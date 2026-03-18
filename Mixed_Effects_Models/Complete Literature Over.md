@@ -107,12 +107,53 @@ The course recommends the **Median Absolute Deviation (MAD)** over standard SD.
 
 ---
 
-## 🔄 The "Homework Rhythm" (The Workflow)
-Every assignment follows this logic:
-1.  **Prep:** Load, check for "crazy" values (Winsorise?), Center continuous variables, Contrast Code factors.
-2.  **Look:** Run the "Wave" (Density) and the "Windows" (Lattice).
-3.  **Build:** Start with the **Maximal Model** (everything in).
-4.  **Fix:** Get a Singularity warning? **Prune** (use `||`).
-5.  **Validate:** Check "The Cloud" (Residuals) and "The Diagonal" (Q-Q).
-6.  **Conclude:** Run `car::Anova(model, type = 3)` for the truth.
-7.  **Write-up:** Use the UK English template.
+---
+
+## 🔄 Typical Steps of Research: The In-Depth Workflow
+*Source: Synthesised from Week 2 Prepsteps, Class 6 Workflow, and Homework Rhythm*
+
+```mermaid
+graph TD
+    R1[1. Data Management] --> R2[2. Descriptives & Visualisation]
+    R2 --> R3[3. Model Specification]
+    R3 --> R4[4. Diagnostics & Outliers]
+    R4 --> R5[5. Model Refinement]
+    R5 --> R6[6. Inference & Reporting]
+
+    classDef workflow fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b;
+    class R1,R2,R3,R4,R5,R6 workflow
+```
+
+### 📄 Step 1: Data Management (The Invisible Work)
+Before any code runs, you must ensure R understands your data structure.
+*   **Importing:** `read.csv()` or `read.delim()`.
+*   **Formatting:** Reshaping from "Wide" to "Long" format (essential for MEM) using `melt()`.
+*   **Variable Typing:** Converting IDs and Conditions into **Factors** (`as.factor()`).
+*   **Centring:** Continuous predictors must be centred (`scale(center=T, scale=F)`) to make the intercept meaningful.
+
+### 📄 Step 2: Descriptives & Visualisation
+Understand the "shape" of your sample before asking for $p$-values.
+*   **The Table:** Use `describeBy()` from the `psych` package to get means and SDs per cell.
+*   **The Check:** Use `with(df, table(pp_code, condition))` to ensure every participant has enough data in every cell (The **lm() trick** foundation).
+*   **The Plots:** Run "The Wave" (Density) to check for skewness and "The Windows" (Lattice) to spot individual differences.
+
+### 📄 Step 3: Model Specification
+Following the **Maximal Model** mandate (Barr et al., 2013).
+*   Define the Fixed Effects based on the research question.
+*   Add Random Intercepts for all grouping factors (e.g., `(1|pid) + (1|item_id)`).
+*   Add Random Slopes for all fixed effects that vary **within** those factors.
+
+### 📄 Step 4: Diagnostics & Outlier Management
+Is the model lying to you?
+*   **Residual Check:** Look for "The Cloud" (Homoscedasticity) and "The Diagonal" (Normality).
+*   **Outlier Management:** Use the **MAD Rule** (`Median +/- 2.5*MAD`) to identify extreme cases.
+*   **Decision:** Do you **Winsorise** (cap the value) or **Exclude** (delete the row)? *Course hint: Be transparent about this in the write-up.*
+
+### 📄 Step 5: Model Refinement
+Handling the dreaded **Singularity** warning.
+*   **Principled Pruning:** If the maximal model is too complex, remove random correlations first using the `||` syntax.
+*   **Comparison:** Compare the simplified model to the maximal model to ensure conclusions don't shift.
+
+### 📄 Step 6: Inference & Reporting
+*   **The Truth:** Run `car::Anova(model, type = 3, test = "F")` for the final effects.
+*   **The Write-up:** Describe the model formula, the $p$-value method (Kenward-Roger), and the specific means/CIs. Use the UK English template provided above.
