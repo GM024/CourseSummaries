@@ -1,5 +1,5 @@
 # File: README.md
-# Description: This is the Master Study Guide for Mixed Effects Models (MEM). It is structured as a "Professor's Handout" to facilitate deep understanding, memorisation, and practical application. Updated with active recall checks and "Golden Rules."
+# Description: This is the Master Study Guide for Mixed Effects Models (MEM). It is structured as a "Professor's Handout" to facilitate deep understanding, memorisation, and practical application. Expanded with technical depth, "Pro-Tips," and optimised visuals.
 
 # 🎓 Mixed Effects Models (MEM): The Master Framework
 
@@ -31,11 +31,6 @@ Before MEM became standard, researchers had a problem with repeated measures. If
 *   **The Hidden Cost:** By averaging Joe, you delete the information about how Joe changed over time (learning/fatigue) and how much Joe fluctuated (within-person variance).
 *   **The MEM Solution:** MEM keeps all 50 trials. It uses the "Trial-level" information to give more weight to stable participants and less to noisy ones, resulting in a more accurate picture of the population.
 
-### 📄 The Bridge to Modern Research
-In this course, we move from **Frequentist** (`lme4`) to **Bayesian** (`brms`). 
-*   **lme4** is fast and standard, but it uses "Maximum Likelihood" (hill-climbing) which often gets stuck (**Singularity**).
-*   **brms** is the "Stronger Brother." It uses simulation (MCMC) to explore the data more thoroughly, often finding answers where `lme4` gives up.
-
 ---
 
 ## 🏛️ The Statistical Roadmap: "The 7 Steps"
@@ -53,13 +48,8 @@ graph LR
 
     S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
 
-    style S1 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S2 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S3 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S4 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S5 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S6 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style S7 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    classDef purple fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c;
+    class S1,S2,S3,S4,S5,S6,S7 purple
 ```
 
 ---
@@ -78,22 +68,29 @@ graph LR
 ### 🟢 Stage 1: The "Why" (Week 1 - Politeness Data)
 *   **The Lesson:** Standard $t$-tests are "Blind." They don't see that 10 data points come from the same person.
 *   **Application:** If Subject A has a high voice and Subject B has a low voice, we only care about how *their own* voice changes when being polite.
+*   **Pro-Tip:** Violating independence inflates Type 1 Error (false positives) because standard errors are underestimated.
 
 ### 🟢 Stage 2: The "Preparation" (Week 2 - Feather Contest)
 *   **The Lesson:** Cleanliness is next to Godliness. If Trial 1-5 isn't centred, your results are anchored to "Trial 0" (impossible).
 *   **Application:** **Winsorising** (capping extreme values) is safer than deleting data. Use the **MAD Rule** (`Median +/- 2.5*MAD`) to find the caps.
+*   **Centring Formula:** $X_{centred} = X - \bar{X}$. This makes the Intercept the "Grand Mean."
 
 ### 🟢 Stage 3: The "Shield" (Weeks 3 & 4 - Sleepstudy)
 *   **The Lesson:** $p$-values are fragile. The standard "Wald" $p$-value is too optimistic.
-*   **Application:** Use **Kenward-Roger (KR)** corrections. It acts as a shield, toughening the requirements for significance in small samples.
+*   **Application:** Use **Kenward-Roger (KR)** corrections via `car::Anova()`. It acts as a shield, adjusting the degrees of freedom to protect against false positives in small samples.
+*   **Estimation Pro-Tip:** **REML** (Restricted Maximum Likelihood) is for final parameter estimates; **ML** (Maximum Likelihood) is for comparing models with different fixed effects.
 
 ### 🟢 Stage 4: The "Magnifying Glass" (Week 5 - ChickWeight)
 *   **The Lesson:** Interactions are just "Clues." A significant interaction tells you *something* is happening, but not *what*.
 *   **Application:** Use `emmeans` to zoom in on specific days or diets to find where the effect "lives."
+*   **UK English Note:** Always check for **heteroscedasticity** (uneven variance) when dealing with growth data like ChickWeight.
 
 ### 🟢 Stage 5: The "Pruning" (Week 6 - AAT Data)
 *   **The Lesson:** Don't over-ask the data. If R gives a **Singularity Warning**, your model is too "greedy."
-*   **Application:** **Principled Pruning.** Remove random correlations (`||`) first. Simplify only what is necessary to get a stable fit.
+*   **Application:** **Principled Pruning.** 
+    1. Remove random correlations (`||` syntax).
+    2. Remove the smallest variance component (often random slopes for interactions).
+    3. Simplify only until the warning disappears.
 
 ---
 
@@ -101,10 +98,24 @@ graph LR
 
 | Plot | Professor's Mnemonic | The Application Check |
 | :--- | :--- | :--- |
-| **Density** | 🌊 **The Wave** | Is it skewed? (If yes, try log-transformation). |
-| **Lattice** | 🪟 **The Windows** | Is there a "Rebel" participant who goes against the grain? |
+| **Density** | 🌊 **The Wave** | Is it skewed? (If yes, try log-transformation or **Winsorising**). |
+| **Lattice** | 🪟 **The Windows** | Is there a "Rebel" participant who goes against the grain? (Check individual slopes). |
 | **Q-Q** | 📏 **The Diagonal** | Are the dots "hugging" the line? (If they snake away, your $p$-values are suspect). |
 | **Residual** | ☁️ **The Cloud** | Is there a "Funnel"? (If the cloud expands, you've violated Homoscedasticity). |
+
+---
+
+## 🧹 Data Management & Outliers (Expanded)
+*Source: Week 2, Slide 113; Class 6 Workflow*
+
+### 📄 Winsorising vs. Exclusion
+*   **Winsorising:** Replace extreme values with the nearest "acceptable" value (e.g., the 95th percentile). This preserves your sample size.
+*   **Exclusion:** Delete the row. Only do this if the value is a clear technical error (e.g., RT = 1ms).
+*   **The MAD Rule:** `Median +/- 2.5 * MAD`. MAD is the "robust brother" of Standard Deviation—it isn't swayed by the outliers it's trying to find.
+
+### 📄 The "lm() Trick"
+*   **Goal:** Check if a random slope is estimable *in principle*.
+*   **Method:** Run a standard `lm()` on just **one** participant. If `lm()` can't estimate the effect for one person, `lmer()` can't estimate it as a random slope for the whole group.
 
 ---
 
@@ -114,17 +125,20 @@ graph LR
 ### 🔹 Level 1: Basic Recall
 1.  What is the "5-Level Rule" for grouping factors?
 2.  What does a "Singularity" warning actually mean in plain English?
-3.  Which R function is the "Gold Standard" for obtaining $p$-values in this course?
+3.  Which R package is the "Gold Standard" for obtaining $p$-values in this course?
+4.  What is the difference between `(1 + IV | Group)` and `(1 + IV || Group)`?
 
 ### 🔹 Level 2: Conceptual Understanding
 1.  Why is it "cheating" to run a standard $t$-test on repeated-measures data? (Hint: Type 1 Error).
 2.  If my data has a long right-tail (skewed), why should I look at "The Wave" before running the model?
-3.  Explain the difference between **Winsorising** and **Excluding** an outlier. Which is "kinder" to your sample size?
+3.  Explain why **Winsorising** is often preferred over **Exclusion** in real-world messy data.
+4.  Why must you use **Sum-to-zero coding** when running a Type 3 ANOVA?
 
 ### 🔹 Level 3: Application (The Exam Challenge)
 1.  **Scenario:** You are testing an AAT task with 40 participants. You get a Singularity warning. You currently have `(1 + Emotion * Target | pid)`. What is your **first** step to prune the model according to "Principled Pruning"?
 2.  **Scenario:** You find a significant interaction between `Gender` and `Time`. Your professor asks: "Which gender improved faster?" Which R command do you use to answer this?
 3.  **Scenario:** You are using `car::Anova(type = 3)`. You forgot to use `contr.sum`. Why will your professor mark your "Main Effects" results as incorrect?
+4.  **Scenario:** You have 3 observations per participant for a continuous predictor. Is this enough to justify a random slope? (Hint: See Week 5 slides).
 
 ---
 
