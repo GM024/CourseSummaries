@@ -114,11 +114,18 @@ The course recommends the **Median Absolute Deviation (MAD)** over standard SD.
 
 ```mermaid
 graph TD
-    R1[1. Data Management] --> R2[2. Descriptives & Visualisation]
-    R2 --> R3[3. Model Specification]
-    R3 --> R4[4. Diagnostics & Outliers]
-    R4 --> R5[5. Model Refinement]
-    R5 --> R6[6. Inference & Reporting]
+    R1[1. Data<br/>Management]
+    R2[2. Descriptives &<br/>Visualisation]
+    R3[3. Model<br/>Specification]
+    R4[4. Diagnostics &<br/>Outliers]
+    R5[5. Model<br/>Refinement]
+    R6[6. Inference &<br/>Reporting]
+
+    R1 --> R2
+    R2 --> R3
+    R3 --> R4
+    R4 --> R5
+    R5 --> R6
 
     classDef workflow fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b;
     class R1,R2,R3,R4,R5,R6 workflow
