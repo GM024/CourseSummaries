@@ -9,16 +9,19 @@
 ## 🏗️ The Statistical Roadmap: "The 7 Steps"
 
 ```mermaid
-graph TD
-    S1["<b>1. Prepsteps</b><br>Centring & Coding"]
-    S2["<b>2. Visualization</b><br>The 'Wave' & 'Windows'"]
-    S3["<b>3. Specification</b><br>Fixed vs. Random"]
-    S4["<b>4. Model Fitting</b><br>lmer vs. brm"]
-    S5["<b>5. Diagnostics</b><br>Residual Clouds"]
-    S6["<b>6. Inference</b><br>p-values & CIs"]
-    S7["<b>7. Refinement</b><br>Post-hocs"]
+graph LR
+    S1["1. Prepsteps<br/>Centring & Coding"]
+    S2["2. Visualisation<br/>Wave & Windows"]
+    S3["3. Specification<br/>Fixed vs. Random"]
+    S4["4. Model Fitting<br/>lmer vs. brm"]
+    S5["5. Diagnostics<br/>Residuals"]
+    S6["6. Inference<br/>p-values & CIs"]
+    S7["7. Refinement<br/>Post-hocs"]
 
     S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
+
+    classDef purple fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,rx:5,ry:5,color:#4a148c;
+    class S1,S2,S3,S4,S5,S6,S7 purple
 ```
 
 ---
