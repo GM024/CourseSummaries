@@ -11,13 +11,13 @@ Mixed Effects Models sit at the intersection of several historical traditions. U
 
 ```mermaid
 graph TD
-    A[<b>1. The ANOVA Era</b><br/>Strictly categorical, balanced designs.<br/>Requires aggregation (losing data).] 
-    --> B[<b>2. The GLM Era (Regression)</b><br/>Flexible predictors (continuous/categorical).<br/>Assumes everyone is a 'stranger' (independence).]
-    
-    B --> C[<b>3. The MEM Revolution</b><br/>Flexible like regression + handles 'families' (clusters).<br/>Models Trial-level data without aggregation.]
-    
-    C --> D[<b>4. The Bayesian Frontier (brms)</b><br/>Estimates complex models via simulation.<br/>Handles what Frequentist R often crashes on.]
+    A[<b>1. The ANOVA Era</b><br/>Strictly categorical, balanced designs.<br/>Requires aggregation and loss of data.] 
+    --> B[<b>2. The GLM Era (Regression)</b><br/>Flexible predictors continuous or categorical.<br/>Assumes everyone is a 'stranger' - independence.]
 
+    B --> C[<b>3. The MEM Revolution</b><br/>Flexible like regression + handles 'families' clusters.<br/>Models Trial-level data without aggregation.]
+
+    C --> D[<b>4. The Bayesian Frontier - brms</b><br/>Estimates complex models via simulation.<br/>Handles what Frequentist R often crashes on.]
+```
     classDef legacy fill:#f5f5f5,stroke:#9e9e9e,color:#9e9e9e;
     classDef current fill:#e1f5fe,stroke:#01579b,color:#01579b;
     classDef future fill:#fff3e0,stroke:#e65100,color:#e65100;
