@@ -1,8 +1,8 @@
 # File: README.md
-# Description: This is the master study guide for the Mixed Effects Models course. It provides a detailed framework based on the 7 "Typical Research Steps" from the 2026 curriculum. Updated with calibrated visuals, hypothetical studies, and actual graph imagery.
+# Description: This is the master study guide for the Mixed Effects Models course. It provides a detailed framework based on the 7 "Typical Research Steps" from the 2026 curriculum. Updated with UK English, Winsorising, and extensive grounded examples.
 
 # 🎓 Mixed Effects Models (MEM): The Master Framework
-> **Conceptual Summary:** MEM is the senior sibling of standard regression. While standard regression assumes all data points are independent (like 100 different people), MEM handles "clumpy" data (like 10 people measured 10 times). By splitting effects into **Fixed** (average pattern) and **Random** (individual deviation), we generalise our results from a specific sample to the entire population without inflating our error rates.
+> **In Plain English:** Imagine you're testing a new drug on 10 people, and you measure them 5 times each. Standard statistics thinks you have 50 different people. **MEM knows better.** It knows that Joe's 5 measurements are "linked" because they all come from Joe. By using **Fixed Effects** (the average drug effect) and **Random Effects** (Joe's personal baseline and reaction), we get the truth without being fooled by individual quirks.
 
 ---
 
@@ -51,82 +51,88 @@ graph LR
 
 ---
 
-## 📅 The Conceptual Evolution (Week-by-Week)
+## 📅 The Conceptual Evolution (Lecture-by-Lecture)
 
-### 🟢 Week 1: The Foundation (Non-independence)
-*   **The Problem:** Standard $t$-tests and regressions assume every observation is independent. If you have 6 participants each measured 4 times (the **"Happiness Treatment"** study), you don't have $N=24$; you have 6 individuals. 
-*   **The Danger:** Treating $N=24$ as independent is "cheating." It makes your standard errors too small and your $p$-values too significant (Inflated **Type 1 Error**).
-*   **The Add:** MEM solves this by allowing each participant to have their own "baseline" (Random Intercept).
+### 🟢 Week 1: The Foundation (Politeness Data)
+*   **The Study:** Testing voice pitch (frequency) in polite vs informal speech.
+*   **The Problem:** Some people have naturally high voices. If you just average all "polite" vs "informal" pitch, you might just be measuring the difference between the people, not the attitude.
+*   **The Logic:** We need to account for **Subjects** (Who is speaking) and **Scenarios** (What are they saying).
+*   **Easy Concept:** You are looking for the *shift* within each person.
 
-### 🟢 Week 2: The Workflow (The "Prepsteps")
-*   **The Problem:** Raw data is often uninterpretable. If "Trial" ranges from 1 to 5 (the **"Cherry Pit Spitting"** study), the intercept represents "Trial 0," which doesn't exist.
-*   **The Add:** **Centring** trial so that 0 represents the middle of the experiment. Learning to use **Sum-to-zero coding** so that main effects are tested against the grand mean, not just a baseline group.
+### 🟢 Week 2: The Workflow (The Feather Contest)
+*   **The Study:** Comparing smokers vs non-smokers in a feather-spitting contest.
+*   **The Logic:** We must "Prep" the data. We **Centre** Trial (so 0 = the middle of the contest) and use **Sum-to-zero coding**.
+*   **Easy Concept:** If you don't centre Trial, your "Starting Line" (Intercept) is at Trial 0. But there was no Trial 0! Centring moves the starting line to a place that actually exists.
 
-### 🟢 Week 3 & 4: Inferential Precision
-*   **The Problem:** Standard $p$-values are often biased in small samples. The "Wald Test" (standard in many packages) is notoriously unreliable for MEM.
-*   **The Add:** Introduction of **Kenward-Roger (KR)** corrections—a "shield" that adjusts degrees of freedom to protect against false positives. We also learn to compare models using **Likelihood Ratio Tests (LRT)**.
+### 🟢 Week 3 & 4: Inferential Precision (The Sleepstudy)
+*   **The Study:** Reaction times after days of sleep deprivation.
+*   **The Logic:** Standard $p$-values (Wald tests) are risky. We use **Kenward-Roger (KR)** corrections.
+*   **Easy Concept:** KR is like a **"Small Sample Shield."** It stops you from being too confident if you only have a few subjects. It makes the model "earn" its $p$-value.
 
-### 🟢 Week 5: Interactions & Follow-ups
-*   **The Problem:** An interaction like `Gender * Trial` is just the start. If significant, how do we know *where* the difference is?
-*   **The Add:** Using `emmeans` for pairwise comparisons (The **"Politeness Data"** study). We also learn to run **Follow-up** models (e.g., testing the trial effect for females and males separately) to untangle the interaction.
+### 🟢 Week 5: Interactions (The ChickWeight Study)
+*   **The Study:** Does a chick's weight gain over time depend on its Diet?
+*   **The Logic:** Interaction! `Time * Diet`. We use `emmeans` to find which diet is best on Day 21.
+*   **Easy Concept:** An interaction says "The effect of Time is different for different Diets." Post-hocs are the **Magnifying Glass** that tells you exactly *how* different.
 
-### 🟢 Week 6: The "Maximal" Reality
-*   **The Problem:** We are told to "keep it maximal" (Barr et al., 2013), but real data often crashes (`Singularity` warnings).
-*   **The Add:** Dealing with the **"AAT" (Approach-Avoidance)** data. Learning **Principled Pruning**: removing random correlations first (`||` syntax), and only then simplifying slopes that the data cannot support.
+### 🟢 Week 6: The Maximal Model (The AAT Study)
+*   **The Study:** Approach (Pull) vs Avoid (Push) for Happy vs Angry faces.
+*   **The Logic:** "Keep it Maximal" (Barr et al., 2013). But real data often crashes (**Singularity**).
+*   **Easy Concept:** A "Maximal Model" tries to capture every tiny quirk of every person. If the data is too messy, R gives a **Singularity Warning**, which means: "I'm guessing here because the data is too thin."
+*   **The Fix:** **Principled Pruning.** Remove random correlations first (`||`), then remove non-significant slopes.
 
-### 🟢 Week 7: Complex Architectures
-*   **The Problem:** Sometimes subjects aren't the only thing that's random. In the **"School23"** or **"Honeymoon"** studies, we have students nested in schools, or participants responding to specific stimuli (Items).
-*   **The Add:** **Crossed Random Effects.** Modelling both "Who" (Participants) and "What" (Items/Stimuli) simultaneously to truly generalise to the population.
+### 🟢 Week 7: Crossed Random Effects (School23)
+*   **The Study:** Math scores of students in different schools.
+*   **The Logic:** Students are nested in schools. SES (Rich/Poor) varies.
+*   **Easy Concept:** This is **"The Cross."** We aren't just looking at people; we are looking at how environments (Schools) change the way people (Students) react to things (SES).
 
 ---
 
-## 🖼️ Visual Imagery & Plot Examples
+## 🧹 Data Cleaning: Winsorising & Outliers
+*Source: Week 2, Slide 113; General Stats Convention*
+
+### 📄 What is Winsorising?
+Instead of deleting an outlier (which loses data), you **"cap"** it. 
+*   **Example:** In an RT task, most people take 500ms. One person takes 10,000ms because they sneezed. 
+*   **The Fix:** You change that 10,000ms to the 95th percentile value (e.g., 1,500ms).
+*   **Direct Language:** You're saying "This value is extreme, so I'll treat it as 'just very high' rather than 'impossibly high'."
+
+### 📄 The "MAD" Rule
+The course recommends the **Median Absolute Deviation (MAD)** over standard SD.
+*   **Why?** The Mean and SD are "fooled" by outliers. The Median isn't.
+*   **Rule of Thumb:** Use `Median +/- 2.5 * MAD` as your cut-off for "too extreme."
+
+---
+
+## 🖼️ Visualisation Guide (The Plot Gallery)
 
 ### 🌊 1. The Wave (Density Plot)
-*   **Mnemonic:** Use to check for skewness and long tails (typical for Reaction Time data).
-*   **Actual Graph Example:**
-![Density Plot Example](https://r-charts.com/en/distribution/density-plot-ggplot2_files/figure-html/fill-density-plot-ggplot2.png)
+*   **What it means:** Is your data "Normal"?
+*   **Look for:** Skewness. RT data usually has a long "tail" to the right.
+*   [View Example Density Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Normal_distribution_pdf.png/640px-Normal_distribution_pdf.png)
 
 ### 🪟 2. The Windows (Lattice/Individual Plots)
-*   **Mnemonic:** Use to spot "The Outlier" or see how individual slopes differ.
-*   **Actual Graph Example:**
-![Lattice Plot Example](https://www.r-project.org/nosvn/pandoc/lattice_files/figure-html/unnamed-chunk-17-1.png)
+*   **What it means:** Does everyone behave the same?
+*   **Look for:** One panel that goes "down" while everyone else goes "up."
+*   [View Example Lattice Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
 
 ### 📏 3. The Diagonal (Q-Q Plot)
-*   **Mnemonic:** Check if points deviate from the line (Normality check).
-*   **Actual Graph Example:**
-![Q-Q Plot Example](https://www.statisticsglobe.com/wp-content/uploads/2020/02/figure-1-qqplot-r-programming-language.png)
+*   **What it means:** Are your residuals normal?
+*   **Look for:** Dots snaking away from the line. If they stay on the line, you're good.
+*   [View Example Q-Q Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Q-Q_plot_of_normal_distribution.png/640px-Q-Q_plot_of_normal_distribution.png)
 
 ### ☁️ 4. The Cloud (Residual Plot)
-*   **Mnemonic:** Look for a random patternless cloud. Beware of the "Funnel" (Heteroscedasticity).
-*   **Actual Graph Example:**
-![Residual Plot Example](https://www.itl.nist.gov/div898/handbook/eda/section3/gif/resplot1.gif)
+*   **What it means:** Is the error "fair" across all values?
+*   **Look for:** The "Funnel." If the cloud gets wider on the right, your model is getting "less certain" as values increase (Heteroscedasticity).
+*   [View Example Residual Plot](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Residuals_vs_Fitted_plot.png/640px-Residuals_vs_Fitted_plot.png)
 
 ---
 
-## 📄 Formulating Fixed vs. Random: The Rules
-
-| Effect Type | Rule for Selection | Study Example |
-| :--- | :--- | :--- |
-| **Fixed ($\beta$)** | Levels represent **all possible values** or are **directly manipulated**. | **Gender** (M/F), **Treatment** (Drug/Sham). |
-| **Random ($u$)** | Levels are a **random subset** of a larger population. | **Participants** (pid), **Stimuli** (item_id). |
-| **Random Slope** | Add if the predictor varies **within** the grouping factor. | **Trial** varies within Participant. |
-
----
-
-## 📄 Sums of Squares (SS): Type 1, 2, and 3
-*Source: Week 5, Slide 65; Week 4 Example Script*
-
-*   **Type 1 (Sequential):** Order matters. Adding `Gender` then `Trial` gives different results than `Trial` then `Gender`. Rarely used in MEM.
-*   **Type 2 (Hierarchical):** Tests main effects *before* interactions. Good for balanced designs.
-*   **Type 3 (Simultaneous):** **The Course Default.** Tests each effect against all others simultaneously. 
-    *   *Context:* Essential for unbalanced real-world data. 
-    *   *Warning:* Only accurate if you use **Sum-to-zero coding** (`contr.sum`)!
-
----
-
-## 🔗 How to use this guide with LLMs
-To test your understanding, paste this guide into an LLM and ask:
-1.  *"Using the 'Cherry Pit' example, explain why centring trial is a critical prepstep."*
-2.  *"I have a singularity warning in my AAT model. Based on 'Principled Pruning', what should my first three steps be?"*
-3.  *"Explain the difference between Type 2 and Type 3 SS using the 'Happiness' study as a context."*
+## 🔄 The "Homework Rhythm" (The Workflow)
+Every assignment follows this logic:
+1.  **Prep:** Load, check for "crazy" values (Winsorise?), Center continuous variables, Contrast Code factors.
+2.  **Look:** Run the "Wave" (Density) and the "Windows" (Lattice).
+3.  **Build:** Start with the **Maximal Model** (everything in).
+4.  **Fix:** Get a Singularity warning? **Prune** (use `||`).
+5.  **Validate:** Check "The Cloud" (Residuals) and "The Diagonal" (Q-Q).
+6.  **Conclude:** Run `car::Anova(model, type = 3)` for the truth.
+7.  **Write-up:** Use the UK English template.
