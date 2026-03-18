@@ -10,33 +10,13 @@
 
 ```mermaid
 graph LR
-    subgraph Preparation
-    S1(1. Prepsteps<br/>Centring & Coding)
-    end
-    
-    subgraph Exploration
-    S2{{2. Visualisation<br/>Wave & Windows}}
-    end
-    
-    subgraph Specification
-    S3[/3. Specification<br/>Fixed vs. Random/]
-    end
-    
-    subgraph Modelling
-    S4[4. Model Fitting<br/>lmer vs. brm]
-    end
-    
-    subgraph Validation
-    S5[[5. Diagnostics<br/>Residuals]]
-    end
-    
-    subgraph Interpretation
-    S6((6. Inference<br/>p-values & CIs))
-    end
-    
-    subgraph Refinement
-    S7>7. Refinement<br/>Post-hocs]
-    end
+    S1[1. Clean & Code]
+    S2[2. Visualise]
+    S3[3. Pick Effects]
+    S4[4. Fit Model]
+    S5[5. Check Fit]
+    S6[6. Get Answers]
+    S7[7. Follow-up]
 
     S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
 
