@@ -1,7 +1,7 @@
 # File: README.md
-# Description: This is the master study guide for the Mixed Effects Models course. It provides a detailed framework based on the 7 "Typical Research Steps" from the 2026 curriculum. Updated with UK English and source references.
+# Description: This is the master study guide for the Mixed Effects Models course. It provides a detailed, step-by-step statistical framework based on the 7 "Typical Research Steps" from the 2026 curriculum. Updated with vivid imagery, hypothetical studies, and conceptual evolution.
 
-# 🎓 Mixed Effects Models (MEM): The Complete Framework
+# 🎓 Mixed Effects Models (MEM): The Master Framework
 > **Conceptual Summary:** MEM is the senior sibling of standard regression. While standard regression assumes all data points are independent (like 100 different people), MEM handles "clumpy" data (like 10 people measured 10 times). By splitting effects into **Fixed** (average pattern) and **Random** (individual deviation), we generalise our results from a specific sample to the entire population without inflating our error rates.
 
 ---
@@ -26,88 +26,99 @@ graph LR
 
 ---
 
-## 🟢 Phase 1: Preparation (The Prepsteps)
-*Source: Week 2, "The Prepsteps" Homework*
+## 📅 The Conceptual Evolution (Week-by-Week)
 
-*   **Centring:** Subtracting the mean from continuous predictors. 
-    *   *Mnemonic:* ⚖️ **Balance.** Makes the intercept represent the average of the whole sample.
-*   **Contrast Coding:** Essential for factors with 2+ levels.
-    *   *Treatment Coding:* Compares to a baseline.
-    *   *Sum-to-zero (Effect) Coding:* Compares to the grand mean (Required for Type 3 SS).
-    *   `contrasts(df$factor) <- contr.sum(2)`
+### 🟢 Week 1: The Foundation (Non-independence)
+*   **The Problem:** Standard $t$-tests and regressions assume every observation is independent. If you have 6 participants each measured 4 times (the **"Happiness Treatment"** study), you don't have $N=24$; you have 6 individuals. 
+*   **The Danger:** Treating $N=24$ as independent is "cheating." It makes your standard errors too small and your $p$-values too significant (Inflated **Type 1 Error**).
+*   **The Add:** MEM solves this by allowing each participant to have their own "baseline" (Random Intercept).
+
+### 🟢 Week 2: The Workflow (The "Prepsteps")
+*   **The Problem:** Raw data is often uninterpretable. If "Trial" ranges from 1 to 5 (the **"Cherry Pit Spitting"** study), the intercept represents "Trial 0," which doesn't exist.
+*   **The Add:** **Centring** trial so that 0 represents the middle of the experiment. Learning to use **Sum-to-zero coding** so that main effects are tested against the grand mean, not just a baseline group.
+
+### 🟢 Week 3 & 4: Inferential Precision
+*   **The Problem:** Standard $p$-values are often biased in small samples. The "Wald Test" (standard in many packages) is notoriously unreliable for MEM.
+*   **The Add:** Introduction of **Kenward-Roger (KR)** corrections—a "shield" that adjusts degrees of freedom to protect against false positives. We also learn to compare models using **Likelihood Ratio Tests (LRT)**.
+
+### 🟢 Week 5: Interactions & Follow-ups
+*   **The Problem:** An interaction like `Gender * Trial` is just the start. If significant, how do we know *where* the difference is?
+*   **The Add:** Using `emmeans` for pairwise comparisons (The **"Politeness Data"** study). We also learn to run **Follow-up** models (e.g., testing the trial effect for females and males separately) to untangle the interaction.
+
+### 🟢 Week 6: The "Maximal" Reality
+*   **The Problem:** We are told to "keep it maximal" (Barr et al., 2013), but real data often crashes (`Singularity` warnings).
+*   **The Add:** Dealing with the **"AAT" (Approach-Avoidance)** data. Learning **Principled Pruning**: removing random correlations first (`||` syntax), and only then simplifying slopes that the data cannot support.
+
+### 🟢 Week 7: Complex Architectures
+*   **The Problem:** Sometimes subjects aren't the only thing that's random. In the **"School23"** or **"Honeymoon"** studies, we have students nested in schools, or participants responding to specific stimuli (Items).
+*   **The Add:** **Crossed Random Effects.** Modelling both "Who" (Participants) and "What" (Items/Stimuli) simultaneously to truly generalise to the population.
 
 ---
 
-## 🟢 Phase 2: Visualisation (Pre-modelling)
-*Source: Week 2, Class Slides 60-70*
+## 🖼️ Visual Imagery & Plot Mnemonics
 
-| Plot | Mnemonic | Visual Description |
+### 🌊 1. The Wave (Density Plot)
+*   **Description:** A smooth, flowing curve showing the distribution of your data.
+*   **Look for:** Is the wave skewed? Does it have a "long tail" (typical for reaction times)?
+```text
+      _
+     / \
+   _/   \__
+__/        \__
+```
+
+### 🪟 2. The Windows (Lattice/Individual Plots)
+*   **Description:** Small, separate panels for every single participant.
+*   **Look for:** "The Outlier." Does one window look completely different from the others (e.g., a flat line while others go up)?
+```text
+[ . ] [ . ] [ . ]
+[ / ] [ \ ] [ . ]
+```
+
+### 📏 3. The Diagonal (Q-Q Plot)
+*   **Description:** Dots lining up on a straight, 45-degree path.
+*   **Look for:** "The Deviation." If the dots snake away from the line at the ends, your data isn't normally distributed.
+```text
+      / .
+     / .
+   ./
+ ./
+```
+
+### ☁️ 4. The Cloud (Residual Plot)
+*   **Description:** A patternless cluster of points scattered like a thin cloud.
+*   **Look for:** "The Funnel." If the cloud gets wider or narrower at one end, you have heteroscedasticity (a violation of assumptions).
+```text
+ .  .   .  .
+   .  .   .
+ .   .  .  .
+```
+
+---
+
+## 📄 Formulating Fixed vs. Random: The Rules
+
+| Effect Type | Rule for Selection | Study Example |
 | :--- | :--- | :--- |
-| **Density Plot** | 🌊 **The Wave** | A single curve showing the "height" (frequency) of values. |
-| **Boxplot** | 📦 **The Box** | Shows the median and spread across different groups. |
-| **Lattice Plot** | 🪟 **The Windows** | Small separate panels for each participant to spot "odd" individuals. |
+| **Fixed ($\beta$)** | Levels represent **all possible values** or are **directly manipulated**. | **Gender** (M/F), **Treatment** (Drug/Sham). |
+| **Random ($u$)** | Levels are a **random subset** of a larger population. | **Participants** (pid), **Stimuli** (item_id). |
+| **Random Slope** | Add if the predictor varies **within** the grouping factor. | **Trial** varies within Participant. |
 
 ---
 
-## 🟢 Phase 3: Specification (Fixed vs. Random)
-*Source: Week 5, Class Slides 34-41*
+## 📄 Sums of Squares (SS): Type 1, 2, and 3
+*Source: Week 5, Slide 65; Week 4 Example Script*
 
-### 📄 The Formulation Rules
-1.  **Fixed Effects ($\beta$):** 
-    *   *Rule:* Use when levels represent **all possible values** or are **directly manipulated**.
-    *   *Examples:* Gender (M/F), Treatment (Drug/Placebo), Time (Week 1, 2, 3).
-2.  **Random Effects ($u$):**
-    *   *Rule:* Use when levels are a **random subset** of a larger population.
-    *   *Examples:* Participants (pid), Stimuli (actor_id), Schools.
-    *   *Rule of Thumb:* A grouping factor needs at least **5 levels** to estimate variance safely.
-
-### 📄 The "Maximal Model" (Barr et al., 2013)
-*   Include every within-unit fixed effect as a random slope if possible.
-*   `reaction_time ~ emotion * target + (1 + emotion * target | pp_code) + (1 + emotion * target | actor_id)`
+*   **Type 1 (Sequential):** Order matters. Adding `Gender` then `Trial` gives different results than `Trial` then `Gender`. Rarely used in MEM.
+*   **Type 2 (Hierarchical):** Tests main effects *before* interactions. Good for balanced designs.
+*   **Type 3 (Simultaneous):** **The Course Default.** Tests each effect against all others simultaneously. 
+    *   *Context:* Essential for unbalanced real-world data. 
+    *   *Warning:* Only accurate if you use **Sum-to-zero coding** (`contr.sum`)!
 
 ---
 
-## 🟢 Phase 4: Model Fitting
-*Source: Week 4, Class Slides; Week 7 R Script*
-
-*   **Frequentist:** `m1 <- lmer(DV ~ Fixed + (Random_Slope | Group), data = df)`
-*   **Bayesian:** `brum <- brm(DV ~ Fixed + (Random_Slope | Group), data = df)` (Near identical conclusions, different maths).
-
----
-
-## 🟢 Phase 5: Diagnostics
-*Source: Week 2, HW Diagnostics Section*
-
-| Tool | Mnemonic | What to look for? |
-| :--- | :--- | :--- |
-| **Q-Q Plot** | 📏 **The Diagonal** | Do the dots fall on the straight line? (Normality). |
-| **Fitted vs. Resid** | ☁️ **The Cloud** | Is there a random "cloud" of dots? (No patterns = Homoscedasticity). |
-| **Cook's Distance** | 🎣 **The Outlier** | Are any vertical bars much higher than others? (Influential cases). |
-
----
-
-## 🟢 Phase 6: Inference (Significance)
-*Source: Week 4, Example Script; Week 5, Slide 65*
-
-### 📄 Sums of Squares (SS) Types
-*   **Type 1:** Sequential. Order of predictors matters (rarely used in MEM).
-*   **Type 2:** Hierarchical. Tests main effects *before* interactions.
-*   **Type 3:** **Simultaneous (Default).** Tests each effect against all others.
-    *   *Context:* This course uses **Type 3** for `car::Anova`. It requires sum-to-zero coding to be accurate!
-*   **Methods:**
-    *   **Kenward-Roger (KR):** The "Gold Standard" for $p$-values.
-    *   **Likelihood Ratio Test (LRT):** Comparing models (use `REML = FALSE`).
-
----
-
-## 🟢 Phase 7: Post-hocs & Follow-ups
-*Source: Week 5, Slides 12-24*
-
-*   **Post-hocs:** Use `emmeans` for pairwise comparisons. 
-    *   *Mnemonic:* 🔎 **Magnifying Glass.** Zooming in on specific group differences.
-*   **Follow-ups:** Separate models on subsets of data to explain an interaction.
-
----
-
-## 🔗 Write-up Template (UK English)
-> "The data were analysed using a linear mixed-effects model (lme4). The model included fixed effects for [X] and [Y]. We followed a maximal random-effects structure (Barr et al., 2013). P-values were determined using Type 3 Kenward-Roger F-tests (car::Anova)."
+## 🔗 How to use this guide with LLMs
+To test your understanding, paste this guide into an LLM and ask:
+1.  *"Using the 'Cherry Pit' example, explain why centring trial is a critical prepstep."*
+2.  *"I have a singularity warning in my AAT model. Based on 'Principled Pruning', what should my first three steps be?"*
+3.  *"Explain the difference between Type 2 and Type 3 SS using the 'Happiness' study as a context."*
