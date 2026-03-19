@@ -15,44 +15,52 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
-    classDef sandbox stroke-width:2px;
-    classDef hub stroke-width:3px,font-weight:bold;
+    classDef hub fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
+    classDef week1 fill:#e9f5f2,stroke:#2a9d8f,stroke-width:2px;
+    classDef week2 fill:#eef4f7,stroke:#457b9d,stroke-width:2px;
+    classDef week3 fill:#fefae0,stroke:#e9c46a,stroke-width:2px;
+    classDef week4 fill:#fff3e0,stroke:#f4a261,stroke-width:2px;
+    classDef week5 fill:#fbe9e7,stroke:#e76f51,stroke-width:2px;
+    classDef week6 fill:#f3e5f5,stroke:#8338ec,stroke-width:2px;
 
-    A["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Comms & Influence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub --> B["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Belief Systems &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    A --> C["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Norms &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interactions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    A --> D["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Driving, Nudging,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Boosting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    A --> E["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Individual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    A --> F["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resistance &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    A["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Comms & Influence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub --> B(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Belief Systems &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week1
+    A --> C(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Norms &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interactions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week2
+    A --> D(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Driving, Nudging,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Boosting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
+    A --> E(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Individual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week4
+    A --> F(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resistance &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week6
 
-    B --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    B --> B1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week1
+    B --> B2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week5
+    B --> B3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week5
 
-    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Steentjes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Klaperski &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    C --> C1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week2
+    C --> C2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Steentjes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week2
+    C --> C3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Klaperski &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week2
 
-    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hertwig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shiota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    D --> D1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hertwig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
+    D --> D2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
+    D --> D3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shiota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
 
-    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    E --> E1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week4
+    E --> E2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week4
 
-    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fransen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
-    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Basol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    F --> F1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fransen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week6
+    F --> F2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Basol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week6
 ```
 
 
 *Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, the tripartite approach to behavioral change (Driving, Nudging, Boosting), and systemic framing.
 
 
-**Diagram Glossary (Figure 1)**
+<details>
+<summary><b>Diagram Glossary (Figure 1)</b></summary>
+
 *   **Information & Belief Systems:** The study of how individuals acquire, update, and meta-perceive scientific information and collective norms.
 *   **Social Norms & Interactions:** The exploration of how interpersonal talk and group-level misperceptions (pluralistic ignorance) shape behavior.
 *   **Driving, Nudging, & Boosting:** The three-pillar framework for behavior change interventions, focusing on motivation, environment, and competence.
 *   **Systemic vs. Individual:** The critical evaluation of whether behavioral problems should be solved at the level of the person (i-frame) or the system (s-frame).
 *   **Resistance & Inoculation:** The study of psychological defense mechanisms against persuasive manipulation and misinformation.
+</details>
 
 
 ---
@@ -61,7 +69,7 @@ graph TD
 ### 🟢 Week 1: The Social Construction of Belief
 
 
-#### Mildenberger & Tingley (2019): Beliefs about Climate Beliefs
+#### <span style="color:#457b9d">Mildenberger & Tingley (2019): Beliefs about Climate Beliefs</span>
 
 
 **Detailed Abstract**  
@@ -84,14 +92,13 @@ This research challenges the traditional <span style="color:#e63946"><b>Informat
 ### 🔵 Week 2: Interpersonal Communication & Social Norms
 
 
-#### Geiger & Swim (2016): Climate of Silence
-
+#### <span style="color:#457b9d">Geiger & Swim (2016): Climate of Silence</span>
 
 **Detailed Abstract**  
 Investigates the "Climate of Silence" maintained by <span style="color:#e63946"><b>pluralistic ignorance</b></span> and <span style="color:#e63946"><b>impression management</b></span>. Individuals fear damaging their perceived <span style="color:#e63946"><b>warmth</b></span> and **competence**, leading to <span style="color:#e63946"><b>self-silencing</b></span>. This <span style="color:#e63946"><b>socially constructed silence</b></span> can be broken by providing accurate information about group concern.
 
 
-#### Klaperski-van der Wal et al. (2025): The Competent Confronter
+#### <span style="color:#457b9d">Klaperski-van der Wal et al. (2025): The Competent Confronter</span>
 
 
 **Detailed Abstract**  
@@ -114,7 +121,7 @@ The lecture introduces a comprehensive three-pillar approach to behavior change:
 3. <span style="color:#e63946"><b>Boosting</b></span> (Competence) builds lasting <span style="color:#e63946"><b>competences</b></span> by targeting System 2 or sharpening heuristics. It assumes <span style="color:#e63946"><b>ecological rationality</b></span> and respects autonomy.
 
 
-#### Hertwig & Grune-Yanoff (2017): Nudging and Boosting
+#### <span style="color:#457b9d">Hertwig & Grune-Yanoff (2017): Nudging and Boosting</span>
 
 
 **Figure 5**
@@ -125,24 +132,27 @@ The lecture introduces a comprehensive three-pillar approach to behavior change:
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
-    classDef sandbox stroke-width:2px;
-    classDef hub stroke-width:3px,font-weight:bold;
+    classDef hub fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
+    classDef week3 fill:#fefae0,stroke:#e9c46a,stroke-width:2px;
 
     Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Behavior Change</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Approaches</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Driving: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Motivation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
-    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nudging: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Environment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
-    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boosting: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Driving: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Motivation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3 --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nudging: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Environment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3 --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boosting: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3 --- Hub
     
-    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
-    Hub --> B2["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skill Building &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    Hub --> B1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
+    Hub --> B2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skill Building &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week3
 ```
 
 
-**Diagram Glossary (Figure 5)**
+<details>
+<summary><b>Diagram Glossary (Figure 5)</b></summary>
+
 *   **Driving:** Increasing internal pressure through rewards, goals, and social norms (Motivation).
 *   **Nudging:** Steering behavior through the environment (Choice Architecture).
 *   **Boosting:** Increasing individual ability to make good choices (Competence).
+</details>
 
 
 #### Challenges in Behavior Change
@@ -158,11 +168,22 @@ graph TD
 ### 🟠 Week 4: I-frames, S-frames, and System Change
 
 
-#### Chater & Loewenstein (2023): The i-frame and the s-frame
+#### <span style="color:#457b9d">Chater & Loewenstein (2023): The i-frame and the s-frame</span>
 
 
 **Detailed Abstract**  
-Critiques the <span style="color:#e63946"><b>i-frame</b></span> (individual focus) for enabling corporate <span style="color:#e63946"><b>responsibilization</b></span>. Shifting the burden of global issues onto consumers triggers <span style="color:#e63946"><b>crowding out</b></span>, where support for <span style="color:#e63946"><b>s-frames</b></span> (systemic change) is reduced. The lecture notes contrast the i-frame (nudging, status quo remains) with the s-frame (policy/law, changing status quo).
+This paper provides a critical evaluation of the <span style="color:#e63946"><b>i-frame</b></span> (individual focus) and its dominance in behavioral science. The authors argue that by focusing on small-scale, individual-level interventions (like nudges), researchers accidentally facilitate corporate <span style="color:#e63946"><b>responsibilization</b></span>—the shifting of blame for systemic problems (like climate change or obesity) onto the consumer. This focus on the i-frame triggers a <span style="color:#e63946"><b>crowding out effect</b></span>, where public and political support for more effective <span style="color:#e63946"><b>s-frames</b></span> (systemic changes, such as taxes, regulations, or infrastructure) is diminished. The "Influence Stack" identifies that while i-frame interventions are easier to implement, they are often insufficient and can be actively harmful if they deflect attention from necessary policy changes.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**i-frame**</span>: Focuses on individual behavior and choice architecture while keeping the status quo.
+*   <span style="color:#e63946">**s-frame**</span>: Focuses on systemic changes, laws, and infrastructure that alter the status quo.
+*   <span style="color:#e63946">**Responsibilization**</span>: Shifting the burden of systemic problems onto individual choices.
+*   <span style="color:#e63946">**Crowding Out**</span>: When focus on one type of intervention reduces support for another.
+
+
+**How to remember**  
+The **"Leaky Boat."** The i-frame is like handing everyone a small cup to bail out water (individual effort), while the s-frame is actually plugging the hole in the hull (systemic fix). If you only talk about the cups, people forget the hole exists.
 
 
 ---
@@ -171,18 +192,29 @@ Critiques the <span style="color:#e63946"><b>i-frame</b></span> (individual focu
 ### 🔴 Week 5: The Credibility of Science Communication
 
 
-#### Van der Linden et al. (2015): Gateway Belief Model
+#### <span style="color:#457b9d">Van der Linden et al. (2015): Gateway Belief Model</span>
 
 
 **Detailed Abstract**  
-The <span style="color:#e63946"><b>Gateway Belief Model (GBM)</b></span> demonstrates that consensus messaging triggers <span style="color:#e63946"><b>cognitive consistency</b></span>, leading to increased policy support.
+The <span style="color:#e63946"><b>Gateway Belief Model (GBM)</b></span> posits that perceptions of <span style="color:#e63946"><b>scientific consensus</b></span> act as a critical "gateway" to other key beliefs. In a randomized experiment, the authors show that exposing the public to a simple <span style="color:#e63946"><b>consensus message</b></span> (e.g., "97% of climate scientists agree") significantly increases the perceived scientific agreement. This change then ripples through a causal chain, increasing the belief that climate change is happening, that it is human-caused, and that it is a serious problem. Ultimately, this increase in <span style="color:#e63946"><b>cognitive consistency</b></span> leads to higher public support for climate policy. This approach leverages <span style="color:#e63946"><b>heuristic processing</b></span>, where consensus acts as a mental shortcut for truth.
 
 
-#### Meijers & Rutjens (2014): Affirming Belief in Progress
+#### <span style="color:#457b9d">Meijers & Rutjens (2014): Affirming Belief in Progress</span>
 
 
 **Detailed Abstract**  
-Uses <span style="color:#e63946"><b>Compensatory Control Theory</b></span> to show that belief in scientific progress creates a <span style="color:#e63946"><b>hydraulic relationship</b></span> where individual motivation is reduced through <span style="color:#e63946"><b>moral licensing</b></span>.
+Drawing on <span style="color:#e63946"><b>Compensatory Control Theory</b></span>, this research explores how belief in scientific progress affects environmental behavior. When individuals experience a lack of control, they often compensate by affirming belief in external sources of order, such as science. However, this creates a <span style="color:#e63946"><b>hydraulic relationship</b></span>: as belief in scientific progress increases, individual motivation to act pro-environmentally decreases. This is a form of <span style="color:#e63946"><b>moral licensing</b></span> or "delegation," where individuals feel that since science is solving the problem, they no longer need to exert effort.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**Consensus Messaging**</span>: Communicating the degree of agreement among experts.
+*   <span style="color:#e63946">**Heuristic Processing**</span>: Using mental shortcuts (like expert agreement) to form judgments.
+*   <span style="color:#e63946">**Compensatory Control**</span>: Affirming external order to manage feelings of personal chaos.
+*   <span style="color:#e63946">**Hydraulic Relationship**</span>: When an increase in one variable (belief in science) causes a decrease in another (individual effort).
+
+
+**How to remember**  
+The **"Magic Shield."** You believe science is building a giant shield to protect the earth, so you decide you don't need to wear your own raincoat anymore.
 
 
 ---
@@ -191,19 +223,67 @@ Uses <span style="color:#e63946"><b>Compensatory Control Theory</b></span> to sh
 ### 🟣 Week 6: Resistance to Persuasion & Inoculation
 
 
-#### Fransen et al. (2023): Sixty Years Later
+#### <span style="color:#457b9d">Fransen et al. (2023): Sixty Years Later</span>
 
 
 **Detailed Abstract**  
-Replicates <span style="color:#e63946"><b>Inoculation Theory</b></span>, showing how <span style="color:#e63946"><b>refutational pre-emption</b></span> builds resistance against persuasive attacks on <span style="color:#e63946"><b>cultural truisms</b></span>.
+This paper revisits <span style="color:#e63946"><b>Inoculation Theory</b></span> and its application to modern social issues. It confirms that <span style="color:#e63946"><b>refutational pre-emption</b></span>—providing a weakened version of a counter-argument along with a refutation—builds strong resistance against subsequent persuasive attacks on <span style="color:#e63946"><b>cultural truisms</b></span>. The study highlights three primary <span style="color:#e63946"><b>resistance strategies</b></span> used by individuals: **Avoidance** (ignoring the message), **Contesting** (arguing against the source), and **Empowerment** (bolstering one's own existing beliefs).
 
 
-#### Basol et al. (2020): Good News about Bad News
+#### <span style="color:#457b9d">Basol et al. (2020): Good News about Bad News</span>
 
 
 **Detailed Abstract**  
-Uses <span style="color:#e63946"><b>active inoculation</b></span> to build <span style="color:#e63946"><b>broad-spectrum inoculation</b></span> and **cognitive immunity** against misinformation tactics.
+This research demonstrates the power of <span style="color:#e63946"><b>active inoculation</b></span> through a game-based intervention (e.g., "Bad News"). By letting players "step into the shoes" of a fake news producer, they learn the <span style="color:#e63946"><b>manipulation tactics</b></span> (e.g., emotional language, polarization, conspiracy theories). This "pre-bunking" approach builds <span style="color:#e63946"><b>broad-spectrum inoculation</b></span> and **cognitive immunity**, making individuals more resistant to misinformation across various topics, even those not explicitly covered in the game.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**Refutational Pre-emption**</span>: Pre-exposing individuals to a threat and providing the tools to defeat it.
+*   <span style="color:#e63946">**Active Inoculation**</span>: Learning by doing (e.g., playing a game) to build resistance.
+*   <span style="color:#e63946">**Cognitive Immunity**</span>: A mental state where one is resilient against manipulative rhetoric.
+*   <span style="color:#e63946">**Manipulation Tactics**</span>: The specific techniques (polarization, trolling) used to spread misinformation.
 
 
 **How to remember**  
 The **"Fire Drill."** You run a fake drill (inoculation) so your brain knows the exits when a real fire (misinformation) starts.
+
+
+---
+
+
+### 🏗️ The Influence Stack: A Conceptual Synthesis
+
+
+**Figure 6**
+
+*The Hierarchical Layers of Behavioral Intervention*
+
+
+```mermaid
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+graph BT
+    classDef layer fill:#f8f9fa,stroke:#333,stroke-width:2px;
+    classDef week1 fill:#e9f5f2,stroke:#2a9d8f,stroke-width:2px;
+    classDef week2 fill:#eef4f7,stroke:#457b9d,stroke-width:2px;
+    classDef week34 fill:#fff3e0,stroke:#f4a261,stroke-width:2px;
+    classDef week56 fill:#f3e5f5,stroke:#8338ec,stroke-width:2px;
+
+    L1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>1. Individual Layer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Facts & Beliefs) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week1
+    L2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>2. Social Layer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Norms & Talk) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week2
+    L3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3. Architectural Layer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Nudges & Systems) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week34
+    L4(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>4. Resistance Layer</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Mental Defenses) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::week56
+    
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
+
+
+<details>
+<summary><b>Diagram Glossary (Figure 6)</b></summary>
+
+*   **Individual Layer:** The foundational facts and first-order beliefs (Week 1).
+*   **Social Layer:** The meta-perceptions and interpersonal communication (Week 2).
+*   **Architectural Layer:** The environment and choice architecture (Week 3 & 4).
+*   **Resistance Layer:** The psychological defenses against being influenced (Week 5 & 6).
+</details>
