@@ -15,7 +15,7 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    A["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Communication & Influence**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
+    A["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Communication & Influence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> C["&nbsp;&nbsp;&nbsp;&nbsp; Social Norms & Interactions &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> D["&nbsp;&nbsp;&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> E["&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs. Individual &nbsp;&nbsp;&nbsp;&nbsp;"]
@@ -57,7 +57,7 @@ graph TD
 
 
 **Detailed Abstract**  
-This research challenges the traditional <span style="color:#e63946">**Information Deficit Model**</span>—the assumption that providing more scientific facts is the primary route to behavioral change. The authors argue that collective action is often paralyzed not by a lack of knowledge, but by biased <span style="color:#e63946">**second-order beliefs**</span>: our perceptions of what *others* believe. Through six massive surveys in the US and China, the study identifies a systemic <span style="color:#e63946">**egocentric bias**</span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946">**pluralistic ignorance effect**</span>, where a majority incorrectly assumes they are in the minority. This misperception creates a <span style="color:#e63946">**spiral of silence**</span>, where individuals self-censor to avoid social isolation. Crucially, political elites (e.g., congressional staffers) are found to be even more biased than the public, often underestimating constituent support for climate policy by significant margins. This paper fulfill's the objective of outlining how social perceptions shape political reality.
+This research challenges the traditional <span style="color:#e63946">**Information Deficit Model</b></span>—the assumption that providing more scientific facts is the primary route to behavioral change. The authors argue that collective action is often paralyzed not by a lack of knowledge, but by biased <span style="color:#e63946">**second-order beliefs</b></span>: our perceptions of what *others* believe. Through six massive surveys in the US and China, the study identifies a systemic <span style="color:#e63946">**egocentric bias</b></span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946">**pluralistic ignorance effect</b></span>, where a majority incorrectly assumes they are in the minority. This misperception creates a <span style="color:#e63946">**spiral of silence</b></span>, where individuals self-censor to avoid social isolation. Crucially, political elites (e.g., congressional staffers) are found to be even more biased than the public, often underestimating constituent support for climate policy by significant margins. This paper fulfill's the objective of outlining how social perceptions shape political reality.
 
 
 **Figure 2**
@@ -68,7 +68,7 @@ This research challenges the traditional <span style="color:#e63946">**Informati
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Second-Order Beliefs**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Second-Order Beliefs</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simulation View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -87,7 +87,7 @@ graph TD
 
 
 **How to remember**  
-Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-order beliefs**</span> are just a reflection of your own views (<span style="color:#e63946">**egocentric bias**</span>). You assume everyone sees what you see, which leads to the **"Lonely Majority"**—everyone wants to act, but no one speaks because they think they're alone.
+Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-order beliefs</b></span> are just a reflection of your own views (<span style="color:#e63946">**egocentric bias</b></span>). You assume everyone sees what you see, which leads to the **"Lonely Majority"**—everyone wants to act, but no one speaks because they think they're alone.
 
 
 ---
@@ -100,7 +100,7 @@ Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-orde
 
 
 **Detailed Abstract**  
-Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946">**pluralistic ignorance**</span> as the key driver, motivated by <span style="color:#e63946">**impression management**</span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946">**warmth**</span> and **competence**, leading to <span style="color:#e63946">**self-silencing**</span> to protect their social reputation.
+Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946">**pluralistic ignorance</b></span> as the key driver, motivated by <span style="color:#e63946">**impression management</b></span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946">**warmth</b></span> and **competence**, leading to <span style="color:#e63946">**self-silencing</b></span> to protect their social reputation.
 
 
 **Figure 3**
@@ -111,7 +111,7 @@ Investigates the "Climate of Silence" where public discussion lags behind privat
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Socially Constructed Silence**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Socially Constructed Silence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Impression Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -138,7 +138,7 @@ graph TD
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Confronter's Dilemma**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Confronter's Dilemma</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Sanctioning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth Penalty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -171,7 +171,7 @@ graph TD
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Decision Science**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Decision Science</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -204,7 +204,7 @@ graph TD
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Policy Framing**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Policy Framing</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -217,7 +217,7 @@ graph TD
 ```
 
 
-*Note.* This model illustrates the diversionary effect of individual-level framing (<span style="color:#e63946">**i-frame**</span>). It shows how shifting blame onto consumers (<span style="color:#e63946">**responsibilization**</span>) leads to "Systemic Inaction" by "Crowding Out" support for broader systemic changes.
+*Note.* This model illustrates the diversionary effect of individual-level framing (<span style="color:#e63946">**i-frame</b></span>). It shows how shifting blame onto consumers (<span style="color:#e63946">**responsibilization</b></span>) leads to "Systemic Inaction" by "Crowding Out" support for broader systemic changes.
 
 
 ---
@@ -237,7 +237,7 @@ graph TD
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Consensus Gateway**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Consensus Gateway</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
@@ -269,7 +269,7 @@ graph TD
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Cognitive Immunity**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Cognitive Immunity</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
     S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
