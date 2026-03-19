@@ -6,29 +6,29 @@ This guide is designed to optimize your learning, memorization, and application 
 
 ```mermaid
 graph TD
-    A[SOW-BS033:<br/>Communication &<br/>Influence] --> B[Information &<br/>Beliefs]
-    A --> C[Social Norms &<br/>Interaction]
-    A --> D[Choice<br/>Architecture]
-    A --> E[Systemic vs.<br/>Individual]
-    A --> F[Inoculation &<br/>Resistance]
+    A["&nbsp; SOW-BS033: &nbsp;<br/>&nbsp; Communication & &nbsp;<br/>&nbsp; Influence &nbsp;"] --> B["&nbsp; Information & &nbsp;<br/>&nbsp; Beliefs &nbsp;"]
+    A --> C["&nbsp; Social Norms & &nbsp;<br/>&nbsp; Interaction &nbsp;"]
+    A --> D["&nbsp; Choice &nbsp;<br/>&nbsp; Architecture &nbsp;"]
+    A --> E["&nbsp; Systemic vs. &nbsp;<br/>&nbsp; Individual &nbsp;"]
+    A --> F["&nbsp; Inoculation & &nbsp;<br/>&nbsp; Resistance &nbsp;"]
 
-    B --> B1[Mildenberger &<br/>Tingley:<br/>Second-Order<br/>Beliefs]
-    B --> B2[Van der Linden:<br/>Gateway Belief<br/>Model]
-    B --> B3[Meijers &<br/>Rutjens:<br/>Belief in<br/>Progress]
+    B --> B1["&nbsp; Mildenberger & &nbsp;<br/>&nbsp; Tingley: &nbsp;<br/>&nbsp; Second-Order &nbsp;<br/>&nbsp; Beliefs &nbsp;"]
+    B --> B2["&nbsp; Van der Linden: &nbsp;<br/>&nbsp; Gateway Belief &nbsp;<br/>&nbsp; Model &nbsp;"]
+    B --> B3["&nbsp; Meijers & &nbsp;<br/>&nbsp; Rutjens: &nbsp;<br/>&nbsp; Belief in &nbsp;<br/>&nbsp; Progress &nbsp;"]
 
-    C --> C1[Geiger & Swim:<br/>Pluralistic<br/>Ignorance]
-    C --> C2[Steentjes:<br/>Interpersonal<br/>Activism]
-    C --> C3[Klaperski:<br/>Social Costs of<br/>Confrontation]
+    C --> C1["&nbsp; Geiger & Swim: &nbsp;<br/>&nbsp; Pluralistic &nbsp;<br/>&nbsp; Ignorance &nbsp;"]
+    C --> C2["&nbsp; Steentjes: &nbsp;<br/>&nbsp; Interpersonal &nbsp;<br/>&nbsp; Activism &nbsp;"]
+    C --> C3["&nbsp; Klaperski: &nbsp;<br/>&nbsp; Social Costs of &nbsp;<br/>&nbsp; Confrontation &nbsp;"]
 
-    D --> D1[Hertwig:<br/>Nudges vs.<br/>Boosts]
-    D --> D2[Dorresteijn:<br/>10 kcal<br/>Deficit]
-    D --> D3[Shiota:<br/>Positive<br/>Affect]
+    D --> D1["&nbsp; Hertwig: &nbsp;<br/>&nbsp; Nudges vs. &nbsp;<br/>&nbsp; Boosts &nbsp;"]
+    D --> D2["&nbsp; Dorresteijn: &nbsp;<br/>&nbsp; 10 kcal &nbsp;<br/>&nbsp; Deficit &nbsp;"]
+    D --> D3["&nbsp; Shiota: &nbsp;<br/>&nbsp; Positive &nbsp;<br/>&nbsp; Affect &nbsp;"]
 
-    E --> E1[Nickerson &<br/>Loewenstein:<br/>I-frame vs<br/>S-frame]
-    E --> E2[Gonzales-Arcos:<br/>Consumer<br/>Resistance]
+    E --> E1["&nbsp; Nickerson & &nbsp;<br/>&nbsp; Loewenstein: &nbsp;<br/>&nbsp; I-frame vs &nbsp;<br/>&nbsp; S-frame &nbsp;"]
+    E --> E2["&nbsp; Gonzales-Arcos: &nbsp;<br/>&nbsp; Consumer &nbsp;<br/>&nbsp; Resistance &nbsp;"]
 
-    F --> F1[McGuire &<br/>Fransen:<br/>Inoculation<br/>Theory]
-    F --> F2[Basol:<br/>Pre-bunking &<br/>Gamification]
+    F --> F1["&nbsp; McGuire & &nbsp;<br/>&nbsp; Fransen: &nbsp;<br/>&nbsp; Inoculation &nbsp;<br/>&nbsp; Theory &nbsp;"]
+    F --> F2["&nbsp; Basol: &nbsp;<br/>&nbsp; Pre-bunking & &nbsp;<br/>&nbsp; Gamification &nbsp;"]
 
     B1 --- C1
     D1 --- E1
@@ -57,10 +57,10 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    Knowledge[Scientific<br/>Facts] -- X --> Action[Policy<br/>Change]
-    Knowledge --> IndividualBelief[First-Order<br/>Belief]
-    IndividualBelief --> SocialPerception[Second-Order<br/>Belief]
-    SocialPerception --> CollectiveAction[Public Support/<br/>Action]
+    Knowledge["&nbsp; Scientific &nbsp;<br/>&nbsp; Facts &nbsp;"] -- X --> Action["&nbsp; Policy &nbsp;<br/>&nbsp; Change &nbsp;"]
+    Knowledge --> IndividualBelief["&nbsp; First-Order &nbsp;<br/>&nbsp; Belief &nbsp;"]
+    IndividualBelief --> SocialPerception["&nbsp; Second-Order &nbsp;<br/>&nbsp; Belief &nbsp;"]
+    SocialPerception --> CollectiveAction["&nbsp; Public Support/ &nbsp;<br/>&nbsp; Action &nbsp;"]
     style Knowledge fill:#f9f,stroke:#333
     style SocialPerception fill:#a6e3a1,stroke:#333
 ```
@@ -89,9 +89,9 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph LR
-    Perception[Perceived Concern] --> Talk[Willingness to Discuss]
-    Talk --> Norm[Social Norm Shift]
-    Norm --> Behavior[Behavioral Change]
+    Perception["&nbsp; Perceived &nbsp;<br/>&nbsp; Concern &nbsp;"] --> Talk["&nbsp; Willingness &nbsp;<br/>&nbsp; to Discuss &nbsp;"]
+    Talk --> Norm["&nbsp; Social &nbsp;<br/>&nbsp; Norm Shift &nbsp;"]
+    Norm --> Behavior["&nbsp; Behavioral &nbsp;<br/>&nbsp; Change &nbsp;"]
 ```
 
 ---
@@ -118,12 +118,12 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    User((User)) --> S1[System 1:<br/>Automatic]
-    User --> S2[System 2:<br/>Deliberative]
-    S1 --> Nudge[Nudge:<br/>Steering]
-    S2 --> Boost[Boost:<br/>Empowerment]
-    Nudge --> Behavior[Immediate<br/>Action]
-    Boost --> Competence[Long-term<br/>Skill]
+    User((User)) --> S1["&nbsp; System 1: &nbsp;<br/>&nbsp; Automatic &nbsp;"]
+    User --> S2["&nbsp; System 2: &nbsp;<br/>&nbsp; Deliberative &nbsp;"]
+    S1 --> Nudge["&nbsp; Nudge: &nbsp;<br/>&nbsp; Steering &nbsp;"]
+    S2 --> Boost["&nbsp; Boost: &nbsp;<br/>&nbsp; Empowerment &nbsp;"]
+    Nudge --> Behavior["&nbsp; Immediate &nbsp;<br/>&nbsp; Action &nbsp;"]
+    Boost --> Competence["&nbsp; Long-term &nbsp;<br/>&nbsp; Skill &nbsp;"]
 ```
 
 ---
@@ -149,8 +149,8 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph LR
-    I[I-frame: Nudging<br/>Individuals] -- Crowding Out? --> S[S-frame: Changing<br/>Systems]
-    S --> Environment[Environment<br/>& Rules]
+    I["&nbsp; I-frame: Nudging &nbsp;<br/>&nbsp; Individuals &nbsp;"] -- Crowding Out? --> S["&nbsp; S-frame: Changing &nbsp;<br/>&nbsp; Systems &nbsp;"]
+    S --> Environment["&nbsp; Environment &nbsp;<br/>&nbsp; & Rules &nbsp;"]
     Environment --> I
 ```
 
@@ -176,9 +176,9 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    Consensus[Consensus<br/>Message:<br/>97%] --> Gateway[Gateway<br/>Belief:<br/>Scientists<br/>Agree]
-    Gateway --> KeyBeliefs[Real/<br/>Human-Caused/<br/>Risk]
-    KeyBeliefs --> PolicySupport[Support for<br/>Action]
+    Consensus["&nbsp; Consensus &nbsp;<br/>&nbsp; Message: 97% &nbsp;"] --> Gateway["&nbsp; Gateway &nbsp;<br/>&nbsp; Belief: &nbsp;<br/>&nbsp; Scientists &nbsp;<br/>&nbsp; Agree &nbsp;"]
+    Gateway --> KeyBeliefs["&nbsp; Real/ &nbsp;<br/>&nbsp; Human-Caused/ &nbsp;<br/>&nbsp; Risk &nbsp;"]
+    KeyBeliefs --> PolicySupport["&nbsp; Support for &nbsp;<br/>&nbsp; Action &nbsp;"]
 ```
 
 ---
@@ -204,7 +204,7 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph LR
-    Warning[Threat<br/>Warning] --> Refutation[Weak Argument<br/>+ Counter]
-    Refutation --> Immunity[Resistance to<br/>Persuasion]
-    Immunity --> Defense[Systemic Mental<br/>Defense]
+    Warning["&nbsp; Threat &nbsp;<br/>&nbsp; Warning &nbsp;"] --> Refutation["&nbsp; Weak Argument &nbsp;<br/>&nbsp; + Counter &nbsp;"]
+    Refutation --> Immunity["&nbsp; Resistance to &nbsp;<br/>&nbsp; Persuasion &nbsp;"]
+    Immunity --> Defense["&nbsp; Systemic &nbsp;<br/>&nbsp; Mental Defense &nbsp;"]
 ```
