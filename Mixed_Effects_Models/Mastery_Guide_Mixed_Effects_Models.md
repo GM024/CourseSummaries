@@ -65,15 +65,6 @@ graph LR
 
 ---
 
-## 📜 The Professor's Golden Rules (Memorise These!)
-1.  **The <span style="color:#e63946"><b>Independence Rule</b></span>:** If you measure the same thing multiple times (Repeated Measures), you **must** use MEM to avoid **<span style="color:#e63946"><b>Clumping Bias</b></span>**.
-2.  **The <span style="color:#e63946"><b>5-Level Rule</b></span>:** Only use a variable as a **<span style="color:#e63946"><b>Grouping Factor</b></span>** (Random Intercept) if it has at least 5 different levels (e.g., 5+ participants).
-3.  **The <span style="color:#e63946"><b>Maximal Rule</b></span>:** Always *start* with the most complex random-effects structure your design allows (Barr et al., 2013).
-4.  **The <span style="color:#e63946"><b>Sum-to-Zero Rule</b></span>:** If you use **<span style="color:#e63946"><b>Type 3 Sums of Squares</b></span>**, you **must** use **<span style="color:#e63946"><b>Sum-to-zero coding</b></span>** (`contr.sum`). Otherwise, your main effects will be misleading.
-5.  **The <span style="color:#e63946"><b>Centring Rule</b></span>:** Always **<span style="color:#e63946"><b>centre</b></span>** continuous predictors so the "starting line" (Intercept) makes physical sense.
-
----
-
 ## 📅 The Conceptual Evolution (Weekly Logic & Syntax)
 
 ### 🟢 Week 1: The Independence Revolution
@@ -84,6 +75,11 @@ The core problem is **<span style="color:#e63946"><b>Non-Independence</b></span>
 *   **The Problem:** `lm(Pitch ~ Attitude)` (Ignores the person).
 *   **The Solution:** `lmer(Pitch ~ Attitude + (1 | Subject))` (Gives everyone their own "starting point").
 *   **The Logic:** `(1 | Subject)` = "I know my subjects are different; please account for their unique baseline."
+
+**The functions explained**
+*   `lmer()`: The primary tool for **<span style="color:#e63946"><b>Linear Mixed-Effects Models</b></span>**. It allows you to mix "Fixed" signals with "Random" variations.
+*   `(1 | GroupingFactor)`: This creates a **<span style="color:#e63946"><b>Random Intercept</b></span>**. It tells R that each level of the factor (e.g., each participant) has its own unique starting value.
+*   **<span style="color:#e63946"><b>Type 1 Error</b></span>**: A "False Positive." In MEM, this happens if you ignore clustering and wrongly conclude that an effect is significant because your standard errors are too small.
 
 **Practical Translation: Formula-to-English**
 > "By adding `(1 | Subject)`, I am telling R: 'Joe, Sarah, and Bob all start at different heights. Don't punish the treatment effect just because Joe is naturally a high-pitched person.'"
@@ -118,6 +114,11 @@ Raw data is often "anchored" to meaningless points. If you don't **<span style="
 *   **Winsorising:** `winsor(df$RT, trim = 0.05)` (The "Cap and Shield" approach).
 *   **The MAD Rule:** Use the **<span style="color:#e63946"><b>Median Absolute Deviation (MAD)</b></span>** to find outliers, as it isn't fooled by the outliers it's trying to find.
 
+**The functions explained**
+*   `winsor()`: Performs **<span style="color:#e63946"><b>Winsorising</b></span>**. Instead of deleting extreme outliers (exclusion), it replaces them with the nearest "acceptable" value (e.g., the 95th percentile). This saves your sample size.
+*   `mean()` / `scale()`: Used for **<span style="color:#e63946"><b>Mean Centring</b></span>**. By subtracting the average, you make "0" the most meaningful point in your data (the average performance).
+*   **<span style="color:#e63946"><b>MAD (Median Absolute Deviation)</b></span>**: A robust measure of spread. Unlike standard deviation, it is "immune" to the outliers it is trying to identify.
+
 **Practical Translation: Formula-to-English**
 > "By subtracting the mean from my `Trial` variable, I am saying: 'The Intercept is no longer some mythical birth-moment; it is the performance of an average person at the middle of the experiment.'"
 
@@ -145,6 +146,11 @@ Mixed models are "greedy" for **<span style="color:#e63946"><b>Degrees of Freedo
 *   **The Engine:** **<span style="color:#e63946"><b>REML</b></span>** (Restricted Maximum Likelihood) vs **<span style="color:#e63946"><b>ML</b></span>** (Maximum Likelihood).
     *   Use **<span style="color:#e63946"><b>REML</b></span>** (default in `lmer`) for final parameter estimates.
     *   Use **<span style="color:#e63946"><b>ML</b></span>** (`REML = F`) only for comparing models with different fixed effects.
+
+**The functions explained**
+*   `car::Anova()`: An "Omnibus" test. It checks the significance of entire factors (especially those with 3+ levels) rather than just single lines.
+*   **<span style="color:#e63946"><b>Kenward-Roger (KR)</b></span>**: A correction for degrees of freedom. It is the "Gold Standard" for mixed models to avoid over-optimistic $p$-values.
+*   **<span style="color:#e63946"><b>REML vs ML</b></span>**: **<span style="color:#e63946"><b>REML</b></span>** is unbiased for variance; **<span style="color:#e63946"><b>ML</b></span>** is biased but necessary when comparing models with different signal structures.
 
 **Practical Translation: Formula-to-English**
 > "Kenward-Roger is like a strict referee. It says: 'I know you have 1000 data points, but since they all come from only 20 people, you don't actually have 1000 independent bits of info. I'm lowering your degrees of freedom to protect against false positives.'"
@@ -176,6 +182,11 @@ Sometimes, data is clustered by more than one thing. In a language task, trials 
 **The R-Syntax Rosetta Stone**
 *   **Crossed Effects:** `(1 | Subject) + (1 | Item)` (Accounts for both "Who said it" and "What was said").
 *   **The Maximal Model:** `(1 + IV | Subject) + (1 + IV | Item)` (The Barr et al., 2013 "Keep it Maximal" philosophy).
+
+**The functions explained**
+*   `emmeans()`: Calculates **<span style="color:#e63946"><b>Estimated Marginal Means</b></span>**. These are "Model-based" means that represent what the average person would do, after accounting for all the random noise in your model.
+*   `emtrends()`: Specifically used for **<span style="color:#e63946"><b>Simple Slopes</b></span>**. It allows you to see if a continuous predictor (like Time) has a different effect for different groups (like Diet 1 vs. Diet 2).
+*   **<span style="color:#e63946"><b>Crossed Random Effects</b></span>**: When every subject sees every item. This requires two separate random intercept terms to account for two different sources of non-independence.
 
 **Practical Translation: Formula-to-English**
 > "Adding `(1 | Item)` means: 'Some words are just harder to pronounce than others. Don't let the difficulty of the word `Pneumonoultramicroscopicsilicovolcanoconiosis` bias the results of my experiment!'"
@@ -210,6 +221,11 @@ The **<span style="color:#e63946"><b>Maximal Model</b></span>** is the ideal, bu
 *   **The Pruning (Step 1):** `(1 + IV || Subject)` (Removes the correlation between intercept and slope).
 *   **The Pruning (Step 2):** Remove the smallest variance component.
 
+**The functions explained**
+*   `isSingular()`: A diagnostic check. It returns `TRUE` if the model has a **<span style="color:#e63946"><b>Singular Fit</b></span>**, meaning your foundation is unstable.
+*   `||` (Double Pipe): Forces the **<span style="color:#e63946"><b>Zero-Correlation Constraint</b></span>**. It allows the intercepts and slopes to vary but forbids the model from trying to find a mathematical link between them.
+*   **<span style="color:#e63946"><b>Principled Pruning</b></span>**: The logic of simplification. You remove the most complex parts of the random-effects structure until the model can actually "converge" on a stable answer.
+
 **Practical Translation: Formula-to-English**
 > "The `||` syntax is like a divorce. It tells R: 'I want Joe to have his own starting point and his own slope, but I don't care if there's a link between them. Treat them as independent roommates rather than a married couple.'"
 
@@ -243,6 +259,11 @@ Behavior is rarely a straight line. Learning, fatigue, and growth often follow a
 *   **Interpretation:**
     *   **Linear term:** "Is it going up or down overall?"
     *   **Quadratic term:** "Is it accelerating or slowing down (U-shape)?"
+
+**The functions explained**
+*   `poly()`: Generates **<span style="color:#e63946"><b>Orthogonal Polynomials</b></span>**. This is a mathematically cleaner way to model curves without making your predictors "redundant" (highly correlated) with each other.
+*   **<span style="color:#e63946"><b>Quadratic Effect</b></span>**: Represents the "acceleration" or "deceleration" of a trend. It captures U-shapes or plateaus.
+*   **<span style="color:#e63946"><b>Heteroscedasticity</b></span>**: When the "Noise" is not consistent. If your model is good at predicting low values but bad at high values, you have violated the assumption of equal variance.
 
 **Practical Translation: Formula-to-English**
 > "Think of `poly(Trial, 2)` as the 'Arc of Progress.' The first term is the speed of the car, and the second term is whether you are hitting the gas (accelerating) or the brakes (decelerating)."
