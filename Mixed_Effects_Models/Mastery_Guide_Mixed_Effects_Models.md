@@ -15,7 +15,7 @@ Mixed Effects Models sit at the intersection of several historical traditions. U
 *Evolutionary Timeline of Statistical Modelling*
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "sans-serif" }}}%%
 graph TD
     classDef legacy fill:#f5f5f5,stroke:#9e9e9e,stroke-width:2px,color:#9e9e9e;
     classDef current fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#01579b,font-weight:bold;
@@ -49,7 +49,7 @@ Before diving into weeks, you must decode the `lmer` syntax symbol-by-symbol.
 
 ## 📅 The Conceptual Evolution (Weekly Logic & Syntax)
 
-### 🟢 Week 1: The Independence Revolution
+### 🟢 Week 1: Introduction to LMMs and the Independence Revolution
 **The Statistical Logic**  
 The core problem is **<span style="color:#e63946"><b>Non-Independence</b></span>**. Standard $t$-tests assume each data point comes from a different person (a "stranger"). In behavioral science, we often collect 50 trials from one person.
 
@@ -64,10 +64,18 @@ $$Y_{ij} = \beta_0 + u_{0j} + e_{ij}$$
 *   **The Solution:** `lmer(Pitch ~ Attitude + (1 | Subject))`
 *   **The Bottom Line:** Adding `(1 | Subject)` means "I recognize that people aren't identical; I'm giving everyone their own starting point so I can see the treatment effect more clearly."
 
-**The functions explained**
-*   `lmer()`: The primary tool for **<span style="color:#e63946"><b>Linear Mixed-Effects Models</b></span>**.
-*   `(1 | Subject)`: Creates a **<span style="color:#e63946"><b>Random Intercept</b></span>**.
-*   **<span style="color:#e63946"><b>ICC (Intraclass Correlation)</b></span>**: The percentage of "Clumping." It answers: "How much of the variance is just due to people being different from each other?"
+**The Functions Explained**
+*   #### <span style="color:#457b9d">lmer()</span>
+    *   **Meaning:** Linear Mixed-Effects Regression.
+    *   **Does:** Estimates both **<span style="color:#e63946"><b>Fixed Effects</b></span>** (population-level averages) and **<span style="color:#e63946"><b>Random Effects</b></span>** (individual-level variations) simultaneously. It uses Maximum Likelihood to find the parameters that make the observed data most probable.
+    *   **Used:** Whenever your data is **<span style="color:#e63946"><b>nested</b></span>** or **<span style="color:#e63946"><b>clustered</b></span>** (e.g., trials within participants, students within classrooms).
+    *   **Example:** `lmer(RT ~ Condition + (1 | Subject))` models how Reaction Time varies by Condition while accounting for the fact that some participants are naturally faster than others.
+
+*   #### <span style="color:#457b9d">ICC (Intraclass Correlation)</span>
+    *   **Meaning:** A measure of the proportion of variance explained by the grouping factor.
+    *   **Does:** Calculates the ratio of **<span style="color:#e63946"><b>Between-group variance</b></span>** to **<span style="color:#e63946"><b>Total variance</b></span>**.
+    *   **Used:** To quantify the degree of **<span style="color:#e63946"><b>Clumping</b></span>** in your data. An ICC near 1 means participants are very consistent with themselves but very different from each other; an ICC near 0 means the clustering doesn't matter much.
+    *   **Example:** If your ICC for "Subject" is 0.40, it means 40% of the differences in scores are simply due to stable differences between people.
 
 **Practical Translation: Formula-to-English**
 > "Joe and Sarah start at different heights. Don't punish the treatment effect just because Joe is naturally a high-pitched person."
@@ -85,7 +93,7 @@ Random effects:
 
 ---
 
-### 🟢 Week 2: The Cleanliness Mandate
+### 🟢 Week 2: Data Preparation, Centring, and Outliers
 **The Statistical Logic**  
 Raw data is often "anchored" to meaningless points. If you don't **<span style="color:#e63946"><b>centre</b></span>** your predictors, the **<span style="color:#e63946"><b>Intercept</b></span>** represents the score at "Trial 0"—which often doesn't exist.
 
@@ -99,16 +107,25 @@ $$X_{centered} = X_i - \bar{X}$$
 *   **Centring:** `df$c_Trial <- df$Trial - mean(df$Trial)`
 *   **The Bottom Line:** Centering makes the **<span style="color:#e63946"><b>Intercept</b></span>** meaningful. It now represents the performance of an "Average Person" at the "Average Timepoint."
 
-**The functions explained**
-*   `winsor()`: Replaces outliers with the nearest "acceptable" value.
-*   **<span style="color:#e63946"><b>MAD (Median Absolute Deviation)</b></span>**: A measure of spread that isn't fooled by the outliers it's trying to find.
+**The Functions Explained**
+*   #### <span style="color:#457b9d">winsor()</span>
+    *   **Meaning:** Winsorisation of data.
+    *   **Does:** Caps extreme values at a specific percentile (e.g., 5th and 95th) instead of deleting them. This limits the influence of outliers while preserving the **<span style="color:#e63946"><b>sample size</b></span>**.
+    *   **Used:** When you have "rebel" data points (outliers) that would otherwise pull your regression line away from the true population trend.
+    *   **Example:** `winsor(df$RT, trim = 0.05)` replaces any Reaction Time in the top or bottom 5% with the value at the 95th or 5th percentile respectively.
+
+*   #### <span style="color:#457b9d">MAD (Median Absolute Deviation)</span>
+    *   **Meaning:** A robust measure of statistical dispersion.
+    *   **Does:** Calculates the median of the absolute deviations from the data's median. It provides a measure of spread that is much less affected by outliers than the Standard Deviation.
+    *   **Used:** To identify outliers using the **<span style="color:#e63946"><b>MAD Rule</b></span>** (`Median +/- 2.5 * MAD`).
+    *   **Example:** If your median is 500ms and MAD is 50ms, any score beyond 625ms (500 + 2.5*50) is flagged as an outlier.
 
 **Practical Translation: Formula-to-English**
 > "The Intercept is no longer some mythical birth-moment; it is the performance of an average person at the middle of the experiment."
 
 ---
 
-### 🟢 Weeks 3 & 4: The Inference Shield
+### 🟢 Weeks 3 & 4: Inference, p-values, and the Inference Shield
 **The Statistical Logic**  
 Mixed models are "greedy" for **<span style="color:#e63946"><b>Degrees of Freedom (df)</b></span>**. In small samples, the standard $p$-value is too optimistic.
 
@@ -116,13 +133,22 @@ Mixed models are "greedy" for **<span style="color:#e63946"><b>Degrees of Freedo
 *   **The Shield:** `car::Anova(model, type = 3, test.statistic = "F")`
 *   **The Bottom Line:** If you see **<span style="color:#e63946"><b>Decimal Degrees of Freedom</b></span>** (e.g., 28.42), the "Inference Shield" (Kenward-Roger) is working. It means your $p$-value is "honest" and protected against false positives.
 
-**The functions explained**
-*   **<span style="color:#e63946"><b>Kenward-Roger (KR)</b></span>**: A correction that lowers your degrees of freedom to account for the fact that data points from the same person aren't truly independent.
-*   **<span style="color:#e63946"><b>REML</b></span>**: Use this for your final results. It provides the most accurate estimates of variances.
+**The Functions Explained**
+*   #### <span style="color:#457b9d">Kenward-Roger (KR)</span>
+    *   **Meaning:** A small-sample correction for F-tests in LMMs.
+    *   **Does:** Adjusts the **<span style="color:#e63946"><b>Degrees of Freedom</b></span>** downwards and the F-statistic slightly to account for the fact that data points within a cluster are not fully independent. This protects against **<span style="color:#e63946"><b>Type 1 Error</b></span>**.
+    *   **Used:** In almost all behavioral science LMMs, especially when the number of clusters (participants) is relatively small (e.g., < 50).
+    *   **Example:** Using `test.statistic = "F"` in `car::Anova()` invokes this correction, often resulting in non-integer degrees of freedom.
+
+*   #### <span style="color:#457b9d">REML (Restricted Maximum Likelihood)</span>
+    *   **Meaning:** A method for estimating variance components.
+    *   **Does:** Separates the estimation of **<span style="color:#e63946"><b>Random Effects</b></span>** (variances) from the **<span style="color:#e63946"><b>Fixed Effects</b></span>**. Unlike standard ML, REML provides unbiased estimates of variances because it accounts for the degrees of freedom used by the fixed effects.
+    *   **Used:** Always for your **<span style="color:#e63946"><b>final model estimates</b></span>**.
+    *   **Example:** `lmer(..., REML = TRUE)` (the default) ensures your standard errors and variances are not systematically underestimated.
 
 ---
 
-### 🟢 Week 5: The Multi-Level Lens (Interactions)
+### 🟢 Week 5: Random Slopes, Interactions, and Follow-up Tests
 **The Statistical Logic**  
 When an interaction is present, the "Main Effects" change their meaning entirely. They are no longer "overall" effects.
 
@@ -136,16 +162,25 @@ $$Y = \beta_0 + \beta_1 A + \beta_2 B + \beta_3 (A \times B)$$
 *   **Crossed Effects:** `(1 | Subject) + (1 | Item)`
 *   **The Bottom Line:** A significant interaction is a "Warning." It tells you that you cannot talk about the main effect of `Time` without also mentioning `Diet`.
 
-**The functions explained**
-*   `emmeans()`: "Model-based" means. They represent the "pure" average after the model has filtered out the random noise.
-*   **<span style="color:#e63946"><b>Simple Slopes</b></span>**: Testing the effect of one variable at a specific level of another.
+**The Functions Explained**
+*   #### <span style="color:#457b9d">emmeans()</span>
+    *   **Meaning:** Estimated Marginal Means (Least-Squares Means).
+    *   **Does:** Calculates predicted means for different levels of your predictors, "averaging out" the effects of other variables in the model. These represent the "pure" model-based averages.
+    *   **Used:** To perform **<span style="color:#e63946"><b>Post-hoc Comparisons</b></span>** or to visualize interactions.
+    *   **Example:** `emmeans(model, pairwise ~ Condition)` compares the mean score of each Condition while controlling for all other factors in the model.
+
+*   #### <span style="color:#457b9d">test(joint = TRUE)</span>
+    *   **Meaning:** Joint (Omnibus) test of significance.
+    *   **Does:** Tests whether a group of coefficients (e.g., all levels of a factor or an interaction) are simultaneously equal to zero.
+    *   **Used:** To see if an overall effect or interaction is significant before "zooming in" on specific pairwise differences.
+    *   **Example:** `test(emtrends(model, ~ Diet, var = "Time"), joint = TRUE)` tests whether the relationship between Time and Weight differs significantly across the various Diets.
 
 **Practical Translation: Formula-to-English**
 > "A significant interaction means: 'The effect of the drug depends on the age of the patient. It works for kids, but not for adults.'"
 
 ---
 
-### 🟢 Week 6: The Pruning Principle
+### 🟢 Week 6: Model Selection and the Pruning Principle
 **The Statistical Logic**  
 When you ask too much of the data, the model becomes "greedy" and gives you a **<span style="color:#e63946"><b>Singularity Warning</b></span>**.
 
@@ -154,13 +189,22 @@ When you ask too much of the data, the model becomes "greedy" and gives you a **
 *   **The Pruning:** `(1 + IV || Subject)`
 *   **The Bottom Line:** A "Singular Fit" means you are trying to estimate a difference that doesn't exist in the data. You are trying to find a unique "Slope" for Joe, but Joe doesn't have enough data points to define a unique slope.
 
-**The functions explained**
-*   `||` (Double Pipe): The **<span style="color:#e63946"><b>Zero-Correlation Constraint</b></span>**. It tells R to stop looking for a link between the baseline and the slope.
-*   **<span style="color:#e63946"><b>Principled Pruning</b></span>**: Removing the most complex random effects until the model becomes mathematically stable.
+**The Functions Explained**
+*   #### <span style="color:#457b9d">|| (Double Pipe)</span>
+    *   **Meaning:** Zero-Correlation Constraint.
+    *   **Does:** Forces the correlation between the **<span style="color:#e63946"><b>Random Intercept</b></span>** and the **<span style="color:#e63946"><b>Random Slope</b></span>** to be exactly zero. This reduces the number of parameters the model has to estimate.
+    *   **Used:** As the first step in **<span style="color:#e63946"><b>Principled Pruning</b></span>** when a model fails to converge or is singular.
+    *   **Example:** `(1 + Condition || Subject)` allows every participant to have their own intercept and their own effect of Condition, but assumes that being faster at baseline doesn't predict being more affected by the condition.
+
+*   #### <span style="color:#457b9d">step()</span>
+    *   **Meaning:** Automated backward elimination (Pruning).
+    *   **Does:** Systematically removes non-significant random effects (slopes) and then fixed effects based on likelihood ratio tests or AIC.
+    *   **Used:** To find a more **<span style="color:#e63946"><b>parsimonious</b></span>** model that is mathematically stable while still capturing the important variance.
+    *   **Example:** `lmerTest::step(model)` will suggest which random slopes can be safely removed from the model.
 
 ---
 
-### 🟢 Week 7: The Non-Linear Frontier
+### 🟢 Week 7: Non-linear Trends and Polynomials
 **The Statistical Logic**  
 Behavior is rarely a straight line. We use **<span style="color:#e63946"><b>Polynomials</b></span>** to let the line bend.
 
@@ -173,14 +217,15 @@ $$Y = \beta_0 + \beta_1 X + \beta_2 X^2$$
 *   **The Curve:** `poly(Trial, 2)`
 *   **The Bottom Line:** A **Negative Quadratic** term means the effect is "levelling off" (e.g., learning slows down over time). A **Positive Quadratic** means the effect is "accelerating" (e.g., growth gets faster and faster).
 
-**The functions explained**
-*   **<span style="color:#e63946"><b>Orthogonal Polynomials</b></span>**: A way to model curves where the linear and quadratic terms don't "fight" (interfere) with each other.
+**The Functions Explained**
+*   #### <span style="color:#457b9d">poly(..., raw = FALSE)</span>
+    *   **Meaning:** Orthogonal Polynomials.
+    *   **Does:** Creates new versions of your predictor variable (Linear, Quadratic, etc.) that are perfectly independent of each other (uncorrelated).
+    *   **Used:** To model curves (non-linear trends) without the linear and quadratic terms "fighting" for the same variance, which would otherwise cause massive **<span style="color:#e63946"><b>Multicollinearity</b></span>**.
+    *   **Example:** `lmer(Score ~ poly(Trial, 2) + (1 | Subject))` models a curved learning trend across trials.
 
----
-
-## ❓ The Professor's Self-Check (Active Recall)
-1.  **What** does the `|` symbol actually do in an `lmer` formula?
-2.  **Why** do we see decimal degrees of freedom in a good mixed model?
-3.  **What** does a "Singular Fit" mean for the stability of your model?
-4.  **How** does the meaning of a "Main Effect" change when an interaction is significant?
-5.  **What** part of the polynomial formula tells you if a trend is "levelling off"?
+*   #### <span style="color:#457b9d">poly(..., raw = TRUE)</span>
+    *   **Meaning:** Raw (Natural) Polynomials.
+    *   **Does:** Simply squares the original variable (e.g., $Trial^2$). These are much easier to interpret in terms of the original scale of the data but suffer from high correlation between terms.
+    *   **Used:** When **<span style="color:#e63946"><b>interpretability</b></span>** of the specific curve in the original units is more important than statistical efficiency.
+    *   **Example:** If you want to predict height at age 5, raw polynomials might be easier to calculate by hand, but orthogonal ones are better for testing if the "bend" is significant.
