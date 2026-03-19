@@ -57,10 +57,10 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    Knowledge[Scientific Facts] -- X --> Action[Policy Change]
-    Knowledge --> IndividualBelief[First-Order Belief]
-    IndividualBelief --> SocialPerception[Second-Order Belief]
-    SocialPerception --> CollectiveAction[Public Support/Action]
+    Knowledge[Scientific<br/>Facts] -- X --> Action[Policy<br/>Change]
+    Knowledge --> IndividualBelief[First-Order<br/>Belief]
+    IndividualBelief --> SocialPerception[Second-Order<br/>Belief]
+    SocialPerception --> CollectiveAction[Public Support/<br/>Action]
     style Knowledge fill:#f9f,stroke:#333
     style SocialPerception fill:#a6e3a1,stroke:#333
 ```
@@ -118,12 +118,12 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    User((User)) --> S1[System 1: Automatic]
-    User --> S2[System 2: Deliberative]
-    S1 --> Nudge[Nudge: Steering]
-    S2 --> Boost[Boost: Empowerment]
-    Nudge --> Behavior[Immediate Action]
-    Boost --> Competence[Long-term Skill]
+    User((User)) --> S1[System 1:<br/>Automatic]
+    User --> S2[System 2:<br/>Deliberative]
+    S1 --> Nudge[Nudge:<br/>Steering]
+    S2 --> Boost[Boost:<br/>Empowerment]
+    Nudge --> Behavior[Immediate<br/>Action]
+    Boost --> Competence[Long-term<br/>Skill]
 ```
 
 ---
@@ -149,8 +149,8 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph LR
-    I[I-frame: Nudging Individuals] -- Crowding Out? --> S[S-frame: Changing Systems]
-    S --> Environment[Environment & Rules]
+    I[I-frame: Nudging<br/>Individuals] -- Crowding Out? --> S[S-frame: Changing<br/>Systems]
+    S --> Environment[Environment<br/>& Rules]
     Environment --> I
 ```
 
@@ -176,9 +176,9 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    Consensus[Consensus Message: 97%] --> Gateway[Gateway Belief: Scientists Agree]
-    Gateway --> KeyBeliefs[Real/Human-Caused/Risk]
-    KeyBeliefs --> PolicySupport[Support for Action]
+    Consensus[Consensus Message:<br/>97%] --> Gateway[Gateway Belief:<br/>Scientists Agree]
+    Gateway --> KeyBeliefs[Real/Human-Caused/<br/>Risk]
+    KeyBeliefs --> PolicySupport[Support for<br/>Action]
 ```
 
 ---
@@ -204,7 +204,7 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 graph LR
-    Warning[Threat Warning] --> Refutation[Weak Argument + Counter]
-    Refutation --> Immunity[Resistance to Persuasion]
-    Immunity --> Defense[Systemic Mental Defense]
+    Warning[Threat<br/>Warning] --> Refutation[Weak Argument<br/>+ Counter]
+    Refutation --> Immunity[Resistance to<br/>Persuasion]
+    Immunity --> Defense[Systemic Mental<br/>Defense]
 ```
