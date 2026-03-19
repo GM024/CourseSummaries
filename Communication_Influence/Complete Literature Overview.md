@@ -2,6 +2,19 @@
 
 > **Status:** This summary has been reviewed twice by the author. However, as a person, I may have made mistakes.
 
+**Sources Used:** 
+- Mildenberger & Tingley (2019)
+- Geiger & Swim (2016)
+- Steentjes (2017)
+- Klaperski-van der Wal et al. (2025)
+- Hertwig & Grune-Yanoff (2017)
+- Chater & Loewenstein (2023)
+- Van der Linden et al. (2015)
+- Meijers & Rutjens (2014)
+- Fransen et al. (2023)
+- Basol et al. (2020)
+- Official Course Manual and Lecture Slides (2025-2026)
+
 This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-hardened conceptual models, and verbatim keyword styling.
 
 

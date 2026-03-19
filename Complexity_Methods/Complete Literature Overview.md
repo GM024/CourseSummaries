@@ -1,10 +1,18 @@
+# Course Mastery Guide: Complexity Methods (Encyclopedia Edition)
+
 > **Status:** This summary is currently under review by the author.
 
-# File: README.md
-# Description: This is the master study guide for the Complexity Methods course. It provides a high-signal overview of all literature, conceptual models, and detailed key take-aways for every topic, specifically extracted from the exam database and GitHub assignments.
+**Sources Used:** 
+- Complexity Methods (CMBS) Assignments (AL01-AL07)
+- Official Course Book: "Complexity Methods for Behavioural Science"
+- [AL01: Univariate Systems](https://complexity-methods.github.io/assignments/CMBS/CMBSAL01_ASSIGNMENTS_uvSystems.html)
+- [AL03: Basic TSA](https://complexity-methods.github.io/assignments/CMBS/CMBSAL03_ASSIGNMENTS_BasicTSA.html)
+- [AL04: Global Scaling](https://complexity-methods.github.io/assignments/CMBS/CMBSAL04_ASSIGNMENTS_GlobalScaling.html)
+- [AL05: AutoRQA](https://complexity-methods.github.io/assignments/CMBS/CMBSAL05_ASSIGNMENTS_AutoRQA.html)
+- [AL07: Dynamic Complexity](https://complexity-methods.github.io/assignments/CMBS/CMBSAL07_ASSIGNMENTS_DynamicComplexity.html)
+- Official Exam Database and GitHub Assignments (2025-2026)
 
-# 🎓 Complexity Methods: Master Overview
-> **Description:** A professor-level synthesis of the Complexity Methods curriculum (2025-2026). Designed for rapid conceptual understanding of dynamical systems, nonlinear time-series analysis, and fractal scaling.
+This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It provides a high-signal overview of all literature, conceptual models, and detailed key take-aways for every topic, specifically extracted from the exam database and GitHub assignments.
 
 ---
 
@@ -92,13 +100,3 @@ graph BT
 **🚀 Key Take-Aways:**
 - **Dynamic Complexity:** A measure combining distribution and fluctuation to spot shifts in behavioral regimes.
 - **Network Topology:** Analyzing how nodes (variables) connect and influence each other over time.
-
----
-
-## 🔗 Master Source Database (Links)
-1. [AL01: Univariate Systems](https://complexity-methods.github.io/assignments/CMBS/CMBSAL01_ASSIGNMENTS_uvSystems.html)
-2. [AL03: Basic TSA](https://complexity-methods.github.io/assignments/CMBS/CMBSAL03_ASSIGNMENTS_BasicTSA.html)
-3. [AL04: Global Scaling](https://complexity-methods.github.io/assignments/CMBS/CMBSAL04_ASSIGNMENTS_GlobalScaling.html)
-4. [PSD Slope Chapter](https://complexity-methods.github.io/book/power-spectral-density-psd-slope.html)
-5. [AL05: AutoRQA](https://complexity-methods.github.io/assignments/CMBS/CMBSAL05_ASSIGNMENTS_AutoRQA.html)
-6. [AL07: Dynamic Complexity](https://complexity-methods.github.io/assignments/CMBS/CMBSAL07_ASSIGNMENTS_DynamicComplexity.html)

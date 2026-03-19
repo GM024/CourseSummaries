@@ -2,6 +2,14 @@
 
 > **Status:** This summary is currently under review by the author.
 
+**Sources Used:** 
+- Winter (2019): Statistics for Linguists (Selected Chapters)
+- Barr et al. (2013): Keeping it Maximal
+- Brauer & Curtin (2018): Linear Mixed-Effects Models
+- Matuschek et al. (2017): Balancing Type 1 Error and Power
+- Official Course Lecture Slides (Week 1-7)
+- R Documentation (lme4, lmerTest, car, emmeans)
+
 This guide is a master-level statistical resource optimized for the MSc Behavioural Science curriculum. It features deep-dive logic, R-syntax "Rosetta Stones," and surgical definitions of every symbol and parameter.
 
 ---
