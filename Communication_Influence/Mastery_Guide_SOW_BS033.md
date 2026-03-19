@@ -6,29 +6,29 @@ This guide is designed to optimize your learning, memorization, and application 
 
 ```mermaid
 graph TD
-    A[SOW-BS033:<br/>Communication & Influence] --> B[Information & Beliefs]
-    A --> C[Social Norms & Interaction]
-    A --> D[Choice Architecture]
-    A --> E[Systemic vs. Individual]
-    A --> F[Inoculation & Resistance]
+    A[SOW-BS033:<br/>Communication &<br/>Influence] --> B[Information &<br/>Beliefs]
+    A --> C[Social Norms &<br/>Interaction]
+    A --> D[Choice<br/>Architecture]
+    A --> E[Systemic vs.<br/>Individual]
+    A --> F[Inoculation &<br/>Resistance]
 
-    B --> B1[Mildenberger & Tingley:<br/>Second-Order Beliefs]
-    B --> B2[Van der Linden:<br/>Gateway Belief Model]
-    B --> B3[Meijers & Rutjens:<br/>Belief in Progress]
+    B --> B1[Mildenberger &<br/>Tingley:<br/>Second-Order<br/>Beliefs]
+    B --> B2[Van der Linden:<br/>Gateway Belief<br/>Model]
+    B --> B3[Meijers &<br/>Rutjens:<br/>Belief in<br/>Progress]
 
-    C --> C1[Geiger & Swim:<br/>Pluralistic Ignorance]
-    C --> C2[Steentjes:<br/>Interpersonal Activism]
-    C --> C3[Klaperski:<br/>Social Costs of Confrontation]
+    C --> C1[Geiger & Swim:<br/>Pluralistic<br/>Ignorance]
+    C --> C2[Steentjes:<br/>Interpersonal<br/>Activism]
+    C --> C3[Klaperski:<br/>Social Costs of<br/>Confrontation]
 
-    D --> D1[Hertwig:<br/>Nudges vs. Boosts]
-    D --> D2[Dorresteijn:<br/>10 kcal Deficit]
-    D --> D3[Shiota:<br/>Positive Affect]
+    D --> D1[Hertwig:<br/>Nudges vs.<br/>Boosts]
+    D --> D2[Dorresteijn:<br/>10 kcal<br/>Deficit]
+    D --> D3[Shiota:<br/>Positive<br/>Affect]
 
-    E --> E1[Nickerson & Loewenstein:<br/>I-frame vs S-frame]
-    E --> E2[Gonzales-Arcos:<br/>Consumer Resistance]
+    E --> E1[Nickerson &<br/>Loewenstein:<br/>I-frame vs<br/>S-frame]
+    E --> E2[Gonzales-Arcos:<br/>Consumer<br/>Resistance]
 
-    F --> F1[McGuire & Fransen:<br/>Inoculation Theory]
-    F --> F2[Basol:<br/>Pre-bunking & Gamification]
+    F --> F1[McGuire &<br/>Fransen:<br/>Inoculation<br/>Theory]
+    F --> F2[Basol:<br/>Pre-bunking &<br/>Gamification]
 
     B1 --- C1
     D1 --- E1
@@ -176,8 +176,8 @@ graph LR
 *   **🖼️ Visual Model:**
 ```mermaid
 graph TD
-    Consensus[Consensus Message:<br/>97%] --> Gateway[Gateway Belief:<br/>Scientists Agree]
-    Gateway --> KeyBeliefs[Real/Human-Caused/<br/>Risk]
+    Consensus[Consensus<br/>Message:<br/>97%] --> Gateway[Gateway<br/>Belief:<br/>Scientists<br/>Agree]
+    Gateway --> KeyBeliefs[Real/<br/>Human-Caused/<br/>Risk]
     KeyBeliefs --> PolicySupport[Support for<br/>Action]
 ```
 
