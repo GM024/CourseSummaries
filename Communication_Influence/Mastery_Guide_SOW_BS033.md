@@ -118,7 +118,7 @@ Think of the **"Social Mirror."** Your <span style="color:#e63946"><b>second-ord
 
 
 **Detailed Abstract**  
-Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946"><b>pluralistic ignorance</b></span> as the key driver, motivated by <span style="color:#e63946"><b>impression management</b></span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946"><b>warmth</b></span> and **competence**, leading to <span style="color:#e63946"><b>self-silencing</b></span> to protect their social reputation.
+Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946"><b>pluralistic ignorance</b></span> as the key driver, motivated by <span style="color:#e63946"><b>impression management</b></span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946"><b>warmth</b></span> and **competence**, leading to <span style="color:#e63946"><b>self-silencing</b></span> to protect their social reputation. This state of <span style="color:#e63946"><b>socially constructed silence</b></span> means that even in groups where a majority is concerned, the topic remains taboo, reinforcing the incorrect perception of a lack of consensus.
 
 
 **Figure 3**
@@ -194,6 +194,10 @@ graph TD
 #### Hertwig & Grune-Yanoff (2017): Nudging and Boosting
 
 
+**Detailed Abstract**  
+This theoretical paper provides a formal framework to distinguish between environmental steering (<span style="color:#e63946"><b>Nudges</b></span>) and cognitive empowerment (<span style="color:#e63946"><b>Boosts</b></span>). Nudges operate within a **Dual-Process Architecture**, typically targeting **System 1** by exploiting <span style="color:#e63946"><b>Cognitive Deficiencies</b></span> like inertia or present bias. In contrast, Boosts target **System 2** or sharpen System 1 heuristics, assuming <span style="color:#e63946"><b>Ecological Rationality</b></span>—the idea that the human mind is a toolbox of skills that can be improved. While nudges are often cost-effective for large-scale "repairs" (e.g., auto-enrollment), boosts are more transparent, building lasting <span style="color:#e63946"><b>competences</b></span> that persist even after the intervention is removed. The authors argue that policy makers should choose between these tools based on the target behavior's complexity and the degree of human agency desired.
+
+
 **Figure 5**
 
 *Taxonomy of Behavioral Policy Interventions*
@@ -209,6 +213,7 @@ graph TD
     
     S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Theory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ecological &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bounded &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
     Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
     Hub --> B2["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
@@ -223,6 +228,20 @@ graph TD
 *   **Boosting:** Giving people a new skill or rule-of-thumb so they can make better choices themselves.
 
 
+#### Dorresteijn et al. (2013): 10 kcal Nudges
+
+
+**Detailed Abstract**  
+A field study conducted in a Dutch hospital tested the effectiveness of low-cost <span style="color:#e63946"><b>Choice Architecture</b></span> interventions to promote healthy lifestyle choices. By leveraging <span style="color:#e63946"><b>Accessibility</b></span> and <span style="color:#e63946"><b>Point-of-Decision Prompts</b></span>, the researchers aimed to create a cumulative "10 kcal deficit" in daily energy expenditure. The study reversed the positions of butter and margarine (Accessibility) and placed signs near elevators promoting stair use (Salience). Findings showed that Accessibility was the most powerful driver: making the healthy choice easier to reach led to a sevenfold increase in margarine selection. Stair climbing also increased by 11.2%, demonstrating that minor environmental modifications can lead to significant population-level behavioral shifts without requiring conscious effort.
+
+
+#### Shiota et al. (2021): Positive Affect
+
+
+**Detailed Abstract**  
+This review examines how positive emotions (awe, pride, joy) can be leveraged for behavioral change. Grounded in <span style="color:#e63946"><b>Broaden-and-Build Theory</b></span>, the authors argue that positive affect expands cognitive scope and receptivity to new information, unlike fear-based appeals which often cause avoidance. However, they also warn of <span style="color:#e63946"><b>Moral Licensing</b></span>, where one pro-environmental action leads to a "moral credit" that justifies subsequent selfish behavior.
+
+
 ---
 
 
@@ -230,6 +249,10 @@ graph TD
 
 
 #### Chater & Loewenstein (2023): The i-frame and the s-frame
+
+
+**Detailed Abstract**  
+This critical review argues that the behavioral science community has over-focused on the <span style="color:#e63946"><b>i-frame</b></span> (individual-level nudges), which has inadvertently diverted attention from more effective <span style="color:#e63946"><b>s-frames</b></span> (systemic changes like regulation and taxation). The authors highlight the <span style="color:#e63946"><b>Fundamental Attribution Error</b></span>—the tendency to blame individual failings for systemic problems. They also describe <span style="color:#e63946"><b>Responsibilization</b></span>, where corporate actors (e.g., fossil fuel companies) shift the moral burden of global problems onto consumer choices. This focus triggers a <span style="color:#e63946"><b>Crowding Out</b></span> effect, where public support for necessary systemic laws is reduced because people feel the problem is already being addressed by individual actions. The authors advocate for "system-level change," where scientists design the rules of the game rather than just nudging the players.
 
 
 **Figure 6**
@@ -261,6 +284,13 @@ graph TD
 *   **Systemic Inaction:** When no major changes happen because everyone is focused on small, individual-level "nudges."
 
 
+#### Gonzales-Arcos et al. (2021): Consumer Resistance
+
+
+**Detailed Abstract**  
+Based on Chile's plastic bag ban, this study uses <span style="color:#e63946"><b>Social Practice Theory</b></span> to explain why consumers resist sustainability interventions. Resistance is not merely laziness; it is a battle over <span style="color:#e63946"><b>Responsibilization</b></span>. When interventions disrupt deeply embedded daily practices (materials, skills, and meanings), they trigger <span style="color:#e63946"><b>Unsettling Emotionality</b></span> like shame or frustration. Consumers may even engage in "theft" of disposable fruit bags to assert agency against perceived loss of freedom.
+
+
 ---
 
 
@@ -268,6 +298,10 @@ graph TD
 
 
 #### Van der Linden et al. (2015): Gateway Belief Model
+
+
+**Detailed Abstract**  
+This study introduces the <span style="color:#e63946"><b>Gateway Belief Model (GBM)</b></span>, which explores how perceptions of expert agreement influence policy support. The authors demonstrate that communicating the scientific consensus (e.g., "97% agreement") acts as a foundational "gateway." This triggers a drive for <span style="color:#e63946"><b>Cognitive Consistency</b></span>: once people accept that the experts agree, they update their related beliefs regarding the risk and reality of climate change. This cascading effect leads to a statistically significant increase in support for public policy action. The study suggests that consensus messaging is a robust, low-cost tool for aligning public perception with scientific reality.
 
 
 **Figure 7**
@@ -297,13 +331,31 @@ graph TD
 *   **Policy Support:** Willingness to vote for or fund government actions to solve a problem.
 
 
+#### Meijers & Rutjens (2014): Affirming Belief in Progress
+
+
+**Detailed Abstract**  
+Explores <span style="color:#e63946"><b>Compensatory Control Theory</b></span>, which states that humans seek external order when personal control is low. The authors find that affirming belief in scientific progress can paradoxically reduce environmental behavior through a <span style="color:#e63946"><b>Hydraulic Relationship</b></span>: as belief in science's ability to save the world increases, personal motivation to act pro-environmentally decreases. This is a form of outsourced responsibility or <span style="color:#color:#e63946"><b>Moral Licensing</b></span>, where the perceived safety of "progress" leads to individual passivity.
+
+
 ---
 
 
 ### 🟣 Week 6: Resistance to Persuasion & Inoculation
 
 
+#### Fransen et al. (2023): Sixty Years Later
+
+
+**Detailed Abstract**  
+This large-scale replication of McGuire’s 1961 experiment confirms the effectiveness of <span style="color:#e63946"><b>Inoculation Theory</b></span>. Using the biological metaphor of a vaccine, the study shows that <span style="color:#e63946"><b>Refutational Pre-emption</b></span> (pre-exposing people to weakened counterarguments and their refutations) builds long-term resistance to persuasion. By triggering <span style="color:#e63946"><b>Threat Awareness</b></span>, individuals are motivated to develop "mental antibodies" to defend their <span style="color:#e63946"><b>Cultural Truisms</b></span>—unquestioned beliefs that are otherwise vulnerable to attack.
+
+
 #### Basol et al. (2020): Good News about Bad News
+
+
+**Detailed Abstract**  
+Investigates <span style="color:#e63946"><b>Active Inoculation</b></span> through the "Bad News" game. Unlike passive warnings, this gamified approach builds <span style="color:#e63946"><b>Broad-Spectrum Inoculation</b></span> by teaching players to identify the *tactics* of misinformation (e.g., polarization, emotional language). By creating fake news in a controlled setting, participants build <span style="color:#e63946"><b>Cognitive Immunity</b></span>, increasing their ability to spot and resist real-world manipulative communication.
 
 
 **Figure 8**
