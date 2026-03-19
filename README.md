@@ -22,7 +22,7 @@ Every guide in this repository adheres to a strict visual and semantic protocol 
 I use "GitHub-Hardened" Mermaid diagrams to visualize conceptual hierarchies. These are engineered for zero-clipping and professional aesthetics directly within the GitHub UI.
 
 ```mermaid
-%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif" }}}%%
+%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "sans-serif" }}}%%
 graph TD
     classDef engine fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
     classDef layer fill:#f8f9fa,stroke:#457b9d,stroke-width:2px;
