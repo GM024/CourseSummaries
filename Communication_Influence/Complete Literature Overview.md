@@ -1,6 +1,6 @@
 # Course Mastery Guide: SOW-BS033 Communication and Influence (Encyclopedia Edition)
 
-> **Status:** This summary has been reviewed twice by the author. However, as a person, I may have made mistakes.
+> **Status:** This summary has been reviewed various times by the author, but is still under review.
 
 **Sources Used:** 
 - Mildenberger & Tingley (2019)
