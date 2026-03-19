@@ -13,7 +13,7 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif" }}}%%
 graph TD
     classDef hub fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
     classDef week1 fill:#e9f5f2,stroke:#2a9d8f,stroke-width:2px;
@@ -130,7 +130,7 @@ The lecture introduces a comprehensive three-pillar approach to behavior change:
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif" }}}%%
 graph TD
     classDef hub fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
     classDef week3 fill:#fefae0,stroke:#e9c46a,stroke-width:2px;
@@ -260,7 +260,7 @@ The **"Fire Drill."** You run a fake drill (inoculation) so your brain knows the
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif" }}}%%
 graph BT
     classDef layer fill:#f8f9fa,stroke:#333,stroke-width:2px;
     classDef week1 fill:#e9f5f2,stroke:#2a9d8f,stroke-width:2px;
