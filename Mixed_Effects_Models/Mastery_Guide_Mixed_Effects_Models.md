@@ -78,7 +78,7 @@ $$Y_{ij} = \beta_0 + u_{0j} + e_{ij}$$
     *   **Example:** If your ICC for "Subject" is 0.40, it means 40% of the differences in scores are simply due to stable differences between people.
 
 **Practical Translation: Formula-to-English**
-> "Joe and Sarah start at different heights. Don't punish the treatment effect just because Joe is naturally a high-pitched person."
+*   **`(1 | Subject)`** $\rightarrow$ "Joe and Sarah start at different heights. Don't punish the treatment effect just because Joe is naturally a high-pitched person."
 
 **Diagnostic Lab: Anatomy of the Variance Table**
 ```R
@@ -121,7 +121,7 @@ $$X_{centered} = X_i - \bar{X}$$
     *   **Example:** If your median is 500ms and MAD is 50ms, any score beyond 625ms (500 + 2.5*50) is flagged as an outlier.
 
 **Practical Translation: Formula-to-English**
-> "The Intercept is no longer some mythical birth-moment; it is the performance of an average person at the middle of the experiment."
+*   **`X - mean(X)`** $\rightarrow$ "The Intercept is no longer some mythical birth-moment; it is the performance of an average person at the middle of the experiment."
 
 ---
 
@@ -176,7 +176,7 @@ $$Y = \beta_0 + \beta_1 A + \beta_2 B + \beta_3 (A \times B)$$
     *   **Example:** `test(emtrends(model, ~ Diet, var = "Time"), joint = TRUE)` tests whether the relationship between Time and Weight differs significantly across the various Diets.
 
 **Practical Translation: Formula-to-English**
-> "A significant interaction means: 'The effect of the drug depends on the age of the patient. It works for kids, but not for adults.'"
+*   **`Time * Diet`** $\rightarrow$ "A significant interaction means: 'The effect of the drug depends on the age of the patient. It works for kids, but not for adults.'"
 
 ---
 
