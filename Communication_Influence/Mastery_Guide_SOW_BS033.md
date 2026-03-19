@@ -7,29 +7,29 @@ This guide is designed to optimize your learning, memorization, and application 
 ```mermaid
 %%{init: {'flowchart': {'padding': 40, 'nodeSpacing': 50, 'rankSpacing': 50}, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    A["&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Communication & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Influence &nbsp;&nbsp;&nbsp;&nbsp;"]:::category --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
+    A["&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Comms & Influence &nbsp;&nbsp;&nbsp;&nbsp;"]:::category --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
     A --> C["&nbsp;&nbsp;&nbsp;&nbsp; Social Norms & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Interaction &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
     A --> D["&nbsp;&nbsp;&nbsp;&nbsp; Choice &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Architecture &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
     A --> E["&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs. &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Individual &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
     A --> F["&nbsp;&nbsp;&nbsp;&nbsp; Inoculation & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
 
-    B --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Tingley: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Second-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Gateway Belief &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Model &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp; Meijers & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Rutjens: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief in &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Progress &nbsp;&nbsp;&nbsp;&nbsp;"]
+    B --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger:<br/>2nd-Order Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
+    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden:<br/>Gateway Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
+    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens:<br/>Belief in Progress &nbsp;&nbsp;&nbsp;&nbsp;"]
 
-    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Ignorance &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp; Steentjes: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Interpersonal &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Activism &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp; Klaperski: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Social Costs of &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Confrontation &nbsp;&nbsp;&nbsp;&nbsp;"]
+    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim:<br/>Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;"]
+    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp; Steentjes:<br/>Interpersonal Activism &nbsp;&nbsp;&nbsp;&nbsp;"]
+    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp; Klaperski:<br/>Costs of Speak-Up &nbsp;&nbsp;&nbsp;&nbsp;"]
 
-    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp; Hertwig: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Nudges vs. &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Boosts &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; 10 kcal &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Deficit &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp; Shiota: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Positive &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Affect &nbsp;&nbsp;&nbsp;&nbsp;"]
+    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp; Hertwig:<br/>Nudges vs. Boosts &nbsp;&nbsp;&nbsp;&nbsp;"]
+    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn:<br/>10 kcal Deficit &nbsp;&nbsp;&nbsp;&nbsp;"]
+    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp; Shiota:<br/>Positive Affect &nbsp;&nbsp;&nbsp;&nbsp;"]
 
-    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp; Nickerson & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Loewenstein: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; I-frame vs &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; S-frame &nbsp;&nbsp;&nbsp;&nbsp;"]
-    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Consumer &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
+    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen:<br/>I-frame vs S-frame &nbsp;&nbsp;&nbsp;&nbsp;"]
+    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos:<br/>Consumer Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
 
-    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp; McGuire & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Fransen: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Inoculation &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Theory &nbsp;&nbsp;&nbsp;&nbsp;"]
-    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp; Basol: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Pre-bunking & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Gamification &nbsp;&nbsp;&nbsp;&nbsp;"]
+    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp; Fransen et al:<br/>Inoculation Theory &nbsp;&nbsp;&nbsp;&nbsp;"]
+    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp; Basol et al:<br/>Pre-bunking Game &nbsp;&nbsp;&nbsp;&nbsp;"]
 
     B1 --- C1
     D1 --- E1
@@ -62,9 +62,9 @@ graph TD
 %%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
     Knowledge["&nbsp;&nbsp;&nbsp;&nbsp; Scientific &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Facts &nbsp;&nbsp;&nbsp;&nbsp;"] -- X --> Action["&nbsp;&nbsp;&nbsp;&nbsp; Policy &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Knowledge --> IndividualBelief["&nbsp;&nbsp;&nbsp;&nbsp; First-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
-    IndividualBelief --> SocialPerception["&nbsp;&nbsp;&nbsp;&nbsp; Second-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
-    SocialPerception --> CollectiveAction["&nbsp;&nbsp;&nbsp;&nbsp; Public Support/ &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Action &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Knowledge --> IndividualBelief["&nbsp;&nbsp;&nbsp;&nbsp; 1st-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
+    IndividualBelief --> SocialPerception["&nbsp;&nbsp;&nbsp;&nbsp; 2nd-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
+    SocialPerception --> CollectiveAction["&nbsp;&nbsp;&nbsp;&nbsp; Public Support &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; & Action &nbsp;&nbsp;&nbsp;&nbsp;"]
     style Knowledge fill:#f9f,stroke:#333
     style SocialPerception fill:#a6e3a1,stroke:#333
 ```
@@ -93,7 +93,7 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 %%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
-graph LR
+graph TD
     Perception["&nbsp;&nbsp;&nbsp;&nbsp; Perceived &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Concern &nbsp;&nbsp;&nbsp;&nbsp;"] --> Talk["&nbsp;&nbsp;&nbsp;&nbsp; Willingness &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; to Discuss &nbsp;&nbsp;&nbsp;&nbsp;"]
     Talk --> Norm["&nbsp;&nbsp;&nbsp;&nbsp; Social &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Norm Shift &nbsp;&nbsp;&nbsp;&nbsp;"]
     Norm --> Behavior["&nbsp;&nbsp;&nbsp;&nbsp; Behavioral &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
@@ -155,10 +155,10 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 %%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
-graph LR
-    I["&nbsp;&nbsp;&nbsp;&nbsp; I-frame: Nudging &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Individuals &nbsp;&nbsp;&nbsp;&nbsp;"] -- Crowding Out? --> S["&nbsp;&nbsp;&nbsp;&nbsp; S-frame: Changing &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Systems &nbsp;&nbsp;&nbsp;&nbsp;"]
-    S --> Environment["&nbsp;&nbsp;&nbsp;&nbsp; Environment &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; & Rules &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Environment --> I
+graph TD
+    I["&nbsp;&nbsp;&nbsp;&nbsp; I-frame: Nudging &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Individuals &nbsp;&nbsp;&nbsp;&nbsp;"] -- Crowding Out? --> S["&nbsp;&nbsp;&nbsp;&nbsp; S-frame: System &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
+    S --> Env["&nbsp;&nbsp;&nbsp;&nbsp; Environment &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; & Rules &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Env --> I
 ```
 
 ---
@@ -184,9 +184,9 @@ graph LR
 ```mermaid
 %%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    Consensus["&nbsp;&nbsp;&nbsp;&nbsp; Consensus &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Message: 97% &nbsp;&nbsp;&nbsp;&nbsp;"] --> Gateway["&nbsp;&nbsp;&nbsp;&nbsp; Gateway &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Scientists &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Agree &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Gateway --> KeyBeliefs["&nbsp;&nbsp;&nbsp;&nbsp; Real/ &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Human-Caused/ &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Risk &nbsp;&nbsp;&nbsp;&nbsp;"]
-    KeyBeliefs --> PolicySupport["&nbsp;&nbsp;&nbsp;&nbsp; Support for &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Action &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Consensus["&nbsp;&nbsp;&nbsp;&nbsp; Consensus: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; 97% Agree &nbsp;&nbsp;&nbsp;&nbsp;"] --> Gateway["&nbsp;&nbsp;&nbsp;&nbsp; Gateway: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Scientists Agree &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Gateway --> KeyBeliefs["&nbsp;&nbsp;&nbsp;&nbsp; Key Beliefs: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Real/Human/Risk &nbsp;&nbsp;&nbsp;&nbsp;"]
+    KeyBeliefs --> PolicySupport["&nbsp;&nbsp;&nbsp;&nbsp; Support for &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Policy Action &nbsp;&nbsp;&nbsp;&nbsp;"]
 ```
 
 ---
@@ -212,8 +212,8 @@ graph TD
 *   **🖼️ Visual Model:**
 ```mermaid
 %%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
-graph LR
+graph TD
     Warning["&nbsp;&nbsp;&nbsp;&nbsp; Threat &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Warning &nbsp;&nbsp;&nbsp;&nbsp;"] --> Refutation["&nbsp;&nbsp;&nbsp;&nbsp; Weak Argument &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; + Counter &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Refutation --> Immunity["&nbsp;&nbsp;&nbsp;&nbsp; Resistance to &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Persuasion &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Immunity --> Defense["&nbsp;&nbsp;&nbsp;&nbsp; Systemic &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Mental Defense &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Refutation --> Immunity["&nbsp;&nbsp;&nbsp;&nbsp; Persuasion &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Immunity --> Defense["&nbsp;&nbsp;&nbsp;&nbsp; Systemic Mental &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Defense &nbsp;&nbsp;&nbsp;&nbsp;"]
 ```
