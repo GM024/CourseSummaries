@@ -1,7 +1,7 @@
 # Course Mastery Guide: SOW-BS033 Communication and Influence (Encyclopedia Edition)
 
 
-This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-native conceptual models, and verbatim keyword styling.
+This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-over-engineered conceptual models, and verbatim keyword styling.
 
 
 ### 1. Global Topology
@@ -13,38 +13,38 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true, 'padding': 20 }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    A["&nbsp;&nbsp; SOW-BS033:<br/><span style='color:#e63946'><b>Communication & Influence</b></span> &nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;"]:::sandbox
-    A --> C["&nbsp;&nbsp; Social Norms & Interactions &nbsp;&nbsp;"]:::sandbox
-    A --> D["&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;"]:::sandbox
-    A --> E["&nbsp;&nbsp; Systemic vs. Individual &nbsp;&nbsp;"]:::sandbox
-    A --> F["&nbsp;&nbsp; Resistance & Inoculation &nbsp;&nbsp;"]:::sandbox
+    A["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Comms & Influence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub --> B["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Belief Systems &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    A --> C["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Norms &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interactions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    A --> D["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Choice<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Architecture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    A --> E["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Individual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    A --> F["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resistance &<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 
-    B --> B1["&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;"]:::sandbox
-    B --> B2["&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;"]:::sandbox
-    B --> B3["&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;"]:::sandbox
+    B --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
 
-    C --> C1["&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;"]:::sandbox
-    C --> C2["&nbsp;&nbsp; Steentjes &nbsp;&nbsp;"]:::sandbox
-    C --> C3["&nbsp;&nbsp; Klaperski &nbsp;&nbsp;"]:::sandbox
+    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Steentjes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Klaperski &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
 
-    D --> D1["&nbsp;&nbsp; Hertwig &nbsp;&nbsp;"]:::sandbox
-    D --> D2["&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;"]:::sandbox
-    D --> D3["&nbsp;&nbsp; Shiota &nbsp;&nbsp;"]:::sandbox
+    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hertwig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shiota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
 
-    E --> E1["&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;"]:::sandbox
-    E --> E2["&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;"]:::sandbox
+    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
 
-    F --> F1["&nbsp;&nbsp; Fransen &nbsp;&nbsp;"]:::sandbox
-    F --> F2["&nbsp;&nbsp; Basol &nbsp;&nbsp;"]:::sandbox
+    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fransen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
+    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Basol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::sandbox
 ```
 
 
-*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The central hub is the course itself, which branches into the six thematic weeks. Each paper is categorized under its respective theoretical pillar to facilitate rapid identification of the course's diverse psychological perspectives. The use of GitHub-native font stacks ensures that each node box is calculated with pixel-perfect accuracy to fit the verbatim labels.
+*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The use of over-engineered node sizing, featuring vertical line breaks and horizontal buffers, ensures that every core text element is rendered with maximum clearance from node borders on the GitHub web interface. This structural clarity supports the learning objective of outlining diverse theoretical perspectives by providing a visual anchor for the course's complex literature.
 
 
 ---
@@ -66,24 +66,24 @@ This research challenges the traditional <span style="color:#e63946"><b>Informat
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true, 'padding': 20 }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Second-Order Beliefs</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Second-Order</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Beliefs</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Simulation View &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;"]):::sandbox --- Hub
-    S3(["&nbsp;&nbsp; Anchoring & Adjustment &nbsp;&nbsp;"]):::sandbox --- Hub
-    S4(["&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simulation View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Anchoring & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjustment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S4(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Spiral of Silence &nbsp;&nbsp;"]:::sandbox
-    Hub --> B2["&nbsp;&nbsp; Political Inaction &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spiral of Silence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    Hub --> B2["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Political Inaction &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
-*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central Hub represents the meta-cognitive state of holding a second-order belief. The rounded satellite nodes depict the internal cognitive processes—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction," where policy-makers fail to act because they misjudge public consensus. Using the GitHub system font ensures that the boxes perfectly encapsulate these complex theoretical terms.
+*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central Hub represents the meta-cognitive state of holding a second-order belief. The rounded satellite nodes depict the internal cognitive mechanisms—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction." The diagram is over-engineered with vertical spacers and 6-space horizontal buffers to ensure that no verbatim text element is clipped by GitHub's rendering engine, regardless of the local system font.
 
 
 **How to remember**  
@@ -109,22 +109,22 @@ Investigates the "Climate of Silence" where public discussion lags behind privat
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Socially Constructed Silence</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Socially Constructed</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Silence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Impression Management &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;"]):::sandbox --- Hub
-    S3(["&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Impression &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth vs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Self-silencing &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Self-silencing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
-*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing" to avoid being labeled with negative stereotypes. The native font alignment ensures that longer strings like "Impression Management" are rendered with full border visibility.
+*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing." The over-engineered node sizing ensures that even complex terms like "Impression Management" are fully displayed without clipping on any browser or device.
 
 
 #### Klaperski-van der Wal et al. (2025): The Competent Confronter
@@ -136,18 +136,18 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Confronter's Dilemma</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Confronter's</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Dilemma</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Social Sanctioning &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Warmth Penalty &nbsp;&nbsp;"]):::sandbox --- Hub
-    S3(["&nbsp;&nbsp; Domain Competence &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sanctioning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth Penalty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domain Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Social Costs &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Costs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
@@ -166,18 +166,18 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Decision Science</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Decision Science</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Theory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ecological &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;"]:::sandbox
-    Hub --> B2["&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
+    Hub --> B2["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
@@ -196,18 +196,18 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Policy Framing</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Policy Framing</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;"]):::sandbox --- Hub
-    S3(["&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Systemic Inaction &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Systemic Inaction &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
@@ -226,17 +226,17 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Consensus Gateway</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Consensus</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Gateway</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cognitive &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Consistency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Policy Support &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Policy Support &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
@@ -255,22 +255,22 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
+%%{init: { 'flowchart': { 'padding': 30, 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '12px', 'fontFamily': '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif' }}}%%
 graph TD
     classDef sandbox stroke-width:2px;
     classDef hub stroke-width:3px,font-weight:bold;
 
-    Hub["&nbsp;&nbsp; <span style='color:#e63946'><b>Cognitive Immunity</b></span> &nbsp;&nbsp;"]:::hub
+    Hub["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Cognitive</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Immunity</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::hub
     
-    S1(["&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;"]):::sandbox --- Hub
-    S2(["&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;"]):::sandbox --- Hub
-    S3(["&nbsp;&nbsp; Refutational Pre-emption &nbsp;&nbsp;"]):::sandbox --- Hub
+    S1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
+    S3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refutational &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pre-emption &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp; Misinfo Resistance &nbsp;&nbsp;"]:::sandbox
+    Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Misinfo Resistance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
 
 
-*Note.* Models the build-up of mental defense. The Immunity Hub is established through "Active Inoculation" (learning by doing) and "Tactic Spotting," creating a measurable resistance to persuasive manipulation.
+*Note.* Models the build-up of mental defense. The Immunity Hub is established through "Active Inoculation" (learning by doing) and "Tactic Spotting." The over-engineered buffers ensure that every complex term remains centered and fully visible on the GitHub web interface.
 
 
 **How to remember**  
