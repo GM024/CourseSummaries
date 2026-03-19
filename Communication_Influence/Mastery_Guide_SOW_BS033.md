@@ -44,7 +44,15 @@ graph TD
 ```
 
 
-*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The use of over-engineered node sizing, featuring vertical line breaks and horizontal buffers, ensures that every core text element is rendered with maximum clearance from node borders on the GitHub web interface. This structural clarity supports the learning objective of outlining diverse theoretical perspectives by providing a visual anchor for the course's complex literature.
+*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing.
+
+
+**Diagram Glossary (Figure 1)**
+*   **Information & Belief Systems:** The study of how individuals acquire, update, and meta-perceive scientific information and collective norms.
+*   **Social Norms & Interactions:** The exploration of how interpersonal talk and group-level misperceptions (pluralistic ignorance) shape behavior.
+*   **Choice Architecture:** The design of environments (nudges) or skill-building (boosts) to steer or empower decision-making.
+*   **Systemic vs. Individual:** The critical evaluation of whether behavioral problems should be solved at the level of the person (i-frame) or the system (s-frame).
+*   **Resistance & Inoculation:** The study of psychological defense mechanisms against persuasive manipulation and misinformation.
 
 
 ---
@@ -83,7 +91,17 @@ graph TD
 ```
 
 
-*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central Hub represents the meta-cognitive state of holding a second-order belief. The rounded satellite nodes depict the internal cognitive mechanisms—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction." The diagram is over-engineered with vertical spacers and 6-space horizontal buffers to ensure that no verbatim text element is clipped by GitHub's rendering engine, regardless of the local system font.
+*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central Hub represents the meta-cognitive state of holding a second-order belief.
+
+
+**Diagram Glossary (Figure 2)**
+*   **Second-Order Beliefs:** A person's estimate of what other people think or believe.
+*   **Simulation View:** Making an inference about another's mind by imagining yourself in their situation.
+*   **Egocentric Bias:** Using your own belief as the primary reference point for guessing the beliefs of others.
+*   **Anchoring & Adjustment:** A mental shortcut where you start with an initial value (anchor) and fail to adjust away from it sufficiently.
+*   **Pluralistic Ignorance:** When a majority of people hold a belief but incorrectly think that most others disagree with them.
+*   **Spiral of Silence:** The behavioral outcome where people stop expressing their views because they fear they are in the minority.
+*   **Political Inaction:** The failure of policy-makers to enact change because they misperceive a lack of public mandate.
 
 
 **How to remember**  
@@ -124,7 +142,15 @@ graph TD
 ```
 
 
-*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing." The over-engineered node sizing ensures that even complex terms like "Impression Management" are fully displayed without clipping on any browser or device.
+*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence.
+
+
+**Diagram Glossary (Figure 3)**
+*   **Socially Constructed Silence:** A quietness in society caused by shared psychological misperceptions rather than a lack of actual interest.
+*   **Impression Management:** The process of trying to control how other people view you.
+*   **Warmth vs Competence:** The two main ways we judge people (how "nice" they are vs how "smart/capable" they are).
+*   **Pluralistic Ignorance:** Thinking you are the only one who cares when actually most people care.
+*   **Self-silencing:** Choosing not to speak your mind to avoid social awkwardness or judgment.
 
 
 #### Klaperski-van der Wal et al. (2025): The Competent Confronter
@@ -149,6 +175,14 @@ graph TD
     
     Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Costs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
+
+
+**Diagram Glossary (Figure 4)**
+*   **Confronter's Dilemma:** The conflict between wanting to stand up for your values and wanting to be liked by your friends.
+*   **Social Sanctioning:** When a group "punishes" a member (e.g., by ignoring them) for breaking a social rule.
+*   **Warmth Penalty:** Being seen as less friendly or pleasant because you corrected someone else's behavior.
+*   **Domain Competence:** Being seen as very knowledgeable about the specific topic you are talking about.
+*   **Social Costs:** The negative impact on your reputation or friendships after you speak up.
 
 
 ---
@@ -181,6 +215,14 @@ graph TD
 ```
 
 
+**Diagram Glossary (Figure 5)**
+*   **Decision Science:** The study of how people make choices and how to help them make better ones.
+*   **Dual-Process Theory:** The idea that the brain has two modes: System 1 (fast/emotional) and System 2 (slow/logical).
+*   **Ecological Rationality:** The idea that our "gut feelings" are actually smart if they match the situation we are in.
+*   **Nudging:** Gently pushing people toward a choice by changing their environment (e.g., placing healthy food at eye-level).
+*   **Boosting:** Giving people a new skill or rule-of-thumb so they can make better choices themselves.
+
+
 ---
 
 
@@ -211,6 +253,14 @@ graph TD
 ```
 
 
+**Diagram Glossary (Figure 6)**
+*   **Policy Framing:** How a problem is "packaged" or described to the public.
+*   **Attribution Error:** Blaming an individual's character for a problem that is actually caused by the system.
+*   **Responsibilization:** Making individuals feel it is their personal duty to solve massive problems like climate change.
+*   **Crowding Out:** When focusing on small individual actions makes people care less about big systemic changes (like laws).
+*   **Systemic Inaction:** When no major changes happen because everyone is focused on small, individual-level "nudges."
+
+
 ---
 
 
@@ -238,6 +288,13 @@ graph TD
     
     Hub --> B1["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Policy Support &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::sandbox
 ```
+
+
+**Diagram Glossary (Figure 7)**
+*   **Consensus Gateway:** A "key" belief (that scientists agree) which opens the door to other beliefs.
+*   **Expert Consensus:** The degree to which experts in a field agree on a specific fact.
+*   **Cognitive Consistency:** The human drive to make all our internal beliefs match each other logically.
+*   **Policy Support:** Willingness to vote for or fund government actions to solve a problem.
 
 
 ---
@@ -270,7 +327,12 @@ graph TD
 ```
 
 
-*Note.* Models the build-up of mental defense. The Immunity Hub is established through "Active Inoculation" (learning by doing) and "Tactic Spotting." The over-engineered buffers ensure that every complex term remains centered and fully visible on the GitHub web interface.
+**Diagram Glossary (Figure 8)**
+*   **Cognitive Immunity:** A "mental vaccine" that makes you resistant to being tricked by lies.
+*   **Active Inoculation:** Building immunity by practicing how to create (and refute) fake news yourself.
+*   **Tactic Spotting:** Learning to recognize the specific "tricks" used in misinformation (like impersonating experts).
+*   **Refutational Pre-emption:** Seeing a lie and its explanation *before* you hear it in the real world.
+*   **Misinfo Resistance:** The ability to not be fooled by fake news or manipulative arguments.
 
 
 **How to remember**  
