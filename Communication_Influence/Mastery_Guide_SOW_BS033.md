@@ -1,7 +1,7 @@
 # Course Mastery Guide: SOW-BS033 Communication and Influence (Encyclopedia Edition)
 
 
-This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-optimized conceptual models, and verbatim keyword styling.
+This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-optimized dynamic conceptual models, and verbatim keyword styling.
 
 
 ### 1. Global Topology
@@ -13,38 +13,38 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    A["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Communication & Influence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
-    A --> C["&nbsp;&nbsp;&nbsp;&nbsp; Social Norms & Interactions &nbsp;&nbsp;&nbsp;&nbsp;"]
-    A --> D["&nbsp;&nbsp;&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;&nbsp;&nbsp;"]
-    A --> E["&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs. Individual &nbsp;&nbsp;&nbsp;&nbsp;"]
-    A --> F["&nbsp;&nbsp;&nbsp;&nbsp; Resistance & Inoculation &nbsp;&nbsp;&nbsp;&nbsp;"]
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
 
-    B --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;&nbsp;&nbsp;"]
+    A["SOW-BS033:<br/><span style='color:#e63946'><b>Communication & Influence</b></span>"]:::hub --> B["Information & Beliefs"]:::sandbox
+    A --> C["Social Norms & Interactions"]:::sandbox
+    A --> D["Choice Architecture"]:::sandbox
+    A --> E["Systemic vs. Individual"]:::sandbox
+    A --> F["Resistance & Inoculation"]:::sandbox
 
-    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp; Steentjes &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp; Klaperski &nbsp;&nbsp;&nbsp;&nbsp;"]
+    B --> B1["Mildenberger"]:::sandbox
+    B --> B2["Van der Linden"]:::sandbox
+    B --> B3["Meijers & Rutjens"]:::sandbox
 
-    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp; Hertwig &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp; Shiota &nbsp;&nbsp;&nbsp;&nbsp;"]
+    C --> C1["Geiger & Swim"]:::sandbox
+    C --> C2["Steentjes"]:::sandbox
+    C --> C3["Klaperski"]:::sandbox
 
-    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;&nbsp;&nbsp;"]
-    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;&nbsp;&nbsp;"]
+    D --> D1["Hertwig"]:::sandbox
+    D --> D2["Dorresteijn"]:::sandbox
+    D --> D3["Shiota"]:::sandbox
 
-    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp; Fransen &nbsp;&nbsp;&nbsp;&nbsp;"]
-    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp; Basol &nbsp;&nbsp;&nbsp;&nbsp;"]
+    E --> E1["Chater & Loewen"]:::sandbox
+    E --> E2["Gonzales-Arcos"]:::sandbox
 
-    classDef hub font-weight:bold,stroke-width:3px;
-    classDef default stroke-width:2px;
+    F --> F1["Fransen"]:::sandbox
+    F --> F2["Basol"]:::sandbox
 ```
 
 
-*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The central hub is the course itself, which branches into the six thematic weeks. Each paper is categorized under its respective theoretical pillar to facilitate rapid identification of the course's diverse psychological perspectives.
+*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The central hub is the course itself, which branches into the six thematic weeks. Each paper is categorized under its respective theoretical pillar to facilitate rapid identification of the course's diverse psychological perspectives. The use of dynamic node sizing ensures that each category title is perfectly centered and legible across all viewing platforms.
 
 
 ---
@@ -57,7 +57,7 @@ graph TD
 
 
 **Detailed Abstract**  
-This research challenges the traditional <span style="color:#e63946">**Information Deficit Model</b></span>—the assumption that providing more scientific facts is the primary route to behavioral change. The authors argue that collective action is often paralyzed not by a lack of knowledge, but by biased <span style="color:#e63946">**second-order beliefs</b></span>: our perceptions of what *others* believe. Through six massive surveys in the US and China, the study identifies a systemic <span style="color:#e63946">**egocentric bias</b></span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946">**pluralistic ignorance effect</b></span>, where a majority incorrectly assumes they are in the minority. This misperception creates a <span style="color:#e63946">**spiral of silence</b></span>, where individuals self-censor to avoid social isolation. Crucially, political elites (e.g., congressional staffers) are found to be even more biased than the public, often underestimating constituent support for climate policy by significant margins. This paper fulfill's the objective of outlining how social perceptions shape political reality.
+This research challenges the traditional <span style="color:#e63946"><b>Information Deficit Model</b></span>—the assumption that providing more scientific facts is the primary route to behavioral change. The authors argue that collective action is often paralyzed not by a lack of knowledge, but by biased <span style="color:#e63946"><b>second-order beliefs</b></span>: our perceptions of what *others* believe. Through six massive surveys in the US and China, the study identifies a systemic <span style="color:#e63946"><b>egocentric bias</b></span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946"><b>pluralistic ignorance effect</b></span>, where a majority incorrectly assumes they are in the minority. This misperception creates a <span style="color:#e63946"><b>spiral of silence</b></span>, where individuals self-censor to avoid social isolation. Crucially, political elites (e.g., congressional staffers) are found to be even more biased than the public, often underestimating constituent support for climate policy by significant margins. This paper fulfill's the objective of outlining how social perceptions shape political reality.
 
 
 **Figure 2**
@@ -66,28 +66,28 @@ This research challenges the traditional <span style="color:#e63946">**Informati
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Second-Order Beliefs</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Second-Order Beliefs</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simulation View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Anchoring & Adjustment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S4(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Simulation View"]):::sandbox --- Hub
+    S2(["Egocentric Bias"]):::sandbox --- Hub
+    S3(["Anchoring & Adjustment"]):::sandbox --- Hub
+    S4(["Pluralistic Ignorance"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Spiral of Silence &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Political Inaction &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Spiral of Silence"]:::sandbox
+    Hub --> B2["Political Inaction"]:::sandbox
 ```
 
 
-*Note.* This conceptual network illustrates the psychological drivers that transform subjective individual beliefs into biased meta-perceptions of the collective. The central Hub (red-bolded) represents the meta-cognitive target. The rounded satellite nodes depict the internal cognitive mechanisms—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction," where policy-makers fail to act because they misjudge public consensus.
+*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central Hub (red-bolded) represents the meta-cognitive target. The rounded satellite nodes depict the internal cognitive mechanisms—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction," where policy-makers fail to act because they misjudge public consensus. The dynamic box architecture prevents text clipping by calculating node dimensions based on the verbatim labels.
 
 
 **How to remember**  
-Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-order beliefs</b></span> are just a reflection of your own views (<span style="color:#e63946">**egocentric bias</b></span>). You assume everyone sees what you see, which leads to the **"Lonely Majority"**—everyone wants to act, but no one speaks because they think they're alone.
+Think of the **"Social Mirror."** Your <span style="color:#e63946"><b>second-order beliefs</b></span> are just a reflection of your own views (<span style="color:#e63946"><b>egocentric bias</b></span>). You assume everyone sees what you see, which leads to the **"Lonely Majority"**—everyone wants to act, but no one speaks because they think they're alone.
 
 
 ---
@@ -100,7 +100,7 @@ Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-orde
 
 
 **Detailed Abstract**  
-Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946">**pluralistic ignorance</b></span> as the key driver, motivated by <span style="color:#e63946">**impression management</b></span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946">**warmth</b></span> and **competence**, leading to <span style="color:#e63946">**self-silencing</b></span> to protect their social reputation.
+Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946"><b>pluralistic ignorance</b></span> as the key driver, motivated by <span style="color:#e63946"><b>impression management</b></span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946"><b>warmth</b></span> and **competence**, leading to <span style="color:#e63946"><b>self-silencing</b></span> to protect their social reputation.
 
 
 **Figure 3**
@@ -109,22 +109,22 @@ Investigates the "Climate of Silence" where public discussion lags behind privat
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Socially Constructed Silence</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Socially Constructed Silence</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Impression Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Impression Management"]):::sandbox --- Hub
+    S2(["Warmth vs Competence"]):::sandbox --- Hub
+    S3(["Pluralistic Ignorance"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Self-silencing &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Self-silencing"]:::sandbox
 ```
 
 
-*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing" to avoid being labeled with negative stereotypes.
+*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing" to avoid being labeled with negative stereotypes. The content-aware node sizing ensures that complex terms like "Impression Management" are fully encapsulated within their borders.
 
 
 #### Klaperski-van der Wal et al. (2025): The Competent Confronter
@@ -136,18 +136,18 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Confronter's Dilemma</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Confronter's Dilemma</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Sanctioning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth Penalty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domain Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Social Sanctioning"]):::sandbox --- Hub
+    S2(["Warmth Penalty"]):::sandbox --- Hub
+    S3(["Domain Competence"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Social Costs &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Social Costs"]:::sandbox
 ```
 
 
@@ -169,18 +169,18 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Decision Science</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Decision Science</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Dual-Process Theory"]):::sandbox --- Hub
+    S2(["Ecological Rationality"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Nudging (System 1)"]:::sandbox
+    Hub --> B2["Boosting (System 2)"]:::sandbox
 ```
 
 
@@ -202,22 +202,22 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Policy Framing</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Policy Framing</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Attribution Error"]):::sandbox --- Hub
+    S2(["Responsibilization"]):::sandbox --- Hub
+    S3(["Crowding Out"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Systemic Inaction &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Systemic Inaction"]:::sandbox
 ```
 
 
-*Note.* This model illustrates the diversionary effect of individual-level framing (<span style="color:#e63946">**i-frame</b></span>). It shows how shifting blame onto consumers (<span style="color:#e63946">**responsibilization</b></span>) leads to "Systemic Inaction" by "Crowding Out" support for broader systemic changes.
+*Note.* This model illustrates the diversionary effect of individual-level framing (<span style="color:#e63946"><b>i-frame</b></span>). It shows how shifting blame onto consumers (<span style="color:#e63946"><b>responsibilization</b></span>) leads to "Systemic Inaction" by "Crowding Out" support for broader systemic changes.
 
 
 ---
@@ -235,17 +235,17 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Consensus Gateway</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Consensus Gateway</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Expert Consensus"]):::sandbox --- Hub
+    S2(["Cognitive Consistency"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Policy Support &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Policy Support"]:::sandbox
 ```
 
 
@@ -267,19 +267,23 @@ graph TD
 
 
 ```mermaid
-%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: { 'flowchart': { 'useMaxWidth': false, 'htmlLabels': true }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'><b>Cognitive Immunity</b></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    classDef sandbox padding-left:20px,padding-right:20px,padding-top:10px,padding-bottom:10px,stroke-width:2px;
+    classDef hub padding-left:25px,padding-right:25px,padding-top:15px,padding-bottom:15px,stroke-width:3px,font-weight:bold;
+
+    Hub["<span style='color:#e63946'><b>Cognitive Immunity</b></span>"]:::hub
     
-    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
-    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refutational Pre-emption &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S1(["Active Inoculation"]):::sandbox --- Hub
+    S2(["Tactic Spotting"]):::sandbox --- Hub
+    S3(["Refutational Pre-emption"]):::sandbox --- Hub
     
-    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Misinfo Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
-    
-    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
-    classDef default stroke-width:2px;
+    Hub --> B1["Misinfo Resistance"]:::sandbox
 ```
 
 
 *Note.* Models the build-up of mental defense. The Immunity Hub is established through "Active Inoculation" (learning by doing) and "Tactic Spotting," creating a measurable resistance to persuasive manipulation.
+
+
+**How to remember**  
+The **"Fire Drill."** You run a fake drill (inoculation) so your brain knows the exits when a real fire (misinformation) starts.
