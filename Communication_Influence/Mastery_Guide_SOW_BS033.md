@@ -1,246 +1,392 @@
-# Course Mastery Guide: SOW-BS033 Communication and Influence
+# Course Mastery Guide: SOW-BS033 Communication and Influence (Encyclopedia Edition)
 
-This guide is designed to optimize your learning, memorization, and application of the core theories in social influence and communication science.
 
-### 1. Global Mindmap (Network)
+This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, APA-formatted conceptual models, and verbatim keyword styling to facilitate the learning objectives of outlining, explaining, and critically evaluating social influence perspectives.
+
+
+### 1. Global Topology
+
+
+**Figure 1**
+
+*Structural Map of Social Influence and Communication Theories*
+
 
 ```mermaid
-%%{init: {'flowchart': {'padding': 40, 'nodeSpacing': 50, 'rankSpacing': 50}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    A["&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Comms & Influence &nbsp;&nbsp;&nbsp;&nbsp;"]:::category --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
-    A --> C["&nbsp;&nbsp;&nbsp;&nbsp; Social Norms & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Interaction &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
-    A --> D["&nbsp;&nbsp;&nbsp;&nbsp; Choice &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Architecture &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
-    A --> E["&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs. &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Individual &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
-    A --> F["&nbsp;&nbsp;&nbsp;&nbsp; Inoculation & &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]:::category
+    A["&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;<br/>&nbsp;&nbsp; Communication & Influence &nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;"]
+    A --> C["&nbsp;&nbsp; Social Norms & Interactions &nbsp;&nbsp;"]
+    A --> D["&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;"]
+    A --> E["&nbsp;&nbsp; Systemic vs. Individual &nbsp;&nbsp;"]
+    A --> F["&nbsp;&nbsp; Resistance & Inoculation &nbsp;&nbsp;"]
 
-    B --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Mildenberger:<br/>2nd-Order Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Van der Linden:<br/>Gateway Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
-    B --> B3["&nbsp;&nbsp;&nbsp;&nbsp; Meijers & Rutjens:<br/>Belief in Progress &nbsp;&nbsp;&nbsp;&nbsp;"]
+    B --> B1["&nbsp;&nbsp; Mildenberger &nbsp;&nbsp;"]
+    B --> B2["&nbsp;&nbsp; Van der Linden &nbsp;&nbsp;"]
+    B --> B3["&nbsp;&nbsp; Meijers & Rutjens &nbsp;&nbsp;"]
 
-    C --> C1["&nbsp;&nbsp;&nbsp;&nbsp; Geiger & Swim:<br/>Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C2["&nbsp;&nbsp;&nbsp;&nbsp; Steentjes:<br/>Interpersonal Activism &nbsp;&nbsp;&nbsp;&nbsp;"]
-    C --> C3["&nbsp;&nbsp;&nbsp;&nbsp; Klaperski:<br/>Costs of Speak-Up &nbsp;&nbsp;&nbsp;&nbsp;"]
+    C --> C1["&nbsp;&nbsp; Geiger & Swim &nbsp;&nbsp;"]
+    C --> C2["&nbsp;&nbsp; Steentjes &nbsp;&nbsp;"]
+    C --> C3["&nbsp;&nbsp; Klaperski &nbsp;&nbsp;"]
 
-    D --> D1["&nbsp;&nbsp;&nbsp;&nbsp; Hertwig:<br/>Nudges vs. Boosts &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D2["&nbsp;&nbsp;&nbsp;&nbsp; Dorresteijn:<br/>10 kcal Deficit &nbsp;&nbsp;&nbsp;&nbsp;"]
-    D --> D3["&nbsp;&nbsp;&nbsp;&nbsp; Shiota:<br/>Positive Affect &nbsp;&nbsp;&nbsp;&nbsp;"]
+    D --> D1["&nbsp;&nbsp; Hertwig &nbsp;&nbsp;"]
+    D --> D2["&nbsp;&nbsp; Dorresteijn &nbsp;&nbsp;"]
+    D --> D3["&nbsp;&nbsp; Shiota &nbsp;&nbsp;"]
 
-    E --> E1["&nbsp;&nbsp;&nbsp;&nbsp; Chater & Loewen:<br/>I-frame vs S-frame &nbsp;&nbsp;&nbsp;&nbsp;"]
-    E --> E2["&nbsp;&nbsp;&nbsp;&nbsp; Gonzales-Arcos:<br/>Consumer Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
+    E --> E1["&nbsp;&nbsp; Chater & Loewen &nbsp;&nbsp;"]
+    E --> E2["&nbsp;&nbsp; Gonzales-Arcos &nbsp;&nbsp;"]
 
-    F --> F1["&nbsp;&nbsp;&nbsp;&nbsp; Fransen et al:<br/>Inoculation Theory &nbsp;&nbsp;&nbsp;&nbsp;"]
-    F --> F2["&nbsp;&nbsp;&nbsp;&nbsp; Basol et al:<br/>Pre-bunking Game &nbsp;&nbsp;&nbsp;&nbsp;"]
+    F --> F1["&nbsp;&nbsp; Fransen &nbsp;&nbsp;"]
+    F --> F2["&nbsp;&nbsp; Basol &nbsp;&nbsp;"]
 
-    B1 --- C1
-    D1 --- E1
-    F1 --- B2
-
-    classDef category font-weight:bold,stroke-width:2px,padding:40px;
+    classDef hub font-weight:bold,stroke-width:3px;
+    classDef default stroke-width:2px;
 ```
 
+
+*Note.* This figure provides a hierarchical overview of the course themes, illustrating the relationship between core modules and the foundational literature. The topology is designed to help students outline the broad perspectives covered in SOW-BS033, from information-based belief systems to systemic framing and psychological resistance.
+
+
 ---
+
 
 ### 🟢 Week 1: The Social Construction of Belief
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Mildenberger & Tingley (2019)**: 
-    *   **Core Premise & Method:** This study investigates the distribution and content of "second-order beliefs"—individuals' perceptions of what others believe—regarding climate change in the US and China. 
-    *   **Theories & Mechanisms:** The authors draw on the **Simulation View**, where people use their own beliefs as a heuristic to imagine others' minds, often resulting in an **Egocentric Bias**. They highlight the **Anchoring and Adjustment Heuristic**, where individuals fail to sufficiently adjust their estimates away from their own perspective. This leads to **Pluralistic Ignorance**, where a majority incorrectly assumes they are in the minority.
-    *   **Behavioral Examples:** This misperception creates a **Spiral of Silence**, where individuals refrain from participating in climate activism or supporting reforms because they underestimate the level of public consensus. For example, politicians may be disinclined to support climate legislation not because of their personal beliefs, but because they incorrectly assume their constituents do not support it. 
-    *   **Findings:** Both climate believers and skeptics systematically underestimate the true level of pro-climate support in their societies. Experimentally correcting these second-order beliefs increases individual support for collective climate action.
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Second-Order Beliefs</b></summary>Perceptions of the distribution of beliefs within a population ("what I think you think").</details>
-*   <details><summary><b>Information Deficit Model</b></summary>The assumption that providing more scientific facts will automatically lead to behavior change.</details>
-*   <details><summary><b>Egocentric Bias</b></summary>The tendency to judge others' beliefs based on one's own internal state.</details>
+#### Mildenberger & Tingley (2019): Beliefs about Climate Beliefs
 
-#### Critiques
-*   **Volatility of Perceptions:** Second-order opinions are highly susceptible to media framing and "loud" minority voices, making them unstable targets for long-term policy communication.
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** Imagine a room where everyone is worried about a fire but stays seated because everyone else *looks* calm.
-*   **🔗 Mnemonic:** **"The Social Mirror"** — We don't see the crowd; we see what we *think* the crowd sees.
-*   **🖼️ Visual Model:**
+**Detailed Abstract**  
+This research challenges the traditional <span style="color:#e63946">**Information Deficit Model**</span>—the assumption that public inaction stems purely from a lack of scientific knowledge. The authors argue that collective action depends not just on what individuals believe (first-order beliefs), but on <span style="color:#e63946">**second-order beliefs**</span>: their perceptions of what others believe. Utilizing six surveys across the US and China, the study maps these perceptions among the public and political elites. They find a consistent <span style="color:#e63946">**egocentric bias**</span>, where individuals use their own beliefs as a heuristic anchor, leading to a <span style="color:#e63946">**pluralistic ignorance effect**</span>. In this state, a majority may privately support climate action but publicly assume they are in the minority. This misperception creates a <span style="color:#e63946">**spiral of silence**</span>, where fear of social sanctions prevents the expression of pro-climate views. Crucially, the study shows that political elites (e.g., congressional staffers) are even more biased than the public, often underestimating constituent support for climate policy by 30-40%. This fulfills the learning objective of explaining how social perceptions can paralyze policy momentum regardless of scientific facts.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**Second-order beliefs**</span>: An individual's perception or estimate of the distribution of beliefs within a population.
+*   <span style="color:#e63946">**Information Deficit Model**</span>: The assumption that providing more scientific information will automatically lead to behavioral or policy shifts.
+*   <span style="color:#e63946">**Egocentric Bias**</span>: The cognitive tendency to use one's own internal state as a starting point for estimating the states of others.
+*   <span style="color:#e63946">**Pluralistic Ignorance Effect**</span>: A psychological state where individuals hold a belief but mistakenly assume that the majority of others do not share it.
+*   <span style="color:#e63946">**Simulation View**</span>: Making inferences about others' minds by imagining oneself in their position.
+*   <span style="color:#e63946">**Spiral of Silence**</span>: The tendency of people to remain silent when they feel their views are in the minority, fearing social isolation.
+
+
+**Figure 2**
+
+*Theoretical Topology of Second-Order Belief Construction*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    Knowledge["&nbsp;&nbsp;&nbsp;&nbsp; Scientific &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Facts &nbsp;&nbsp;&nbsp;&nbsp;"] -- X --> Action["&nbsp;&nbsp;&nbsp;&nbsp; Policy &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Knowledge --> IndividualBelief["&nbsp;&nbsp;&nbsp;&nbsp; 1st-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
-    IndividualBelief --> SocialPerception["&nbsp;&nbsp;&nbsp;&nbsp; 2nd-Order &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Belief &nbsp;&nbsp;&nbsp;&nbsp;"]
-    SocialPerception --> CollectiveAction["&nbsp;&nbsp;&nbsp;&nbsp; Public Support &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; & Action &nbsp;&nbsp;&nbsp;&nbsp;"]
-    style Knowledge fill:#f9f,stroke:#333
-    style SocialPerception fill:#a6e3a1,stroke:#333
+    Hub["&nbsp;&nbsp; Second-Order Beliefs &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Simulation View &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;")) --- Hub
+    S3(("&nbsp;&nbsp; Anchoring & Adjustment &nbsp;&nbsp;")) --- Hub
+    S4(("&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Spiral of Silence &nbsp;&nbsp;"]
+    Hub --> B2["&nbsp;&nbsp; Political Inaction &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
 
+
+*Note.* This conceptual network illustrates the psychological drivers that transform subjective individual beliefs into biased meta-perceptions of the collective. The "Hub" represents the meta-belief, while the circular satellite nodes represent the cognitive mechanisms (Simulation, Bias, Anchoring) that lead to the phenomenon of Pluralistic Ignorance. The rectangular output nodes show the behavioral consequences: a "Spiral of Silence" among the public and "Political Inaction" among elites who misjudge their mandates.
+
+
+**How to remember**  
+To remember Week 1, use the analogy of the **"Social Mirror."** When you look at a mirror, you think you're seeing the room (society), but you're actually just seeing yourself. In behavioral terms, your <span style="color:#e63946">**Second-Order Beliefs**</span> are just reflections of your own <span style="color:#e63946">**Egocentric Bias**</span>. 
+
+**🔗 Mnemonic: S.E.A. Silence**  
+- **S**imulation (Guessing minds)
+- **E**gocentric (Guessing from self)
+- **A**nchoring (Sticking to the guess)
+- Leads to **Silence** (Spiral of Silence).
+
+
 ---
+
 
 ### 🔵 Week 2: Interpersonal Communication & Social Norms
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Geiger & Swim (2016)**:
-    *   **Core Premise & Method:** Explores why people who care about climate change rarely talk about it, identifying **pluralistic ignorance** as a primary psychological barrier.
-    *   **Theories & Mechanisms:** The study focuses on **Impression Management**, where individuals prioritize being viewed as competent and likeable. They identify two core dimensions of social evaluation: **Warmth** and **Competence**. People fear that speaking up will lead to **Self-Silencing** to avoid being stereotyped as "alarmists" or "complainers."
-    *   **Behavioral Examples:** In a group project setting, a student might refrain from suggesting sustainable practices because they fear the group will perceive them as eccentric or socially difficult (low warmth). This creates a "climate of silence" that reinforces the status quo.
-    *   **Findings:** Correcting misperceptions of others' concern levels significantly increases people's willingness to engage in climate conversations.
-*   **Klaperski-van der Wal et al. (2025)**:
-    *   **Core Premise & Method:** Investigates the social costs and benefits of confronting others on unsustainable behavior.
-    *   **Theories & Mechanisms:** Explores the **Confronter's Dilemma**, where the desire to influence behavior (competence) clashes with the desire to maintain social harmony (warmth).
-    *   **Behavioral Examples:** Confronting a friend for wasting water may lead to the friend perceiving the confronter as annoying or judgmental, resulting in a social "penalty."
-*   **Steentjes et al. (2017)**:
-    *   **Core Premise & Method:** Defines **Interpersonal Activism** as the daily negotiation of social norms through talk.
-    *   **Theories & Mechanisms:** Differentiates between **Descriptive Norms** (what people do) and **Injunctive Norms** (what people approve of). 
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Self-Silencing</b></summary>Withholding one's true opinions to avoid social sanctions or negative evaluation.</details>
-*   <details><summary><b>Impression Management</b></summary>The conscious or subconscious process in which people attempt to influence the perceptions other people have of them.</details>
+#### Geiger & Swim (2016): Climate of Silence
 
-#### Critiques
-*   **Cultural Specificity:** The social costs of confrontation (Klaperski) may be much lower in cultures that value direct communication (e.g., The Netherlands) compared to those that value high-context harmony.
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** Talking about the climate is like being the first person to dance at a party—everyone wants to do it, but no one wants to be "that person."
-*   **🔗 Mnemonic:** **"W.A.C."** — **W**armth **A**nd **C**ompetence (The dual filters of social judgment).
-*   **🖼️ Visual Model:**
+**Detailed Abstract**  
+This paper investigates the psychological barriers to discussing climate change in everyday social life. The authors hypothesize that a <span style="color:#e63946">**socially constructed silence**</span> is maintained by <span style="color:#e63946">**pluralistic ignorance**</span>—the false belief that others do not share one's concern. The study focuses on <span style="color:#e63946">**impression management**</span>, specifically the dimensions of <span style="color:#e63946">**warmth**</span> (being likeable) and <span style="color:#e63946">**competence**</span> (being capable). Participants feared that speaking up would lead to being labeled with negative stereotypes, resulting in <span style="color:#e63946">**self-silencing**</span>. Interestingly, the results showed that the fear of appearing **incompetent** was a more powerful driver of silence than the fear of being perceived as cold or unfriendly. This illustrates the objective of explaining social influence by showing how group-level "silence" is not a lack of concern, but a strategic avoidance of social judgment.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**Socially Constructed Silence**</span>: A state where a topic is not discussed because participants mutually misperceive each other as disinterested.
+*   <span style="color:#e63946">**Impression Management**</span>: The process by which individuals attempt to control the impressions others form of them.
+*   <span style="color:#e63946">**Warmth**</span>: A social evaluation dimension related to friendliness and helpfulness.
+*   <span style="color:#e63946">**Competence**</span>: A social evaluation dimension related to intelligence and skill.
+*   <span style="color:#e63946">**Self-silencing**</span>: The active suppression of one's thoughts or feelings to avoid social conflict or negative evaluation.
+
+
+**Figure 3**
+
+*The Mechanism of Self-Silencing*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    Perception["&nbsp;&nbsp;&nbsp;&nbsp; Perceived &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Concern &nbsp;&nbsp;&nbsp;&nbsp;"] --> Talk["&nbsp;&nbsp;&nbsp;&nbsp; Willingness &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; to Discuss &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Talk --> Norm["&nbsp;&nbsp;&nbsp;&nbsp; Social &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Norm Shift &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Norm --> Behavior["&nbsp;&nbsp;&nbsp;&nbsp; Behavioral &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Hub["&nbsp;&nbsp; Socially Constructed Silence &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Impression Management &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;")) --- Hub
+    S3(("&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Self-silencing &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
+
+
+*Note.* This diagram shows how reputation concerns mediate the relationship between private belief and public action. The "Hub" is the collective state of silence, which is "constructed" by the three explanatory satellite nodes. The arrows demonstrate that while an individual may feel concern, the "Impression Management" filter forces them into "Self-silencing" to preserve their perceived social "Warmth" and "Competence."
+
+
+**How to remember**  
+Think of the **"Confronter's Tightrope."** You are walking a wire where one side is being "Nice but Useless" (High Warmth, No Change) and the other is being "Right but Alone" (High Competence, High Social Cost). To stay on the rope, you must be a "Competent Confronter."
+
+**🔗 Mnemonic: W.A.C. Out**  
+- **W**armth & **A**ccuracy (Competence)
+- Lead to **C**onversation
+- Breaking the **Out**cast fear.
+
 
 ---
 
-### 🟡 Week 3: Beyond Nagging Nudges: Applying Social Influence Theories
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Hertwig & Grune-Yanoff (2017)**:
-    *   **Core Premise & Method:** Compares **Nudges** (environmentally steered choices) with **Boosts** (competence-building skills). 
-    *   **Theories & Mechanisms:** Based on the **Dual-System Architecture** (System 1 vs System 2). Nudges target System 1 by leveraging **Cognitive Deficiencies** like inertia and present bias. Boosts target System 2, assuming **Ecological Rationality**—that the mind is a toolbox of heuristics that can be sharpened.
-    *   **Behavioral Examples:** A **Nudge** is setting retirement savings to "auto-enroll" (harnessing laziness). A **Boost** is teaching someone "simple rules of thumb" to calculate interest, empowering them to manage their own finances.
-*   **Dorresteijn et al. (2013)**:
-    *   **Core Premise & Method:** A field study in a Dutch hospital implementing "10 kcal deficit" nudges.
-    *   **Theories & Mechanisms:** Uses **Choice Architecture** and **Point-of-Decision Prompts**. It leverages **Accessibility**, making the healthy choice (margarine) physically easier to reach than the unhealthy one (butter).
-    *   **Behavioral Examples:** Placing signs by the elevator led to a significant increase in stair climbing without visitors realizing they were being "nudged."
-*   **Shiota et al. (2021)**:
-    *   **Core Premise & Method:** Reviews how positive affect (joy, awe, pride) drives behavior change.
-    *   **Theories & Mechanisms:** **Broaden-and-Build Theory** posits that positive emotions broaden cognitive scope. It also discusses **Moral Licensing**, where one good deed leads to "earned" selfish behavior later.
-    *   **Behavioral Examples:** Labeling vegetables as "Indulgent" rather than "Healthy" increases intake by triggering positive anticipation (Positive Reinforcement).
+### 🟡 Week 3: Beyond Nagging Nudges
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Boost</b></summary>Interventions aimed at improving people’s decision-making competence.</details>
-*   <details><summary><b>Moral Licensing</b></summary>The phenomenon where doing something "good" makes people feel entitled to do something "bad" later.</details>
 
-#### Critiques
-*   **Paternalism:** Nudges are often critiqued for bypassing human agency, whereas boosts are seen as more transparent but harder to implement.
+#### Hertwig & Grune-Yanoff (2017): Nudging and Boosting
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** A Nudge is a GPS that steers you; a Boost is teaching you how to read a map.
-*   **🖼️ Visual Model:**
+
+**Detailed Abstract**  
+This paper provides a theoretical foundation for behavioral policy, distinguishing between <span style="color:#e63946">**Nudges**</span> and <span style="color:#e63946">**Boosts**</span>. Nudges aim to steer behavior without forbidding options, typically by changing the <span style="color:#e63946">**Choice Architecture**</span>. They rely on a **Dual-System Architecture**, targeting **System 1** (fast, automatic) by leveraging <span style="color:#e63946">**Cognitive Deficiencies**</span> like inertia or loss aversion. In contrast, Boosts aim to empower individuals by building <span style="color:#e63946">**competences**</span>. They assume <span style="color:#e63946">**Ecological Rationality**</span>—the idea that the mind is a toolbox of heuristics that can be trained. Boosts are more transparent and build lasting skills, whereas nudges are local "repairs" that may not persist once the intervention is removed. This critically evaluates the effectiveness of individual-level interventions in light of human agency and cognitive malleability.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**Nudge**</span>: An intervention that steers behavior by changing the environment without forbidding options or changing economic incentives.
+*   <span style="color:#e63946">**Boost**</span>: An intervention that empowers people by improving their decision-making skills or competences.
+*   <span style="color:#e63946">**Choice Architecture**</span>: The design of different ways in which choices can be presented to consumers.
+*   <span style="color:#e63946">**Ecological Rationality**</span>: The theory that human decision strategies are rational when they match the structure of the environment.
+*   <span style="color:#e63946">**Bounded Rationality**</span>: The idea that decision-making is limited by the information available, the cognitive limitations of the mind, and the time available.
+
+
+**Figure 4**
+
+*Taxonomy of Behavioral Policy Interventions*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    User((User)) --> S1["&nbsp;&nbsp;&nbsp;&nbsp; System 1: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Automatic &nbsp;&nbsp;&nbsp;&nbsp;"]
-    User --> S2["&nbsp;&nbsp;&nbsp;&nbsp; System 2: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Deliberative &nbsp;&nbsp;&nbsp;&nbsp;"]
-    S1 --> Nudge["&nbsp;&nbsp;&nbsp;&nbsp; Nudge: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Steering &nbsp;&nbsp;&nbsp;&nbsp;"]
-    S2 --> Boost["&nbsp;&nbsp;&nbsp;&nbsp; Boost: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Empowerment &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Hub["&nbsp;&nbsp; Decision Science &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;")) --- Hub
+    S3(("&nbsp;&nbsp; Bounded Rationality &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;"]
+    Hub --> B2["&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
 
+
+*Note.* This taxonomy contrasts the two major approaches to behavioral change. The "Decision Science" Hub branches into the theoretical assumptions (Dual-Process, Rationality) that justify either Nudging (targeting automatic System 1) or Boosting (targeting deliberative System 2). The arrows indicate the path from theoretical assumption to intervention type.
+
+
+**How to remember**  
+Think of a **"GPS vs. A Map."** A **Nudge** is like a GPS—it tells you exactly where to turn (steering you), but if the GPS breaks, you're lost. A **Boost** is like teaching you how to read a map—it empowers you with a skill that works even if the technology changes.
+
+**🔗 Mnemonic: B.E.S.T.**  
+- **B**oost **E**mpowers
+- **S**teer **T**hrough Nudge.
+
+
 ---
+
 
 ### 🟠 Week 4: I-frames, S-frames, and System Change
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Chater & Loewenstein (2023)**:
-    *   **Core Premise & Method:** A critical review of behavioral public policy, arguing that "i-frame" (individual) focus has distracted from "s-frame" (systemic) solutions.
-    *   **Theories & Mechanisms:** Highlights the **Fundamental Attribution Error**, where we blame individual failings rather than systemic rules. Discusses **Crowding Out / Displacement Effects**, where minor individual-level progress reduces public appetite for major systemic changes. It also touches on **Responsibilization**, a neoliberal strategy to shift the burden of societal issues onto the consumer.
-    *   **Behavioral Examples:** BP’s carbon footprint calculator shifts the guilt of climate change onto the individual’s lightbulb choices, deflecting attention from the need for a carbon tax (S-frame).
-*   **Gonzales-Arcos et al. (2021)**:
-    *   **Core Premise & Method:** Develops a theory of **Consumer Resistance** to sustainability interventions using Chile's plastic bag ban as a case study.
-    *   **Theories & Mechanisms:** Grounded in **Social Practice Theory**, where behavior is a mix of Materials, Competences, and Meanings. They identify **Responsibilization Battles**—conflicts over who is responsible for the change—and **Unsettling Emotionality** (shame, frustration).
-    *   **Behavioral Examples:** Consumers "stealing" disposable fruit bags to use for their groceries or feeling "shame" when they forget their reusable bags at the register.
-    *   **Findings:** Resistance occurs not because people are lazy, but because the intervention disrupts their deeply embedded daily practices and triggers negative identity-related emotions.
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Responsibilization</b></summary>The process of framing societal problems as individual responsibilities.</details>
-*   <details><summary><b>Social Practice Theory</b></summary>Viewing behavior as a complex web of materials (stuff), competences (skills), and meanings (values).</details>
+#### Chater & Loewenstein (2023): The i-frame and the s-frame
 
-#### Critiques
-*   **The False Dichotomy:** Critics argue that i-frames and s-frames are not mutually exclusive; i-frames often serve as the "gateway" to make s-frames politically viable.
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** If a boat is sinking, an I-frame is handing everyone a bucket; an S-frame is fixing the hull.
-*   **🖼️ Visual Model:**
+**Detailed Abstract**  
+This provocative paper critiques the behavioral science community's preoccupation with the <span style="color:#e63946">**i-frame**</span> (individual-level focus). The authors argue that by focusing on small individual nudges, scientists have inadvertently supported corporate <span style="color:#e63946">**responsibilization**</span>—shifting the blame for systemic failures (e.g., climate change, obesity) onto individual choices. This focus triggers a <span style="color:#e63946">**crowding out**</span> effect, where public support for necessary <span style="color:#e63946">**s-frame**</span> (systemic) changes like taxes or regulation is reduced because people feel the problem is being solved by individual actions. The authors advocate for a shift toward designing systems that make good behavior the default, rather than trying to "fix" the fallible individual. This fulfills the objective of critically evaluating perspectives by revealing the hidden political consequences of purely psychological interventions.
+
+
+**Core Definitions**  
+*   <span style="color:#e63946">**i-frame**</span>: A perspective that focuses on individuals as the primary target for behavioral change interventions.
+*   <span style="color:#e63946">**s-frame**</span>: A perspective that focuses on the rules, infrastructure, and systems that shape behavior.
+*   <span style="color:#e63946">**Responsibilization**</span>: The process of framing societal problems as the moral responsibility of the individual consumer.
+*   <span style="color:#e63946">**Crowding Out**</span>: When individual-level interventions reduce the perceived need or support for systemic policy changes.
+*   <span style="color:#e63946">**Fundamental Attribution Error**</span>: Overestimating the role of personal traits and underestimating situational factors in behavior.
+
+
+**Figure 5**
+
+*Structural Dynamics of Policy Framing*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    I["&nbsp;&nbsp;&nbsp;&nbsp; I-frame: Nudging &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Individuals &nbsp;&nbsp;&nbsp;&nbsp;"] -- Crowding Out? --> S["&nbsp;&nbsp;&nbsp;&nbsp; S-frame: System &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Change &nbsp;&nbsp;&nbsp;&nbsp;"]
-    S --> Env["&nbsp;&nbsp;&nbsp;&nbsp; Environment &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; & Rules &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Env --> I
+    Hub["&nbsp;&nbsp; Policy Framing &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;")) --- Hub
+    S3(("&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Systemic Inaction &nbsp;&nbsp;"]
+    Hub --> B2["&nbsp;&nbsp; Individual Guilt &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
 
+
+*Note.* This model illustrates the diversionary effect of the i-frame. The "Policy Framing" Hub leads to individual guilt but systemic inaction because the cognitive mechanisms (Attribution Error, Responsibilization) hide the need for s-frame structural change. The "Crowding Out" spoke explains why the small "wins" of the i-frame prevent the large "wins" of the s-frame.
+
+
+**How to remember**  
+Imagine a sinking boat. The **i-frame** approach is giving every passenger a small cup to bail out the water (individual responsibility). The **s-frame** approach is fixing the massive hole in the hull (systemic change). If everyone is busy bailing with cups, they might forget to demand that the captain fixes the hole.
+
+**🔗 Mnemonic: I.S. Fix**  
+- **I**ndividual (Small cup)
+- **S**ystem (Large fix)
+- Don't let the **I** hide the **S**.
+
+
 ---
+
 
 ### 🔴 Week 5: The Credibility of Science Communication
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Van der Linden et al. (2015)**:
-    *   **Core Premise & Method:** Experiments with the **Gateway Belief Model (GBM)** to see if consensus messaging can shift public policy support.
-    *   **Theories & Mechanisms:** The **Gateway Belief Model** posits that a single foundational belief (97% consensus) can trigger a "domino effect" across other beliefs. This relies on **Cognitive Consistency**, where people update their perceptions of risk and causality to match the new expert-backed "fact."
-    *   **Behavioral Examples:** Individuals who were previously skeptical of climate change increased their support for public action after being exposed to a simple pie chart showing the degree of scientific agreement.
-*   **Meijers & Rutjens (2014)**:
-    *   **Core Premise & Method:** Investigates why "belief in progress" can lead to lower environmental action.
-    *   **Theories & Mechanisms:** **Compensatory Control Theory** states that humans need to feel the world is orderly. When personal control is low, people compensate by believing in external systems (Science/God). This creates a **Hydraulic Relationship**: as belief in scientific progress (external order) goes up, the motivation for personal action goes down.
-    *   **Behavioral Examples:** Participants who read about rapid scientific breakthroughs in climate tech reported significantly lower intentions to recycle or save water (Moral Licensing / Outsourced Responsibility).
-    *   **Findings:** Affirming science as an omniscient savior can make people passive observers rather than active participants.
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Compensatory Control</b></summary>Seeking external sources of order when personal control is threatened.</details>
-*   <details><summary><b>Gateway Belief</b></summary>A core belief that, once changed, facilitates the updating of other related beliefs.</details>
+#### Van der Linden et al. (2015): The Gateway Belief Model
 
-#### Critiques
-*   **Backfire Effects:** For highly polarized individuals, consensus messaging (Van der Linden) can sometimes be perceived as a conspiracy, leading to even stronger resistance.
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** Belief in progress is like a "Security Blanket"—it makes you feel safe, but it also makes you want to stay in bed.
-*   **🖼️ Visual Model:**
+**Detailed Abstract**  
+This experimental study introduces and tests the <span style="color:#e63946">**Gateway Belief Model (GBM)**</span>. The authors argue that public support for climate policy is blocked by a lack of awareness of the scientific consensus. They demonstrate that communicating a simple fact—that 97% of climate scientists agree—acts as a "gateway" that shifts foundational beliefs. This process relies on <span style="color:#e63946">**cognitive consistency**</span>: once an individual accepts that the experts agree, they update their other beliefs (causality, risk, and reality of climate change) to align with this new fact. This sequentially leads to increased support for public policy. The study provides strong evidence for the effectiveness of consensus messaging as a simple, low-cost communicative intervention that can bypass ideological polarization in some contexts.
+
+
+**Core Definitions**  
+*   <details><summary><b>Gateway Belief Model (GBM)</b></summary>The theory that shifting a single foundational belief (consensus) triggers a cascading effect on other related beliefs and policy support.</details>
+*   <details><summary><b>Cognitive Consistency</b></summary>The psychological drive to maintain a logical and consistent set of beliefs and attitudes.</details>
+
+
+**Figure 6**
+
+*The Consensus Domino Effect*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    Consensus["&nbsp;&nbsp;&nbsp;&nbsp; Consensus: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; 97% Agree &nbsp;&nbsp;&nbsp;&nbsp;"] --> Gateway["&nbsp;&nbsp;&nbsp;&nbsp; Gateway: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Scientists Agree &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Gateway --> KeyBeliefs["&nbsp;&nbsp;&nbsp;&nbsp; Key Beliefs: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Real/Human/Risk &nbsp;&nbsp;&nbsp;&nbsp;"]
-    KeyBeliefs --> PolicySupport["&nbsp;&nbsp;&nbsp;&nbsp; Support for &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Policy Action &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Hub["&nbsp;&nbsp; Consensus Gateway &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Policy Support &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
+
+
+*Note.* This diagram maps the cascading effect of consensus information. The "Hub" is the Gateway Belief itself. The satellite nodes represent the psychological requirements (Expertise and Consistency) that allow the consensus message to "unlock" the final behavioral output: increased Policy Support.
+
+
+#### Meijers & Rutjens (2014): Affirming Belief in Progress
+
+
+**Detailed Abstract**  
+This research explores the paradoxical effect of believing in scientific progress on environmental behavior. Grounded in <span style="color:#e63946">**Compensatory Control Theory**</span>, the authors argue that humans have a fundamental need to perceive the world as orderly and predictable. When personal control is threatened, people compensate by believing in external sources of order, such as science or government. Through four experiments, the authors show that affirming belief in scientific progress creates a <span style="color:#e63946">**hydraulic relationship**</span>: as belief in science's ability to "save us" goes up, the motivation for individual pro-environmental action goes down. This is a form of <span style="color:#e63946">**moral licensing**</span> or outsourced responsibility, where the individual feels they no longer need to act because "the system" has it under control. This critical perspective is vital for the learning objective of evaluating perspectives in light of empirical findings.
+
+
+**Core Definitions**  
+*   <details><summary><b>Compensatory Control Theory</b></summary>The theory that individuals maintain a sense of order by believing in external systems (Science/God) when their personal control is low.</details>
+*   <details><summary><b>Hydraulic Relationship</b></summary>A dynamic where an increase in one variable (belief in science) leads to a proportional decrease in another (individual motivation).</details>
+
+
+**How to remember**  
+Think of science as a **"Security Blanket."** The **Gateway Belief (Van der Linden)** says that knowing the blanket exists (consensus) makes you feel it's real. However, **Compensatory Control (Meijers)** warns that if the blanket feels *too* warm and safe, you might just fall asleep (passivity) instead of getting up to fix the house.
+
+**🔗 Mnemonic: G.C.S.**  
+- **G**ateway (Consensus)
+- **C**ompensatory (Control)
+- leads to **S**leep (Passivity).
+
 
 ---
 
+
 ### 🟣 Week 6: Resistance to Persuasion & Inoculation
 
-**Paper Summaries (Max 250 words per paper):**
-*   **Fransen et al. (2023)**:
-    *   **Core Premise & Method:** A large-scale replication of McGuire's 1961 experiment on **Inoculation Theory**.
-    *   **Theories & Mechanisms:** Uses the biological metaphor of a vaccine. **Refutational Pre-emption** involves exposing people to a weakened counterargument and then refuting it. This triggers **Threat Awareness**, which motivates the individual to produce "mental antibodies" (arguments) to defend their current position.
-    *   **Behavioral Examples:** Strengthening "Cultural Truisms" (unquestioned beliefs like "brushing teeth is good") so that they can withstand sudden, strong persuasive attacks.
-*   **Basol et al. (2020)**:
-    *   **Core Premise & Method:** Tests the "Bad News" game—a gamified tool for building **Cognitive Immunity** against misinformation.
-    *   **Theories & Mechanisms:** Shifting from issue-specific to **Broad-Spectrum Inoculation** (tactic-based). The game uses **Active Inoculation**, where players learn by *doing* (creating fake news themselves). Key tactics taught include **Polarization** (us vs them), **Emotional Language** (fear mongering), and **Impersonation** (fake experts).
-    *   **Behavioral Examples:** After playing the game, participants were better able to spot "Discrediting" and "Trolling" tactics in real-world news headlines, increasing their confidence in their own judgments.
-    *   **Findings:** Active, gamified inoculation is more effective and engaging than passive warnings or fact-checking.
 
-**Key Terms & Definitions:**
-*   <details><summary><b>Inoculation Theory</b></summary>Building resistance to persuasion by pre-exposing individuals to weakened counterarguments.</details>
-*   <details><summary><b>Pre-bunking</b></summary>The process of debunking misinformation tactics before the audience encounters them.</details>
+#### Fransen et al. (2023): Sixty Years Later
 
-#### Critiques
-*   **Decay Rates:** Psychological "immunity" wears off over time, requiring periodic "booster" messages to maintain resistance.
 
-#### Conceptual & Memorizing (Max 200 words per week)
-*   **🧠 Conceptual Tip:** Inoculation is a Fire Drill for your brain. You practice with a fake fire so you don't panic during a real one.
-*   **🖼️ Visual Model:**
+**Detailed Abstract**  
+This paper presents a large-scale replication of McGuire’s 1961 experiment on <span style="color:#e63946">**Inoculation Theory**</span>. Using the biological metaphor of a vaccine, the theory posits that individuals can be made resistant to persuasive attacks by pre-exposure to weakened versions of counterarguments. The process of <span style="color:#e63946">**refutational pre-emption**</span> involves providing both the attack and its refutation in advance. This triggers <span style="color:#e63946">**threat awareness**</span>, motivating the person to develop "mental antibodies" (their own counterarguments). The replication focuses on <span style="color:#e63946">**cultural truisms**</span>—beliefs so widely accepted (e.g., "brushing teeth is good") that they have never been attacked and are thus vulnerable. The study successfully replicates the original findings, proving that inoculation is more effective than simple "supportive" messaging at building long-term resistance to misinformation.
+
+
+**Core Definitions**  
+*   <details><summary><b>Inoculation Theory</b></summary>A theory of resistance to persuasion that uses pre-exposure to weakened counterarguments to build mental defense.</details>
+*   <details><summary><b>Refutational Pre-emption</b></summary>The mechanism of exposing an audience to a counterargument and then immediately refuting it.</details>
+*   <details><summary><b>Threat Awareness</b></summary>The realization that one's current beliefs are vulnerable to attack, which motivates active defense building.</details>
+*   <details><summary><b>Cultural Truisms</b></summary>Beliefs that are widely shared and rarely challenged, making them particularly vulnerable to sudden persuasion.</details>
+
+
+#### Basol et al. (2020): Good News about Bad News
+
+
+**Detailed Abstract**  
+This study extends inoculation theory into the digital age through the "Bad News" game. The authors shift from issue-specific inoculation to <span style="color:#e63946">**broad-spectrum inoculation**</span>, which focuses on identifying the *tactics* of misinformation rather than specific facts. Through <span style="color:#e63946">**active inoculation**</span>, players learn by doing—creating their own fake news using tactics like polarization, emotional manipulation, and impersonation. The research demonstrates that this gamified approach significantly boosts participants' ability to spot and resist real-world misinformation. It builds <span style="color:#e63946">**cognitive immunity**</span> by making individuals active participants in their own defense, rather than passive recipients of warnings. This fulfill's the course objective of making appropriate choices in terms of communicative design for robust behavioral outcomes.
+
+
+**Core Definitions**  
+*   <details><summary><b>Broad-Spectrum Inoculation</b></summary>Building resistance against general categories of misinformation tactics rather than specific topics.</details>
+*   <details><summary><b>Active Inoculation</b></summary>A defense-building process where the individual actively engages in refuting or creating arguments, rather than passively reading them.</details>
+*   <details><summary><b>Cognitive Immunity</b></summary>The state of being resistant to manipulative communication or misinformation.</details>
+
+
+**Figure 7**
+
+*The Mechanism of Cognitive Immunity*
+
+
 ```mermaid
-%%{init: {'flowchart': {'padding': 40}, 'themeVariables': { 'fontSize': '13px' }}}%%
+%%{init: { 'flowchart': { 'padding': 15, 'nodeSpacing': 50, 'rankSpacing': 50, 'curve': 'basis' }, 'themeVariables': { 'fontSize': '13px' }}}%%
 graph TD
-    Warning["&nbsp;&nbsp;&nbsp;&nbsp; Threat &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Warning &nbsp;&nbsp;&nbsp;&nbsp;"] --> Refutation["&nbsp;&nbsp;&nbsp;&nbsp; Weak Argument &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; + Counter &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Refutation --> Immunity["&nbsp;&nbsp;&nbsp;&nbsp; Persuasion &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Immunity --> Defense["&nbsp;&nbsp;&nbsp;&nbsp; Systemic Mental &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Defense &nbsp;&nbsp;&nbsp;&nbsp;"]
+    Hub["&nbsp;&nbsp; Cognitive Immunity &nbsp;&nbsp;"]:::hubNode
+    
+    S1(("&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;")) --- Hub
+    S2(("&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;")) --- Hub
+    S3(("&nbsp;&nbsp; Refutational Pre-emption &nbsp;&nbsp;")) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp; Misinfo Resistance &nbsp;&nbsp;"]
+    Hub --> B2["&nbsp;&nbsp; Meta-Cognitive Confidence &nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
 ```
+
+
+*Note.* This figure models the build-up of mental resistance through the identification of manipulative communicative tactics. The "Hub" represents the state of Immunity, which is constructed through Active participation and pre-emptive refutation. The output nodes show that successful inoculation leads not just to resistance, but to increased Meta-Cognitive Confidence in one's own ability to judge truth.
+
+
+**How to remember**  
+Think of Inoculation as a **"Fire Drill."** You don't wait for a real fire to learn how to use the exit. You run a "fake" drill (pre-exposure) so that when the real threat arrives, your body knows exactly what to do without panicking.
+
+**🔗 Mnemonic: F.A.C.T.**  
+- **F**ire drill (Inoculation)
+- **A**ctive (Doing the game)
+- **C**ounter-arguments (Refutation)
+- **T**hreat awareness.
