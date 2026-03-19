@@ -5,7 +5,7 @@ This guide is designed to optimize your learning, memorization, and application 
 ### 1. Global Mindmap (Network)
 
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
     A["&nbsp; SOW-BS033: &nbsp;<br/>&nbsp; Communication & &nbsp;<br/>&nbsp; Influence &nbsp;"]:::category --> B["&nbsp; Information & &nbsp;<br/>&nbsp; Beliefs &nbsp;"]:::category
     A --> C["&nbsp; Social Norms & &nbsp;<br/>&nbsp; Interaction &nbsp;"]:::category
@@ -59,7 +59,7 @@ graph TD
 *   **🔗 Mnemonic:** **"The Lonely Majority"** — You are part of the majority, but you feel alone in it.
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
     Knowledge["&nbsp; Scientific &nbsp;<br/>&nbsp; Facts &nbsp;"] -- X --> Action["&nbsp; Policy &nbsp;<br/>&nbsp; Change &nbsp;"]
     Knowledge --> IndividualBelief["&nbsp; First-Order &nbsp;<br/>&nbsp; Belief &nbsp;"]
@@ -92,7 +92,7 @@ graph TD
 *   **🔗 Mnemonic:** **"D.I.N."** — **D**escriptive (Doing), **I**njunctive (Ideal/Internal), **N**orms (Network).
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph LR
     Perception["&nbsp; Perceived &nbsp;<br/>&nbsp; Concern &nbsp;"] --> Talk["&nbsp; Willingness &nbsp;<br/>&nbsp; to Discuss &nbsp;"]
     Talk --> Norm["&nbsp; Social &nbsp;<br/>&nbsp; Norm Shift &nbsp;"]
@@ -122,7 +122,7 @@ graph LR
 *   **🔗 Mnemonic:** **"B.E.S.T."** — **B**oost **E**mpowers, **S**teer **T**hrough **N**udges.
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
     User((User)) --> S1["&nbsp; System 1: &nbsp;<br/>&nbsp; Automatic &nbsp;"]
     User --> S2["&nbsp; System 2: &nbsp;<br/>&nbsp; Deliberative &nbsp;"]
@@ -146,7 +146,7 @@ graph TD
 *   <details><summary><b>Psychological Reactance</b></summary>An unpleasant motivational arousal that emerges when people experience a threat to or loss of their free behaviors.</details>
 
 #### Critiques
-*   **The "False Dichotomy":** Critics of Chater & Loewenstein argue that I-frames and S-frames are not mutually exclusive; I-frames (like a plastic bag tax) can be the "gateway" that makes S-frame legislation politically possible.
+*   **The "False Dichotomy):** Critics of Chater & Loewenstein argue that I-frames and S-frames are not mutually exclusive; I-frames (like a plastic bag tax) can be the "gateway" that makes S-frame legislation politically possible.
 *   **Implementation Paralysis:** If we only focus on S-frames, we might wait forever for government action while ignoring effective small-scale changes.
 
 #### Conceptual & Memorizing (Max 200 words per week)
@@ -154,7 +154,7 @@ graph TD
 *   **🔗 Mnemonic:** **"I"** for **I**ndividual, **"S"** for **S**ystem.
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph LR
     I["&nbsp; I-frame: Nudging &nbsp;<br/>&nbsp; Individuals &nbsp;"] -- Crowding Out? --> S["&nbsp; S-frame: Changing &nbsp;<br/>&nbsp; Systems &nbsp;"]
     S --> Environment["&nbsp; Environment &nbsp;<br/>&nbsp; & Rules &nbsp;"]
@@ -182,7 +182,7 @@ graph LR
 *   **🔗 Mnemonic:** **"G.B.M."** — **G**ateway **B**elief **M**atters.
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
     Consensus["&nbsp; Consensus &nbsp;<br/>&nbsp; Message: 97% &nbsp;"] --> Gateway["&nbsp; Gateway &nbsp;<br/>&nbsp; Belief: &nbsp;<br/>&nbsp; Scientists &nbsp;<br/>&nbsp; Agree &nbsp;"]
     Gateway --> KeyBeliefs["&nbsp; Real/ &nbsp;<br/>&nbsp; Human-Caused/ &nbsp;<br/>&nbsp; Risk &nbsp;"]
@@ -211,7 +211,7 @@ graph TD
 *   **🔗 Mnemonic:** **"A.C.E."** — **A**voidance, **C**ontesting, **E**mpowerment (The three ways we resist).
 *   **🖼️ Visual Model:**
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '14px', 'nodePadding': 20 }}}%%
+%%{init: {'flowchart': {'padding': 30}, 'themeVariables': { 'fontSize': '14px' }}}%%
 graph LR
     Warning["&nbsp; Threat &nbsp;<br/>&nbsp; Warning &nbsp;"] --> Refutation["&nbsp; Weak Argument &nbsp;<br/>&nbsp; + Counter &nbsp;"]
     Refutation --> Immunity["&nbsp; Resistance to &nbsp;<br/>&nbsp; Persuasion &nbsp;"]
