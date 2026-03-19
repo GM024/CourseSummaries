@@ -10,36 +10,6 @@ I believe that Large Language Models (LLMs) are not a replacement for the primar
 
 ---
 
-## 🏗️ The Mastery Stack: Engineering Standards
-
-Every guide in this repository adheres to a strict visual and semantic protocol I have developed to maximize retention and minimize cognitive load.
-
-### 1. Semantic Precision
-*   **Verbatim Keywords:** Every technical term, theory, or mechanism is styled as a `<span style="color:#e63946"><b>Verbatim Keyword</b></span>`. This ensures that my mental model remains anchored to the exact language used in the literature.
-*   **Salient Priming:** Research paper titles are highlighted in a salient steel blue (`#457b9d`) to facilitate instant categorization by source and year.
-
-### 2. Structural Mapping (GitHub-Hardened)
-I use "GitHub-Hardened" Mermaid diagrams to visualize conceptual hierarchies. These are engineered for zero-clipping and professional aesthetics directly within the GitHub UI.
-
-```mermaid
-%%{init: { "flowchart": { "padding": 30, "useMaxWidth": false, "htmlLabels": true }, "theme": "neutral", "themeVariables": { "fontSize": "12px", "fontFamily": "sans-serif" }}}%%
-graph TD
-    classDef engine fill:#f8edeb,stroke:#e63946,stroke-width:3px,font-weight:bold;
-    classDef layer fill:#f8f9fa,stroke:#457b9d,stroke-width:2px;
-
-    ROOT["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>THE MASTERY PROTOCOL</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Optimization & Extension) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]:::engine
-
-    ROOT --> L1(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Layer 1: Literature Engagement</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primary Reading & Analysis &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::layer
-    ROOT --> L2(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Layer 2: Prompt Engineering</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Local Prompt Refinement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::layer
-    ROOT --> L3(["<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Layer 3: Structural Synthesis</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub-Hardened Output &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>"]):::layer
-```
-
-### 3. Cognitive Anchoring
-*   **Click-Down Clarity:** All complex glossaries are tucked into `<details>` menus to maintain a high-signal overview while keeping technical depth one click away.
-*   **Salient Mnemonics:** Each weekly theme is distilled into a salient "How to Remember" block, providing a mental hook for rapid recall.
-
----
-
 ## 📂 Repository Navigation
 
 *   [**Communication & Influence**](./Communication_Influence/Mastery_Guide_SOW_BS033.md): Social norms, belief systems, and resistance strategies.
@@ -48,4 +18,4 @@ graph TD
 
 ---
 
-> **Note:** These summaries are produced using my local LLM prompts that I have manually iterated upon to ensure the highest signal-to-noise ratio. They are meant to be used as a companion to, not a substitute for, the original research.
+> **Note:** These summaries are produced using my local LLM prompts that I have manually iterated upon to ensure the highest signal-to-noise ratio. They are meant to be used as a companion to, not a substitute for, the original research. All versions of summaries have been checked by me. Though, of course, as a person, I may have made mistakes.
