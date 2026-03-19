@@ -5,30 +5,30 @@ This guide is designed to optimize your learning, memorization, and application 
 ### 1. Global Mindmap (Network)
 
 ```mermaid
-graph LR
-    A[SOW-BS033: Communication & Influence] --> B[Information & Beliefs]
+graph TD
+    A[SOW-BS033:<br/>Communication & Influence] --> B[Information & Beliefs]
     A --> C[Social Norms & Interaction]
     A --> D[Choice Architecture]
     A --> E[Systemic vs. Individual]
     A --> F[Inoculation & Resistance]
 
-    B --> B1[Mildenberger & Tingley: Second-Order Beliefs]
-    B --> B2[Van der Linden: Gateway Belief Model]
-    B --> B3[Meijers & Rutjens: Belief in Progress]
+    B --> B1[Mildenberger & Tingley:<br/>Second-Order Beliefs]
+    B --> B2[Van der Linden:<br/>Gateway Belief Model]
+    B --> B3[Meijers & Rutjens:<br/>Belief in Progress]
 
-    C --> C1[Geiger & Swim: Pluralistic Ignorance]
-    C --> C2[Steentjes: Interpersonal Activism]
-    C --> C3[Klaperski: Social Costs of Confrontation]
+    C --> C1[Geiger & Swim:<br/>Pluralistic Ignorance]
+    C --> C2[Steentjes:<br/>Interpersonal Activism]
+    C --> C3[Klaperski:<br/>Social Costs of Confrontation]
 
-    D --> D1[Hertwig: Nudges vs. Boosts]
-    D --> D2[Dorresteijn: 10 kcal Deficit]
-    D --> D3[Shiota: Positive Affect]
+    D --> D1[Hertwig:<br/>Nudges vs. Boosts]
+    D --> D2[Dorresteijn:<br/>10 kcal Deficit]
+    D --> D3[Shiota:<br/>Positive Affect]
 
-    E --> E1[Nickerson & Loewenstein: I-frame vs S-frame]
-    E --> E2[Gonzales-Arcos: Consumer Resistance]
+    E --> E1[Nickerson & Loewenstein:<br/>I-frame vs S-frame]
+    E --> E2[Gonzales-Arcos:<br/>Consumer Resistance]
 
-    F --> F1[McGuire & Fransen: Inoculation Theory]
-    F --> F2[Basol: Pre-bunking & Gamification]
+    F --> F1[McGuire & Fransen:<br/>Inoculation Theory]
+    F --> F2[Basol:<br/>Pre-bunking & Gamification]
 
     B1 --- C1
     D1 --- E1
