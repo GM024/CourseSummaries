@@ -1,5 +1,7 @@
 # Course Mastery Guide: Mixed Effects Models (Encyclopedia Edition)
 
+> **Status:** This summary is currently under review by the author.
+
 This guide is a master-level statistical resource optimized for the MSc Behavioural Science curriculum. It features deep-dive logic, R-syntax "Rosetta Stones," and surgical definitions of every symbol and parameter.
 
 ---

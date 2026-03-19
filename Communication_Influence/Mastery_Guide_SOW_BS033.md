@@ -1,5 +1,6 @@
 # Course Mastery Guide: SOW-BS033 Communication and Influence (Encyclopedia Edition)
 
+> **Status:** This summary has been reviewed twice by the author. However, as a person, I may have made mistakes.
 
 This guide is a master-level study resource optimized for the MSc Behavioural Science curriculum. It features deep-dive literature summaries, GitHub-hardened conceptual models, and verbatim keyword styling.
 

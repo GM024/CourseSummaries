@@ -1,3 +1,5 @@
+> **Status:** This summary is currently under review by the author.
+
 # File: README.md
 # Description: This is the master study guide for the Complexity Methods course. It provides a high-signal overview of all literature, conceptual models, and detailed key take-aways for every topic, specifically extracted from the exam database and GitHub assignments.
 

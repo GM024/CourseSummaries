@@ -12,9 +12,9 @@ I believe that Large Language Models (LLMs) are not a replacement for the primar
 
 ## 📂 Repository Navigation
 
-*   [**Communication & Influence**](./Communication_Influence/Mastery_Guide_SOW_BS033.md): Social norms, belief systems, and resistance strategies.
-*   [**Mixed-Effects Models**](./Mixed_Effects_Models/Mastery_Guide_Mixed_Effects_Models.md): Hierarchical data structures and statistical mastery.
-*   [**Complexity Methods**](./Complexity_Methods/Complete%20Literature%20Over.md): Non-linear dynamics and system-level analysis.
+*   [**Communication & Influence**](./Communication_Influence/Mastery_Guide_SOW_BS033.md): Social norms, belief systems, and resistance strategies. (**Status:** Reviewed twice; mistakes may remain)
+*   [**Mixed-Effects Models**](./Mixed_Effects_Models/Mastery_Guide_Mixed_Effects_Models.md): Hierarchical data structures and statistical mastery. (**Status:** Under review)
+*   [**Complexity Methods**](./Complexity_Methods/Complete%20Literature%20Over.md): Non-linear dynamics and system-level analysis. (**Status:** Under review)
 
 ---
 
