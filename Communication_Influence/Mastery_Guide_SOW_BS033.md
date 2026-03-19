@@ -15,7 +15,7 @@ This guide is a master-level study resource optimized for the MSc Behavioural Sc
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    A["&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp; Communication & Influence &nbsp;&nbsp;&nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
+    A["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOW-BS033: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Communication & Influence**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hub --> B["&nbsp;&nbsp;&nbsp;&nbsp; Information & Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> C["&nbsp;&nbsp;&nbsp;&nbsp; Social Norms & Interactions &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> D["&nbsp;&nbsp;&nbsp;&nbsp; Choice Architecture &nbsp;&nbsp;&nbsp;&nbsp;"]
     A --> E["&nbsp;&nbsp;&nbsp;&nbsp; Systemic vs. Individual &nbsp;&nbsp;&nbsp;&nbsp;"]
@@ -44,7 +44,7 @@ graph TD
 ```
 
 
-*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems (Week 1 & 5) to the social dynamics of interaction (Week 2), the environmental design of choice (Week 3), the critical evaluation of systemic vs. individual frames (Week 4), and the psychological mechanisms of resistance (Week 6). By mapping each core paper to its thematic pillar, this model facilitates the learning objective of outlining and explaining the diverse perspectives within communication science. The layout specifically demonstrates that behavioral influence is not a monolithic process, but rather a multi-layered interaction between individual cognition, social norms, and institutional structures.
+*Note.* This figure provides a comprehensive hierarchical overview of the SOW-BS033 course themes. It illustrates the primary conceptual domains—ranging from information-based belief systems to the social dynamics of interaction, environmental design of choice, and systemic framing. The central hub is the course itself, which branches into the six thematic weeks. Each paper is categorized under its respective theoretical pillar to facilitate rapid identification of the course's diverse psychological perspectives.
 
 
 ---
@@ -57,7 +57,7 @@ graph TD
 
 
 **Detailed Abstract**  
-This research challenges the <span style="color:#e63946">**Information Deficit Model**</span>, which assumes that providing scientific facts is the primary route to behavior change. The authors argue that collective action is paralyzed not by a lack of facts, but by biased <span style="color:#e63946">**second-order beliefs**</span>—what we *think* others believe. Through extensive surveys in the US and China, the authors identify a systemic <span style="color:#e63946">**egocentric bias**</span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946">**pluralistic ignorance effect**</span>, where a pro-climate majority incorrectly believes it is a minority. This misperception triggers a <span style="color:#e63946">**spiral of silence**</span>, where individuals self-censor to avoid perceived social isolation. Crucially, the study finds that political elites (e.g., congressional staffers) exhibit even higher levels of bias, often misjudging constituent support by wide margins. Correcting these meta-beliefs is shown to be a potent communicative intervention for increasing policy support.
+This research challenges the traditional <span style="color:#e63946">**Information Deficit Model**</span>—the assumption that providing more scientific facts is the primary route to behavioral change. The authors argue that collective action is often paralyzed not by a lack of knowledge, but by biased <span style="color:#e63946">**second-order beliefs**</span>: our perceptions of what *others* believe. Through six massive surveys in the US and China, the study identifies a systemic <span style="color:#e63946">**egocentric bias**</span>, where individuals' own views anchor their estimates of the collective norm. This leads to a <span style="color:#e63946">**pluralistic ignorance effect**</span>, where a majority incorrectly assumes they are in the minority. This misperception creates a <span style="color:#e63946">**spiral of silence**</span>, where individuals self-censor to avoid social isolation. Crucially, political elites (e.g., congressional staffers) are found to be even more biased than the public, often underestimating constituent support for climate policy by significant margins. This paper fulfill's the objective of outlining how social perceptions shape political reality.
 
 
 **Figure 2**
@@ -68,31 +68,26 @@ This research challenges the <span style="color:#e63946">**Information Deficit M
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Second-Order Beliefs &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Second-Order Beliefs**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Simulation View &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S3(("&nbsp;&nbsp;&nbsp;&nbsp; Anchoring & Adjustment &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S4(("&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simulation View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Egocentric Bias &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Anchoring & Adjustment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S4(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Spiral of Silence &nbsp;&nbsp;&nbsp;&nbsp;"]
     Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Political Inaction &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* This conceptual model explains the psychological construction of social reality as described by Mildenberger & Tingley. The central "Hub" represents the meta-cognitive state of holding a second-order belief. The circular satellite nodes depict the internal cognitive processes—Simulation (guessing others' minds), Egocentric Bias (using self as a reference), and Anchoring/Adjustment (failing to update guesses)—that inevitably lead to the distorted state of Pluralistic Ignorance. The rectangular output nodes show how these internal distortions manifest as external behavioral outcomes: individuals entering a "Spiral of Silence" and policy-makers remaining in a state of "Political Inaction" due to their misjudged mandate. This fulfills the objective of critically evaluating theoretical perspectives in light of empirical evidence.
+*Note.* This conceptual network illustrates the psychological drivers that transform subjective individual beliefs into biased meta-perceptions of the collective. The central Hub (red-bolded) represents the meta-cognitive target. The rounded satellite nodes depict the internal cognitive mechanisms—Simulation (imagining others), Bias (projecting self), and Anchoring (clinging to initial estimates)—that contribute to the state of Pluralistic Ignorance. The final output boxes demonstrate the behavioral consequences: a collective "Spiral of Silence" and subsequent "Political Inaction," where policy-makers fail to act because they misjudge public consensus.
 
 
 **How to remember**  
-Think of the **"Social Mirror."** You look into the mirror (society) and only see your own reflection (Egocentric Bias), then assume that's what the entire room looks like. 
-
-**🔗 Mnemonic: S.E.A. Silence**  
-- **S**imulation (Guessing others)
-- **E**gocentric (Reflecting self)
-- **A**nchoring (Sticking to the guess)
-- leads to **Silence**.
+Think of the **"Social Mirror."** Your <span style="color:#e63946">**second-order beliefs**</span> are just a reflection of your own views (<span style="color:#e63946">**egocentric bias**</span>). You assume everyone sees what you see, which leads to the **"Lonely Majority"**—everyone wants to act, but no one speaks because they think they're alone.
 
 
 ---
@@ -105,7 +100,7 @@ Think of the **"Social Mirror."** You look into the mirror (society) and only se
 
 
 **Detailed Abstract**  
-This paper explores the "Climate of Silence," where concern about climate change is high but public discussion is low. The authors identify <span style="color:#e63946">**pluralistic ignorance**</span> as the key driver—people mistakenly believe they are the only ones concerned. This is motivated by <span style="color:#e63946">**impression management**</span>, specifically the fear of appearing **incompetent** or uninformed. To protect their perceived <span style="color:#e63946">**warmth**</span> and **competence**, individuals engage in <span style="color:#e63946">**self-silencing**</span>. This creates a <span style="color:#e63946">**socially constructed silence**</span> that reinforces the false norm of disinterest.
+Investigates the "Climate of Silence" where public discussion lags behind private concern. The study identifies <span style="color:#e63946">**pluralistic ignorance**</span> as the key driver, motivated by <span style="color:#e63946">**impression management**</span>. Individuals fear that speaking up will damage their perceived <span style="color:#e63946">**warmth**</span> and **competence**, leading to <span style="color:#e63946">**self-silencing**</span> to protect their social reputation.
 
 
 **Figure 3**
@@ -116,23 +111,47 @@ This paper explores the "Climate of Silence," where concern about climate change
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Socially Constructed Silence &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Socially Constructed Silence**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Impression Management &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S3(("&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Impression Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth vs Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pluralistic Ignorance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Self-silencing &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* This model illustrates the mediation of public expression by internal social evaluation concerns. The "Hub" is the collective state of silence. The "Impression Management" and "Warmth vs Competence" satellites show that the barrier to talking is not a lack of interest, but a strategic desire to manage how others perceive our intelligence and friendliness. The path leads to "Self-silencing," which empirically explains why concerned individuals remain quiet in social settings.
+*Note.* This diagram shows how reputation management concerns (Warmth vs Competence) mediate the relationship between private concern and public silence. The "Hub" is the collective quiet, while the satellites represent the social fears that force an individual into the behavior of "Self-silencing" to avoid being labeled with negative stereotypes.
 
 
-**How to remember**  
-The **"Party Dance"** analogy: Everyone is standing against the wall, wanting to dance (concern) but assuming no one else wants to (Pluralistic Ignorance). No one wants to be the first one on the floor and look stupid (Impression Management).
+#### Klaperski-van der Wal et al. (2025): The Competent Confronter
+
+
+**Figure 4**
+
+*Theoretical Tradeoffs in Behavioral Confrontation*
+
+
+```mermaid
+%%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
+graph TD
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Confronter's Dilemma**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Social Sanctioning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Warmth Penalty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domain Competence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    
+    Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Social Costs &nbsp;&nbsp;&nbsp;&nbsp;"]
+    
+    classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
+```
+
+
+*Note.* Illustrates the social evaluation dimensions used during interpersonal confrontation. It maps how standing up for values (Competence) creates a risk of being perceived as socially abrasive (Warmth Penalty), leading to measurable "Social Costs."
 
 
 ---
@@ -144,11 +163,7 @@ The **"Party Dance"** analogy: Everyone is standing against the wall, wanting to
 #### Hertwig & Grune-Yanoff (2017): Nudging and Boosting
 
 
-**Detailed Abstract**  
-The authors distinguish between <span style="color:#e63946">**Nudges**</span> (steering behavior via environment) and <span style="color:#e63946">**Boosts**</span> (empowering behavior via skills). Nudges exploit System 1 <span style="color:#e63946">**cognitive deficiencies**</span>, whereas Boosts build <span style="color:#e63946">**competences**</span> by assuming <span style="color:#e63946">**ecological rationality**</span>—that people can be trained to use heuristics effectively.
-
-
-**Figure 4**
+**Figure 5**
 
 *Taxonomy of Behavioral Policy Interventions*
 
@@ -156,24 +171,20 @@ The authors distinguish between <span style="color:#e63946">**Nudges**</span> (s
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Decision Science &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Decision Science**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S3(("&nbsp;&nbsp;&nbsp;&nbsp; Bounded Rationality &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dual-Process Theory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ecological Rationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Nudging (System 1) &nbsp;&nbsp;&nbsp;&nbsp;"]
     Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Boosting (System 2) &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* This figure provides a structural taxonomy of behavioral interventions. It maps how specific theoretical assumptions about the human mind lead to different policy choices. The "Dual-Process" and "Bounded Rationality" satellites explain the justification for Nudging (steering fallible minds), while "Ecological Rationality" explains the shift toward Boosting (training competent minds).
-
-
-**How to remember**  
-**"GPS vs. Map."** A Nudge is a GPS (tells you where to go); a Boost is learning to read a map (skill empowerment).
+*Note.* Contrasts environmental steering (Nudges) with cognitive empowerment (Boosts) based on the underlying targeted psychological systems (System 1 vs System 2).
 
 
 ---
@@ -185,11 +196,7 @@ graph TD
 #### Chater & Loewenstein (2023): The i-frame and the s-frame
 
 
-**Detailed Abstract**  
-Argues that <span style="color:#e63946">**i-frames**</span> (individual focus) have enabled corporate <span style="color:#e63946">**responsibilization**</span>, shifting blame onto consumers and <span style="color:#e63946">**crowding out**</span> support for <span style="color:#e63946">**s-frames**</span> (systemic change).
-
-
-**Figure 5**
+**Figure 6**
 
 *Structural Dynamics of Policy Framing*
 
@@ -197,20 +204,20 @@ Argues that <span style="color:#e63946">**i-frames**</span> (individual focus) h
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Policy Framing &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Policy Framing**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S3(("&nbsp;&nbsp;&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attribution Error &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Responsibilization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crowding Out &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Systemic Inaction &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Individual Guilt &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* Models the negative externalities of individual-level framing. The "Responsibilization" and "Attribution Error" satellites explain how focus is diverted from corporate/legal systems to individual failings, resulting in "Systemic Inaction" and high levels of "Individual Guilt."
+*Note.* This model illustrates the diversionary effect of individual-level framing (<span style="color:#e63946">**i-frame**</span>). It shows how shifting blame onto consumers (<span style="color:#e63946">**responsibilization**</span>) leads to "Systemic Inaction" by "Crowding Out" support for broader systemic changes.
 
 
 ---
@@ -219,14 +226,10 @@ graph TD
 ### 🔴 Week 5: The Credibility of Science Communication
 
 
-#### Van der Linden et al. (2015): The Gateway Belief Model
+#### Van der Linden et al. (2015): Gateway Belief Model
 
 
-**Detailed Abstract**  
-The <span style="color:#e63946">**Gateway Belief Model (GBM)**</span> shows that scientific consensus messaging triggers <span style="color:#e63946">**cognitive consistency**</span>, cascading into support for policy action.
-
-
-**Figure 6**
+**Figure 7**
 
 *The Consensus Domino Effect*
 
@@ -234,25 +237,19 @@ The <span style="color:#e63946">**Gateway Belief Model (GBM)**</span> shows that
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Consensus Gateway &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Consensus Gateway**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expert Consensus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cognitive Consistency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Policy Support &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* This model illustrates the causal flow of consensus messaging. Shifting the perception of expert agreement (Hub) activates the psychological need for consistency, leading to a domino effect on causality and risk beliefs, ultimately increasing policy support.
-
-
-#### Meijers & Rutjens (2014): Affirming Belief in Progress
-
-
-**Detailed Abstract**  
-Explores <span style="color:#e63946">**Compensatory Control Theory**</span>, showing a <span style="color:#e63946">**hydraulic relationship**</span> where belief in science reduces personal motivation through <span style="color:#e63946">**moral licensing**</span>.
+*Note.* This model maps the "domino effect" of expert consensus messaging. Once the foundational perception of agreement is shifted (Consensus Gateway), the drive for "Cognitive Consistency" updates causal and risk beliefs, sequentially driving "Policy Support."
 
 
 ---
@@ -261,21 +258,10 @@ Explores <span style="color:#e63946">**Compensatory Control Theory**</span>, sho
 ### 🟣 Week 6: Resistance to Persuasion & Inoculation
 
 
-#### Fransen et al. (2023): Sixty Years Later
-
-
-**Detailed Abstract**  
-Replicates <span style="color:#e63946">**Inoculation Theory**</span>, showing that <span style="color:#e63946">**refutational pre-emption**</span> builds resistance to attacks on <span style="color:#e63946">**cultural truisms**</span> by triggering <span style="color:#e63946">**threat awareness**</span>.
-
-
 #### Basol et al. (2020): Good News about Bad News
 
 
-**Detailed Abstract**  
-A gamified approach to <span style="color:#e63946">**active inoculation**</span>, building <span style="color:#e63946">**broad-spectrum inoculation**</span> and **cognitive immunity** against misinformation tactics.
-
-
-**Figure 7**
+**Figure 8**
 
 *The Mechanism of Cognitive Immunity*
 
@@ -283,21 +269,17 @@ A gamified approach to <span style="color:#e63946">**active inoculation**</span>
 ```mermaid
 %%{init: { 'flowchart': { 'padding': 20, 'nodeSpacing': 50, 'rankSpacing': 50, 'useMaxWidth': false }, 'theme': 'neutral', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    Hub["&nbsp;&nbsp;&nbsp;&nbsp; Cognitive Immunity &nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
+    Hub["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='color:#e63946'>**Cognitive Immunity**</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]:::hubNode
     
-    S1(("&nbsp;&nbsp;&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S2(("&nbsp;&nbsp;&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
-    S3(("&nbsp;&nbsp;&nbsp;&nbsp; Refutational Pre-emption &nbsp;&nbsp;&nbsp;&nbsp;")) --- Hub
+    S1(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Inoculation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S2(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tactic Spotting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
+    S3(["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refutational Pre-emption &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]) --- Hub
     
     Hub --> B1["&nbsp;&nbsp;&nbsp;&nbsp; Misinfo Resistance &nbsp;&nbsp;&nbsp;&nbsp;"]
-    Hub --> B2["&nbsp;&nbsp;&nbsp;&nbsp; Meta-Cognitive Confidence &nbsp;&nbsp;&nbsp;&nbsp;"]
     
     classDef hubNode font-weight:bold,stroke-width:2px,fill:#f9f;
+    classDef default stroke-width:2px;
 ```
 
 
-*Note.* Models the build-up of mental defense. The Immunity Hub is established through Active participation (the game) and Tactic Spotting, leading to measurable resistance and meta-cognitive confidence in truth-judgment.
-
-
-**How to remember**  
-The **"Fire Drill."** You run a fake drill (inoculation) so your brain knows the exits when a real fire (misinformation) starts.
+*Note.* Models the build-up of mental defense. The Immunity Hub is established through "Active Inoculation" (learning by doing) and "Tactic Spotting," creating a measurable resistance to persuasive manipulation.
