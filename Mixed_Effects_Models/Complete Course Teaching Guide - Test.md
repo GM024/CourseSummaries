@@ -2626,7 +2626,7 @@ Y_{ij} \sim \text{Binomial}(n_{ij}, p_{ij})
 $$
 
 $$
-\operatorname{logit}(p_{ij}) = \beta_{0} + \beta_{1} X_{ij} + u_{0j} + ...
+logit(p_{ij}) = \beta_{0} + \beta_{1} X_{ij} + u_{0j} + ...
 $$
 
 <details>
