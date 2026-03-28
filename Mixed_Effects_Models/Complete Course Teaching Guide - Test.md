@@ -57,12 +57,11 @@ Status:
 
 ### Why This Matters
 
-> [!info]
-> If you do not understand why mixed models exist, the later syntax will look arbitrary.
-> This course is built around one central idea:
-> - behavioural-science data are often clustered
-> - clustered data violate independence
-> - mixed models let us analyse that structure without throwing away trial-level information
+If you do not understand why mixed models exist, the later syntax will look arbitrary.
+This course is built around one central idea:
+- behavioural-science data are often clustered
+- clustered data violate independence
+- mixed models let us analyse that structure without throwing away trial-level information
 
 <details>
 <summary>Source</summary>
@@ -146,11 +145,10 @@ By the end of the course, you should be able to:
 
 ### What To Remember
 
-> [!tip]
-> - Mixed models exist because behavioural data are often not independent.
-> - They keep trial-level or grouped data instead of collapsing everything prematurely.
-> - They extend regression rather than replacing it.
-> - The whole course is about learning how to connect data structure, model structure, and interpretation.
+- Mixed models exist because behavioural data are often not independent.
+- They keep trial-level or grouped data instead of collapsing everything prematurely.
+- They extend regression rather than replacing it.
+- The whole course is about learning how to connect data structure, model structure, and interpretation.
 
 
 
@@ -158,14 +156,13 @@ By the end of the course, you should be able to:
 
 ### Why This Matters
 
-> [!info]
-> If you can decode the formula, you can usually decode the model.
-> This section is the translation layer between:
->
-> - the conceptual statistics
-> - the model equation
-> - the R syntax
-> - the output
+If you can decode the formula, you can usually decode the model.
+This section is the translation layer between:
+
+- the conceptual statistics
+- the model equation
+- the R syntax
+- the output
 
 <details>
 <summary>Source</summary>
@@ -322,120 +319,115 @@ lmer(Y ~ 1 + X + (1 + X | group), data = d)
 
 ### Formula Decryption Worked Examples
 
-> [!example]
-> For:
->
-> ```r
-> lmer(distance ~ 1 + (1 | pid), data = dfcp)
-> ```
->
-> decrypt it like this:
-> - dependent variable: `distance`
-> - fixed intercept: the `1` after `~`
-> - fixed slopes: none, because no predictor appears after the intercept
-> - random intercept: the `1` inside `(1 | pid)`
-> - random slopes: none
-> - grouping factor: `pid`
-> - residual: not written in the R formula, but still estimated by the Gaussian mixed model
-> - `data = dfcp`: tells R where the variables come from; it is not a model term
->
-> So the sentence version is:
-> - predict `distance`
-> - estimate one average baseline
-> - let each participant have a different baseline
-> - keep residual observation-level noise
->
-> For:
->
-> ```r
-> lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
-> ```
->
-> decrypt it like this:
-> - dependent variable: `Reaction`
-> - fixed intercept: the `1` after `~`
-> - fixed slope: `Days` in the fixed part
-> - random intercept: the `1` inside `(1 + Days | f_Subject)`
-> - random slope: `Days` inside `(1 + Days | f_Subject)`
-> - grouping factor: `f_Subject`
-> - random correlation term: implied because the random intercept and random slope are estimated together inside the same `|` term
-> - action status for the correlation term: automatically estimated by R; no extra action is needed unless you intentionally remove it with `||` or split the random terms apart
-> - residual: not written in the R formula, but still estimated by the Gaussian mixed model
-> - `data = sleepstudy2`: tells R where the variables come from; it is not a model term
->
-> So the sentence version is:
-> - predict `Reaction`
-> - estimate one average intercept
-> - estimate one average effect of `Days`
-> - let each subject have a different baseline
-> - let each subject have a different `Days` effect
-> - estimate the correlation between those subject-specific intercepts and slopes
-> - keep residual observation-level noise
+For:
+
+```r
+lmer(distance ~ 1 + (1 | pid), data = dfcp)
+```
+
+decrypt it like this:
+- dependent variable: `distance`
+- fixed intercept: the `1` after `~`
+- fixed slopes: none, because no predictor appears after the intercept
+- random intercept: the `1` inside `(1 | pid)`
+- random slopes: none
+- grouping factor: `pid`
+- residual: not written in the R formula, but still estimated by the Gaussian mixed model
+- `data = dfcp`: tells R where the variables come from; it is not a model term
+
+So the sentence version is:
+- predict `distance`
+- estimate one average baseline
+- let each participant have a different baseline
+- keep residual observation-level noise
+
+For:
+
+```r
+lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
+```
+
+decrypt it like this:
+- dependent variable: `Reaction`
+- fixed intercept: the `1` after `~`
+- fixed slope: `Days` in the fixed part
+- random intercept: the `1` inside `(1 + Days | f_Subject)`
+- random slope: `Days` inside `(1 + Days | f_Subject)`
+- grouping factor: `f_Subject`
+- random correlation term: implied because the random intercept and random slope are estimated together inside the same `|` term
+- action status for the correlation term: automatically estimated by R; no extra action is needed unless you intentionally remove it with `||` or split the random terms apart
+- residual: not written in the R formula, but still estimated by the Gaussian mixed model
+- `data = sleepstudy2`: tells R where the variables come from; it is not a model term
+
+So the sentence version is:
+- predict `Reaction`
+- estimate one average intercept
+- estimate one average effect of `Days`
+- let each subject have a different baseline
+- let each subject have a different `Days` effect
+- estimate the correlation between those subject-specific intercepts and slopes
+- keep residual observation-level noise
 
 ### Hidden Terms That Are Still Estimated
 
-> [!info]
-> Some model components are real even when they are not written as separate visible terms in the R formula:
-> - residual variance: automatically estimated in Gaussian LMMs; no extra action is needed
-> - intercept-slope correlation: automatically estimated when intercept and slope appear together inside the same `( ... | group )` term
-> - no intercept-slope correlation: if you use `||` or split the random terms, R does not estimate that correlation
-> - in GLMMs, there is no ordinary Gaussian residual term written in the same way as $e_{ij}$; outcome variability is handled through the model family and link
+Some model components are real even when they are not written as separate visible terms in the R formula:
+- residual variance: automatically estimated in Gaussian LMMs; no extra action is needed
+- intercept-slope correlation: automatically estimated when intercept and slope appear together inside the same `( ... | group )` term
+- no intercept-slope correlation: if you use `||` or split the random terms, R does not estimate that correlation
+- in GLMMs, there is no ordinary Gaussian residual term written in the same way as $e_{ij}$; outcome variability is handled through the model family and link
 
 ### How To Read These Formulas In Output
 
-> [!example]
-> The course expects you to connect syntax to output structure:
->
-> - the fixed part of the formula appears in the `Fixed effects` section
-> - the random part appears in the `Random effects` section
-> - the grouping factor appears in the `Groups` column
-> - the residual is reported separately from the random effects
->
-> So, for:
->
-> ```r
-> lmer(distance ~ 1 + (1 | pid), data = dfcp)
-> ```
->
-> you should expect:
-> - one fixed intercept
-> - one participant-level random-intercept variance
-> - one residual variance
->
-> For:
->
-> ```r
-> lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
-> ```
->
-> you should expect:
-> - fixed intercept
-> - fixed `Days` slope
-> - subject random-intercept variance
-> - subject random-slope variance for `Days`
-> - correlation between random intercept and random slope
->   this is automatically estimated because both random coefficients are inside the same `(1 + Days | f_Subject)` term
-> - residual variance
+The course expects you to connect syntax to output structure:
+
+- the fixed part of the formula appears in the `Fixed effects` section
+- the random part appears in the `Random effects` section
+- the grouping factor appears in the `Groups` column
+- the residual is reported separately from the random effects
+
+So, for:
+
+```r
+lmer(distance ~ 1 + (1 | pid), data = dfcp)
+```
+
+you should expect:
+- one fixed intercept
+- one participant-level random-intercept variance
+- one residual variance
+
+For:
+
+```r
+lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
+```
+
+you should expect:
+- fixed intercept
+- fixed `Days` slope
+- subject random-intercept variance
+- subject random-slope variance for `Days`
+- correlation between random intercept and random slope
+  this is automatically estimated because both random coefficients are inside the same `(1 + Days | f_Subject)` term
+- residual variance
 
 ### Common Formula Traps
 
-> [!warning]
-> - `1` does not mean "no fixed effect"; it means intercept.
-> - `(1 | group)` is not the same as adding `group` as a fixed predictor.
-> - `X * Z` expands to `X + Z + X:Z`.
-> - `||` does not remove the slope; it removes the estimated random correlation.
-> - The right side of `|` is the grouping factor, not another predictor of interest.
+- `1` does not mean "no fixed effect"; it means intercept.
+- `(1 | group)` is not the same as adding `group` as a fixed predictor.
+- `X * Z` expands to `X + Z + X:Z`.
+- `||` does not remove the slope; it removes the estimated random correlation.
+- The right side of `|` is the grouping factor, not another predictor of interest.
 
 ### What To Memorize
 
-> [!tip]
-> - `~` means "predicted by."
-> - `1` means intercept.
-> - left of `|` = random coefficients.
-> - right of `|` = grouping factor.
-> - `(1 | group)` = varying baseline.
-> - `(1 + X | group)` = varying baseline and varying effect of `X`.
-> - `X * Z` means main effects plus interaction.
+- `~` means "predicted by."
+- `1` means intercept.
+- left of `|` = random coefficients.
+- right of `|` = grouping factor.
+- `(1 | group)` = varying baseline.
+- `(1 + X | group)` = varying baseline and varying effect of `X`.
+- `X * Z` means main effects plus interaction.
 
 ## 3. Statistical Workflow Step By Step
 
@@ -443,9 +435,8 @@ lmer(Y ~ 1 + X + (1 + X | group), data = d)
 <summary>Open Statistical Workflow</summary>
 ### Why This Matters
 
-> [!info]
-> Your current summaries extract concepts, but a study guide also has to teach you what to do in order.
-> That is what this workflow section fixes.
+Your current summaries extract concepts, but a study guide also has to teach you what to do in order.
+That is what this workflow section fixes.
 
 ### The Workflow At A Glance
 
@@ -719,14 +710,13 @@ If you are doing data-driven model search:
 
 ### What To Memorize
 
-> [!tip]
-> - first decide the question, then the DV type, then the dependence structure
-> - grouping factors come from who or what is repeated
-> - fixed effects are the effects of interest
-> - random intercepts and slopes come from the design
-> - method choice and coding matter for inference
-> - output reading comes before significance interpretation
-> - diagnostics and warnings are part of the workflow, not an afterthought
+- first decide the question, then the DV type, then the dependence structure
+- grouping factors come from who or what is repeated
+- fixed effects are the effects of interest
+- random intercepts and slopes come from the design
+- method choice and coding matter for inference
+- output reading comes before significance interpretation
+- diagnostics and warnings are part of the workflow, not an afterthought
 
 </details>
 
@@ -755,14 +745,13 @@ If you are doing data-driven model search:
 
 #### Why This Matters
 
-> [!info]
-> This is the first question the course keeps asking in different forms:
-> - why not just use ordinary regression or ANOVA?
-> - what is the actual statistical problem?
-> - what extra job does a mixed model do?
->
-> If you cannot answer that, later formula choices will feel arbitrary.
-> In the workflow, this is the point where you decide whether the dependence structure and grouping factors actually require a mixed model.
+This is the first question the course keeps asking in different forms:
+- why not just use ordinary regression or ANOVA?
+- what is the actual statistical problem?
+- what extra job does a mixed model do?
+
+If you cannot answer that, later formula choices will feel arbitrary.
+In the workflow, this is the point where you decide whether the dependence structure and grouping factors actually require a mixed model.
 
 #### Statistical Formula
 
@@ -807,18 +796,17 @@ So the mixed model separates:
 
 #### Book / Literature Explanation
 
-> [!note]
-> The book-style explanation is that mixed models are not "just regression with more terms."
-> They are models for data that vary at more than one level.
-> Baguley's key bridge is that they extend both regression and repeated-measures ANOVA by explicitly modeling variation at different levels of the data.
->
-> That means the question is not only:
-> - does $X$ predict $Y$?
->
-> It is also:
-> - do some participants start higher than others?
-> - do some items produce larger responses than others?
-> - do some participants respond more strongly to $X$ than others?
+The book-style explanation is that mixed models are not "just regression with more terms."
+They are models for data that vary at more than one level.
+Baguley's key bridge is that they extend both regression and repeated-measures ANOVA by explicitly modeling variation at different levels of the data.
+
+That means the question is not only:
+- does $X$ predict $Y$?
+
+It is also:
+- do some participants start higher than others?
+- do some items produce larger responses than others?
+- do some participants respond more strongly to $X$ than others?
 
 #### Equivalent R Syntax
 
@@ -836,39 +824,35 @@ lmer(Y ~ 1 + X + (1 | group), data = d)
 
 #### How To Read It In Output
 
-> [!example]
-> The ordinary model mainly gives:
-> - fixed coefficients
-> - one residual error structure
->
-> The mixed model adds:
-> - a `Random effects` block
-> - variance for the grouping factor
-> - residual variance separate from the grouping-factor variance
+The ordinary model mainly gives:
+- fixed coefficients
+- one residual error structure
+
+The mixed model adds:
+- a `Random effects` block
+- variance for the grouping factor
+- residual variance separate from the grouping-factor variance
 
 #### Common Trap
 
-> [!warning]
-> - Using mixed models because they feel more advanced, instead of because the data structure requires them.
-> - Thinking the main reason is "big data" rather than clustered or repeated data.
+- Using mixed models because they feel more advanced, instead of because the data structure requires them.
+- Thinking the main reason is "big data" rather than clustered or repeated data.
 
 #### What To Memorize
 
-> [!tip]
-> - Mixed models exist because observations are often not independent.
-> - Their extra job is to model structured variation across clusters.
-> - They extend regression and repeated-measures logic rather than replacing them.
+- Mixed models exist because observations are often not independent.
+- Their extra job is to model structured variation across clusters.
+- They extend regression and repeated-measures logic rather than replacing them.
 
 ### 4.2 Minimum Ingredients Of A Mixed-Effects Model
 
 #### Why This Matters
 
-> [!info]
->
-> The example exam directly asks what counts as a mixed-effects model.
-> So you need one stable rule that works even when the formula looks simple.
-> In the workflow, this is the smallest defensible mixed model once you have established non-independence and identified a grouping factor.
->
+
+The example exam directly asks what counts as a mixed-effects model.
+So you need one stable rule that works even when the formula looks simple.
+In the workflow, this is the smallest defensible mixed model once you have established non-independence and identified a grouping factor.
+
 #### Statistical Formula
 
 The smallest clean mixed-model example in this course is:
@@ -899,21 +883,20 @@ So a mixed model is defined by structure, not by visual complexity.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The teaching point here is subtle but important.
-> A mixed model does not need:
-> - many predictors
-> - an interaction
-> - a random slope
-> - multiple grouping factors
->
-> It only needs:
-> - fixed structure
-> - random structure
->
-> That is why an intercept-only model with a random intercept is still a real mixed model.
->
+
+The teaching point here is subtle but important.
+A mixed model does not need:
+- many predictors
+- an interaction
+- a random slope
+- multiple grouping factors
+
+It only needs:
+- fixed structure
+- random structure
+
+That is why an intercept-only model with a random intercept is still a real mixed model.
+
 #### Equivalent R Syntax
 
 ```r
@@ -922,40 +905,36 @@ lmer(distance ~ 1 + (1 | pid), data = dfcp)
 
 #### How To Read It In Output
 
-> [!example]
->
-> For this minimal model you should expect:
-> - a fixed intercept estimate
-> - a variance for the grouping factor
-> - a residual variance
->
-> That is enough to call the model mixed.
->
+
+For this minimal model you should expect:
+- a fixed intercept estimate
+- a variance for the grouping factor
+- a residual variance
+
+That is enough to call the model mixed.
+
 #### Common Trap
 
-> [!warning]
->
-> - Thinking a model is only mixed if it has both random intercepts and random slopes.
-> - Thinking an intercept-only mixed model is "empty."
->
+
+- Thinking a model is only mixed if it has both random intercepts and random slopes.
+- Thinking an intercept-only mixed model is "empty."
+
 #### What To Memorize
 
-> [!tip]
->
-> - Minimum ingredients = fixed part + random part.
-> - Complexity is optional; mixed structure is not.
-> - `lmer(Y ~ 1 + (1 | group), data = d)` is already a mixed model.
->
+
+- Minimum ingredients = fixed part + random part.
+- Complexity is optional; mixed structure is not.
+- `lmer(Y ~ 1 + (1 | group), data = d)` is already a mixed model.
+
 ### 4.3 Fixed Versus Random Effects
 
 #### Why This Matters
 
-> [!info]
->
-> This distinction controls the entire formula.
-> If you confuse fixed and random effects, you will misread both syntax and output.
-> In the workflow, this is the distinction you use when deciding which effects belong in the fixed part and which sampled units belong in the random part.
->
+
+This distinction controls the entire formula.
+If you confuse fixed and random effects, you will misread both syntax and output.
+In the workflow, this is the distinction you use when deciding which effects belong in the fixed part and which sampled units belong in the random part.
+
 #### Statistical Formula
 
 $$
@@ -1004,17 +983,16 @@ So the core distinction is:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> This is where the book-like explanation helps most.
-> Fixed effects are not called "fixed" because they never change in the sample.
-> They are fixed because the model estimates one population-level coefficient for them.
-> Random effects are not random because they are unimportant.
-> They are random because the model treats the observed levels as sampled from a broader population of possible units and models their variability as a distribution.
->
-> That is why the course keeps emphasizing generalization.
-> If subjects, items, clinics, or classes are sampled sources of variability, the model should usually treat them as random.
->
+
+This is where the book-like explanation helps most.
+Fixed effects are not called "fixed" because they never change in the sample.
+They are fixed because the model estimates one population-level coefficient for them.
+Random effects are not random because they are unimportant.
+They are random because the model treats the observed levels as sampled from a broader population of possible units and models their variability as a distribution.
+
+That is why the course keeps emphasizing generalization.
+If subjects, items, clinics, or classes are sampled sources of variability, the model should usually treat them as random.
+
 #### Equivalent R Syntax
 
 ```r
@@ -1027,37 +1005,33 @@ In this example:
 
 #### How To Read It In Output
 
-> [!example]
->
-> Look in different places for different jobs:
-> - `Fixed effects` block: coefficient estimates for effects of interest
-> - `Random effects` block: variance and standard deviation for grouping-factor deviations
-> - `Groups` column: tells you which sampled units those deviations belong to
->
+
+Look in different places for different jobs:
+- `Fixed effects` block: coefficient estimates for effects of interest
+- `Random effects` block: variance and standard deviation for grouping-factor deviations
+- `Groups` column: tells you which sampled units those deviations belong to
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating any variable with many levels as automatically random.
-> - Confusing crossed versus nested with fixed versus random.
->
+
+- Treating any variable with many levels as automatically random.
+- Confusing crossed versus nested with fixed versus random.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Fixed effects = average effects of interest.
-> - Random effects = distributions of unit-level deviations.
-> - Fixed effects are typically tested directly; random effects mainly structure the model.
->
+
+- Fixed effects = average effects of interest.
+- Random effects = distributions of unit-level deviations.
+- Fixed effects are typically tested directly; random effects mainly structure the model.
+
 ### 4.4 Random Intercepts
 
 #### Why This Matters
 
-> [!info]
->
-> Random intercepts are the first real random effect in the course.
-> If you understand them properly, the rest of the random-effects logic becomes much easier.
-> This is still a random-intercept chapter: even if a fixed predictor is added, only the intercept varies across units here.
+
+Random intercepts are the first real random effect in the course.
+If you understand them properly, the rest of the random-effects logic becomes much easier.
+This is still a random-intercept chapter: even if a fixed predictor is added, only the intercept varies across units here.
 #### Statistical Formula
 
 Intercept-only random-intercept model:
@@ -1107,14 +1081,13 @@ The model still estimates one overall intercept, but each unit is allowed to dev
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> This is the cleanest example of the course's phrase "model variation at different levels."
-> The fixed intercept captures the average baseline in the population.
-> The random intercept captures how clusters depart from that average.
->
-> So the model is no longer forced to pretend that every participant or item begins from exactly the same starting point.
->
+
+This is the cleanest example of the course's phrase "model variation at different levels."
+The fixed intercept captures the average baseline in the population.
+The random intercept captures how clusters depart from that average.
+
+So the model is no longer forced to pretend that every participant or item begins from exactly the same starting point.
+
 #### Equivalent R Syntax
 
 ```r
@@ -1135,67 +1108,62 @@ lmer(Y ~ 1 + X + (1 | subject), data = d)
 
 #### Formula Decryption
 
-> [!example]
->
-> For:
->
-> ```r
-> lmer(distance ~ 1 + (1 | pid), data = dfcp)
-> ```
->
-> read it term by term:
-> - fixed intercept: the `1` after `~`
-> - fixed slopes: none
-> - random intercept: the `1` inside `(1 | pid)`
-> - grouping factor: `pid`
-> - random correlation term: none, because only a random intercept is estimated here
-> - residual: still present even though it is not written explicitly in the R formula
->
-> This means:
-> - one average baseline for `distance` ($\beta_{0}$)
-> - different participant-specific baselines around that average ($u_{0j}$)
-> - leftover residual noise for each observation ($e_{ij}$)
->
+
+For:
+
+```r
+lmer(distance ~ 1 + (1 | pid), data = dfcp)
+```
+
+read it term by term:
+- fixed intercept: the `1` after `~`
+- fixed slopes: none
+- random intercept: the `1` inside `(1 | pid)`
+- grouping factor: `pid`
+- random correlation term: none, because only a random intercept is estimated here
+- residual: still present even though it is not written explicitly in the R formula
+
+This means:
+- one average baseline for `distance` ($\beta_{0}$)
+- different participant-specific baselines around that average ($u_{0j}$)
+- leftover residual noise for each observation ($e_{ij}$)
+
 #### How To Read It In Output
 
-> [!example]
->
-> In the output, look for:
-> - the grouping factor under `Groups`
-> - the random-intercept variance for that grouping factor
-> - the residual variance
-> - the fixed intercept estimate
->
-> Interpretation rule:
-> - fixed intercept = average baseline
-> - random-intercept variance = how much baselines vary across units
->
+
+In the output, look for:
+- the grouping factor under `Groups`
+- the random-intercept variance for that grouping factor
+- the residual variance
+- the fixed intercept estimate
+
+Interpretation rule:
+- fixed intercept = average baseline
+- random-intercept variance = how much baselines vary across units
+
 #### Common Trap
 
-> [!warning]
->
-> - Thinking `(1 | group)` means `group` is just another fixed predictor.
-> - Thinking a random intercept already captures differences in the effect of `X`.
->
+
+- Thinking `(1 | group)` means `group` is just another fixed predictor.
+- Thinking a random intercept already captures differences in the effect of `X`.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Random intercept = varying baseline.
-> - `(1 | group)` = allow the intercept to differ across the grouping factor.
-> - A random intercept fixes baseline non-independence, not slope heterogeneity.
->
+
+- Random intercept = varying baseline.
+- `(1 | group)` = allow the intercept to differ across the grouping factor.
+- A random intercept fixes baseline non-independence, not slope heterogeneity.
+
 ### 4.5 Random Slopes
 
 #### Why This Matters
 
-> [!info]
->
-> This is where the course becomes design-sensitive.
-> Random slopes are the answer to the question:
-> - does the effect of the predictor differ across units?
-> In the workflow, this is the point where you ask which fixed effects vary within each grouping factor.
->
+
+This is where the course becomes design-sensitive.
+Random slopes are the answer to the question:
+- does the effect of the predictor differ across units?
+In the workflow, this is the point where you ask which fixed effects vary within each grouping factor.
+
 #### Statistical Formula
 
 $$
@@ -1238,17 +1206,16 @@ This is often essential in repeated-measures designs.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The fixed slope answers the average question:
-> - on average, does `X` change `Y`?
->
-> The random slope answers the heterogeneity question:
-> - does that effect vary across participants, items, or other clusters?
->
-> This is why the course repeatedly warns that a random-intercept-only model can be too optimistic.
-> If units truly differ in slopes, omitting the slope forces the model to act as if everyone shares the same effect size.
->
+
+The fixed slope answers the average question:
+- on average, does `X` change `Y`?
+
+The random slope answers the heterogeneity question:
+- does that effect vary across participants, items, or other clusters?
+
+This is why the course repeatedly warns that a random-intercept-only model can be too optimistic.
+If units truly differ in slopes, omitting the slope forces the model to act as if everyone shares the same effect size.
+
 #### Equivalent R Syntax
 
 ```r
@@ -1265,74 +1232,69 @@ lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
 
 #### Formula Decryption
 
-> [!example]
->
-> For:
->
-> ```r
-> lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
-> ```
->
-> read it term by term:
-> - dependent variable: `Reaction`
-> - fixed intercept: the `1` after `~`
-> - fixed slope: `Days` in the fixed part
-> - random intercept: the `1` inside `(1 + Days | f_Subject)`
-> - random slope: `Days` inside `(1 + Days | f_Subject)`
-> - grouping factor: `f_Subject`
-> - random correlation term: implied because intercept and slope are estimated together inside the same random-effects term
-> - action status for the correlation term: automatically estimated by R; no extra action is needed unless you replace `|` with `||` or separate the random terms
-> - residual: still present even though it is not written explicitly in the R formula
->
-> This means:
-> - one average baseline reaction time ($\beta_{0}$)
-> - one average effect of `Days` ($\beta_{1}$)
-> - subject-specific baselines ($u_{0j}$)
-> - subject-specific `Days` effects ($u_{1j} X_{ij}$)
-> - correlation between those subject-specific baselines and slopes (automatically estimated)
-> - leftover residual noise ($e_{ij}$)
->
+
+For:
+
+```r
+lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
+```
+
+read it term by term:
+- dependent variable: `Reaction`
+- fixed intercept: the `1` after `~`
+- fixed slope: `Days` in the fixed part
+- random intercept: the `1` inside `(1 + Days | f_Subject)`
+- random slope: `Days` inside `(1 + Days | f_Subject)`
+- grouping factor: `f_Subject`
+- random correlation term: implied because intercept and slope are estimated together inside the same random-effects term
+- action status for the correlation term: automatically estimated by R; no extra action is needed unless you replace `|` with `||` or separate the random terms
+- residual: still present even though it is not written explicitly in the R formula
+
+This means:
+- one average baseline reaction time ($\beta_{0}$)
+- one average effect of `Days` ($\beta_{1}$)
+- subject-specific baselines ($u_{0j}$)
+- subject-specific `Days` effects ($u_{1j} X_{ij}$)
+- correlation between those subject-specific baselines and slopes (automatically estimated)
+- leftover residual noise ($e_{ij}$)
+
 #### How To Read It In Output
 
-> [!example]
->
-> For a random-slope model, expect to see:
-> - a random-intercept variance
-> - a random-slope variance
-> - often a correlation between intercept and slope
-> - the fixed slope estimate for the average effect
->
-> Interpretation rule:
-> - fixed slope = average effect of the predictor
-> - random-slope variance = how much that effect differs across units
->
+
+For a random-slope model, expect to see:
+- a random-intercept variance
+- a random-slope variance
+- often a correlation between intercept and slope
+- the fixed slope estimate for the average effect
+
+Interpretation rule:
+- fixed slope = average effect of the predictor
+- random-slope variance = how much that effect differs across units
+
 #### Common Trap
 
-> [!warning]
->
-> - Assuming the fixed slope already captures participant-to-participant variability in the effect.
-> - Adding or removing random slopes without checking whether the design justifies them.
->
+
+- Assuming the fixed slope already captures participant-to-participant variability in the effect.
+- Adding or removing random slopes without checking whether the design justifies them.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Random slope = varying effect of a predictor across units.
-> - `(1 + X | group)` = varying baseline and varying effect of `X`.
-> - Omitting a needed random slope can inflate Type 1 error for the corresponding fixed effect.
->
+
+- Random slope = varying effect of a predictor across units.
+- `(1 + X | group)` = varying baseline and varying effect of `X`.
+- Omitting a needed random slope can inflate Type 1 error for the corresponding fixed effect.
+
 ### 4.6 Interaction Logic
 
 #### Why This Matters
 
-> [!info]
->
-> An interaction is where the effect of one predictor depends on the level of another predictor.
-> In this course, interaction logic matters twice:
-> - in the fixed-effects interpretation
-> - in the random-effects design rule
-> In the workflow, this matters when you choose both the fixed-effects structure and the justified random slopes for models with interactions.
->
+
+An interaction is where the effect of one predictor depends on the level of another predictor.
+In this course, interaction logic matters twice:
+- in the fixed-effects interpretation
+- in the random-effects design rule
+In the workflow, this matters when you choose both the fixed-effects structure and the justified random slopes for models with interactions.
+
 #### Statistical Formula
 
 Fixed-effects interaction:
@@ -1379,20 +1341,19 @@ It also affects which random slopes are justified.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The main teaching point is that interaction logic is design-dependent.
-> You do not ask only:
-> - is there an `A:B` term in the fixed part?
->
-> You also ask:
-> - do both factors vary within subject?
-> - does only one vary within subject?
-> - is there enough replication to estimate the needed slope?
->
-> So the course's interaction rule is not a software trick.
-> It is a design rule about what pattern of variation the model should allow.
->
+
+The main teaching point is that interaction logic is design-dependent.
+You do not ask only:
+- is there an `A:B` term in the fixed part?
+
+You also ask:
+- do both factors vary within subject?
+- does only one vary within subject?
+- is there enough replication to estimate the needed slope?
+
+So the course's interaction rule is not a software trick.
+It is a design rule about what pattern of variation the model should allow.
+
 #### Equivalent R Syntax
 
 If both `A` and `B` vary within subject and the design supports it:
@@ -1409,41 +1370,37 @@ lmer(Y ~ 1 + A * B + (1 + B | subject), data = d)
 
 #### How To Read It In Output
 
-> [!example]
->
-> For an interaction model, look for:
-> - fixed estimates for `A`, `B`, and `A:B`
-> - the relevant random-slope variances for the within-unit effects
-> - whether the model actually contains the slope structure that the design calls for
->
-> Interpretation rule:
-> - the interaction estimate tells you whether one effect changes across levels of the other predictor
->
+
+For an interaction model, look for:
+- fixed estimates for `A`, `B`, and `A:B`
+- the relevant random-slope variances for the within-unit effects
+- whether the model actually contains the slope structure that the design calls for
+
+Interpretation rule:
+- the interaction estimate tells you whether one effect changes across levels of the other predictor
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating interactions as only a fixed-effects issue.
-> - Forgetting that the random-effects structure for an interaction depends on which factors are within-unit.
->
+
+- Treating interactions as only a fixed-effects issue.
+- Forgetting that the random-effects structure for an interaction depends on which factors are within-unit.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Interaction = effect of one predictor depends on another predictor.
-> - The interaction term itself is in the fixed part.
-> - The needed random slope depends on the design, not just on the presence of `A:B` in the formula.
->
+
+- Interaction = effect of one predictor depends on another predictor.
+- The interaction term itself is in the fixed part.
+- The needed random slope depends on the design, not just on the presence of `A:B` in the formula.
+
 ### 4.7 Crossed Versus Nested Structures
 
 #### Why This Matters
 
-> [!info]
->
-> The course uses both repeated-measures subject-item examples and hierarchical examples such as students in classes.
-> You need to tell these structures apart because the formula changes with the data structure.
-> In the workflow, this matters when you identify the dependence structure and grouping factors, because getting crossed versus nested wrong changes the formula itself.
->
+
+The course uses both repeated-measures subject-item examples and hierarchical examples such as students in classes.
+You need to tell these structures apart because the formula changes with the data structure.
+In the workflow, this matters when you identify the dependence structure and grouping factors, because getting crossed versus nested wrong changes the formula itself.
+
 #### Statistical Formula
 
 Crossed structure:
@@ -1498,17 +1455,16 @@ These are both mixed-model problems, but they are not encoded the same way.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The core idea is still non-independence, but the source of that non-independence changes.
-> In crossed designs, observations are connected because they share subjects and items.
-> In nested designs, observations are connected because lower-level units belong to higher-level clusters.
->
-> So you should not memorize crossed and nested as abstract labels.
-> You should ask:
-> - what repeats with what?
-> - what belongs inside what?
->
+
+The core idea is still non-independence, but the source of that non-independence changes.
+In crossed designs, observations are connected because they share subjects and items.
+In nested designs, observations are connected because lower-level units belong to higher-level clusters.
+
+So you should not memorize crossed and nested as abstract labels.
+You should ask:
+- what repeats with what?
+- what belongs inside what?
+
 #### Equivalent R Syntax
 
 Crossed example:
@@ -1525,44 +1481,40 @@ lmer(DV ~ 1 + IV1 * IV2 + (1 + IV1 * IV2 | school/class), data = df)
 
 #### How To Read It In Output
 
-> [!example]
->
-> For crossed models, expect separate grouping lines such as:
-> - `subject`
-> - `item`
->
-> For nested models, expect output tied to the nested grouping structure, where lower-level clusters are interpreted within higher-level clusters.
->
-> Interpretation rule:
-> - crossed = multiple grouping factors combined across each other
-> - nested = one grouping factor contained inside another
->
+
+For crossed models, expect separate grouping lines such as:
+- `subject`
+- `item`
+
+For nested models, expect output tied to the nested grouping structure, where lower-level clusters are interpreted within higher-level clusters.
+
+Interpretation rule:
+- crossed = multiple grouping factors combined across each other
+- nested = one grouping factor contained inside another
+
 #### Common Trap
 
-> [!warning]
->
-> - Confusing crossed versus nested with fixed versus random.
-> - Reading `school/class` as if it were an interaction rather than a nesting shorthand.
->
+
+- Confusing crossed versus nested with fixed versus random.
+- Reading `school/class` as if it were an interaction rather than a nesting shorthand.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Crossed: subjects and items both vary and combine across each other.
-> - Nested: lower-level units live inside higher-level units.
-> - `school/class` means class nested in school.
->
+
+- Crossed: subjects and items both vary and combine across each other.
+- Nested: lower-level units live inside higher-level units.
+- `school/class` means class nested in school.
+
 ### 4.8 Output Interpretation
 
 #### Why This Matters
 
-> [!info]
->
-> The exam explicitly tests whether you can interpret `summary(...)` output.
-> So reading output is not a side skill.
-> It is one of the main skills of the course.
-> In the workflow, this is the step immediately after fitting: confirm the formula and random structure before interpreting significance.
->
+
+The exam explicitly tests whether you can interpret `summary(...)` output.
+So reading output is not a side skill.
+It is one of the main skills of the course.
+In the workflow, this is the step immediately after fitting: confirm the formula and random structure before interpreting significance.
+
 #### Statistical Formula
 
 Use this working model:
@@ -1606,20 +1558,19 @@ The job is to check whether the fitted model actually matches:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The simplest way to read mixed-model output is in layers.
-> First confirm the formula.
-> Then confirm the grouping structure.
-> Then inspect how the model splits variation:
-> - random intercept variance
-> - random slope variance
-> - covariance or correlation terms
-> - residual variance
->
-> Only after that should you move to the fixed coefficients and their tests.
-> This is the opposite of the common bad habit of skipping straight to the bottom-line p-value.
->
+
+The simplest way to read mixed-model output is in layers.
+First confirm the formula.
+Then confirm the grouping structure.
+Then inspect how the model splits variation:
+- random intercept variance
+- random slope variance
+- covariance or correlation terms
+- residual variance
+
+Only after that should you move to the fixed coefficients and their tests.
+This is the opposite of the common bad habit of skipping straight to the bottom-line p-value.
+
 #### Equivalent R Syntax
 
 ```r
@@ -1629,54 +1580,50 @@ summary(m)
 
 #### How To Read It In Output
 
-> [!example]
->
-> Use this order every time:
-> 1. `Formula:` line
-> 2. `Random effects:` block
-> 3. `Fixed effects:` block
-> 4. `Number of obs` and `groups`
-> 5. p-values, F-tests, likelihood-ratio tests, or confidence intervals
->
-> For the sleepstudy-style model, you should be able to identify:
-> - one fixed intercept
-> - one fixed slope for `Days`
-> - one random-intercept variance
-> - one random-slope variance
-> - one random correlation between intercept and slope
-> - one residual variance
->
-> Residual rule:
-> - the residual is always part of the full model anatomy
-> - some exam questions exclude it explicitly by saying `NOT counting the residual`
-> - if that phrase is absent, mention the residual as part of the full stochastic structure
->
+
+Use this order every time:
+1. `Formula:` line
+2. `Random effects:` block
+3. `Fixed effects:` block
+4. `Number of obs` and `groups`
+5. p-values, F-tests, likelihood-ratio tests, or confidence intervals
+
+For the sleepstudy-style model, you should be able to identify:
+- one fixed intercept
+- one fixed slope for `Days`
+- one random-intercept variance
+- one random-slope variance
+- one random correlation between intercept and slope
+- one residual variance
+
+Residual rule:
+- the residual is always part of the full model anatomy
+- some exam questions exclude it explicitly by saying `NOT counting the residual`
+- if that phrase is absent, mention the residual as part of the full stochastic structure
+
 #### Common Trap
 
-> [!warning]
->
-> - Jumping straight to p-values.
-> - Ignoring the random-effects block.
-> - Forgetting to count the covariance or correlation entry when the course asks about the random-effects structure.
->
+
+- Jumping straight to p-values.
+- Ignoring the random-effects block.
+- Forgetting to count the covariance or correlation entry when the course asks about the random-effects structure.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Read output in a fixed order.
-> - Random-effects block first tells you what structure was actually estimated.
-> - Fixed-effects block gives the average effects, not the full clustering story.
->
+
+- Read output in a fixed order.
+- Random-effects block first tells you what structure was actually estimated.
+- Fixed-effects block gives the average effects, not the full clustering story.
+
 ### 4.9 Type 2 Versus Type 3 Tests
 
 #### Why This Matters
 
-> [!info]
->
-> Week 4 turns this into a core logic question.
-> If you do not understand Type 2 versus Type 3, you will not know what question the p-value is answering.
-> In the workflow, this matters after the model structure is fixed, when you choose the exact inferential test.
->
+
+Week 4 turns this into a core logic question.
+If you do not understand Type 2 versus Type 3, you will not know what question the p-value is answering.
+In the workflow, this matters after the model structure is fixed, when you choose the exact inferential test.
+
 #### Statistical Formula
 
 Use a model with an interaction:
@@ -1726,15 +1673,14 @@ Use this compact decision order:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The easiest way to think about it is this:
-> - Type 2 asks whether a main effect matters after accounting for the other main effect
-> - Type 3 asks whether a main effect matters even while the interaction is in the model
->
-> So if there is no interaction, the distinction collapses.
-> If there is an interaction, the distinction becomes important because the meaning of a "main effect" is now conditional.
->
+
+The easiest way to think about it is this:
+- Type 2 asks whether a main effect matters after accounting for the other main effect
+- Type 3 asks whether a main effect matters even while the interaction is in the model
+
+So if there is no interaction, the distinction collapses.
+If there is an interaction, the distinction becomes important because the meaning of a "main effect" is now conditional.
+
 #### How This Course Determines Significance
 
 In this course, significance for linear mixed models is not treated as a single default number that you simply read off one output table. The local Week 4 workflow distinguishes between significance of coefficients and significance of fixed effects as effects. If you are working at the coefficient level, confidence intervals can be used to judge whether a coefficient is credibly different from zero, but the slides explicitly distinguish between different kinds of intervals. Wald intervals are treated with caution, whereas likelihood-profile and bootstrap intervals are presented as the more trustworthy routes. The slides also note that this confidence-interval logic applies most directly to coefficients, not automatically to broader effect questions.
@@ -1765,43 +1711,39 @@ afex::mixed(Y ~ A * B + (1 + B | subject), data = d, type = 3, method = "KR")
 
 #### How To Read It In Output
 
-> [!example]
->
-> Ask:
-> - does the model contain an interaction?
->
-> If no:
-> - Type 2 and Type 3 give the same practical answer
->
-> If yes:
-> - the main-effect tests can differ
-> - Type 3 interpretation depends on valid coding
->
+
+Ask:
+- does the model contain an interaction?
+
+If no:
+- Type 2 and Type 3 give the same practical answer
+
+If yes:
+- the main-effect tests can differ
+- Type 3 interpretation depends on valid coding
+
 #### Common Trap
 
-> [!warning]
->
-> - Thinking Type 2 and Type 3 are always interchangeable.
-> - Running Type 3 with treatment coding and trusting the result anyway.
->
+
+- Thinking Type 2 and Type 3 are always interchangeable.
+- Running Type 3 with treatment coding and trusting the result anyway.
+
 #### What To Memorize
 
-> [!tip]
->
-> - No interaction -> no practical Type 2 versus Type 3 difference.
-> - Interaction present -> main-effect tests can differ.
-> - Type 3 requires appropriate coding.
->
+
+- No interaction -> no practical Type 2 versus Type 3 difference.
+- Interaction present -> main-effect tests can differ.
+- Type 3 requires appropriate coding.
+
 ### 4.10 Maximal Models
 
 #### Why This Matters
 
-> [!info]
->
-> This is one of the course's strongest best-practice messages.
-> For confirmatory testing, the course pushes you to start from the richest random-effects structure justified by the design.
-> In the workflow, this belongs to the confirmatory branch, where you choose the richest justified random structure before reacting to warnings.
->
+
+This is one of the course's strongest best-practice messages.
+For confirmatory testing, the course pushes you to start from the richest random-effects structure justified by the design.
+In the workflow, this belongs to the confirmatory branch, where you choose the richest justified random structure before reacting to warnings.
+
 #### Statistical Formula
 
 Generic maximal logic:
@@ -1846,18 +1788,17 @@ The question is:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The teaching logic is:
-> 1. identify grouping factors
-> 2. identify fixed effects and interactions of interest
-> 3. ask which of those effects vary within each grouping factor
-> 4. include the corresponding random slopes if the design and replication allow them
-> 5. keep the justified covariance terms unless estimation or identifiability forces a principled simplification
->
-> This is why maximality is design-driven rather than software-driven.
-> The model is built from the structure of the experiment or study, not from trial-and-error searching for the easiest fit.
->
+
+The teaching logic is:
+1. identify grouping factors
+2. identify fixed effects and interactions of interest
+3. ask which of those effects vary within each grouping factor
+4. include the corresponding random slopes if the design and replication allow them
+5. keep the justified covariance terms unless estimation or identifiability forces a principled simplification
+
+This is why maximality is design-driven rather than software-driven.
+The model is built from the structure of the experiment or study, not from trial-and-error searching for the easiest fit.
+
 #### Equivalent R Syntax
 
 Actual course example:
@@ -1887,60 +1828,55 @@ lmer(Y ~ 1 + A * B + (1 + justified_subject_terms | subject) +
 
 #### Design-To-Model Decryption
 
-> [!example]
->
-> Read the generic confirmatory template like this:
-> - `Y`: dependent variable
-> - `1`: fixed intercept
-> - `A * B`: fixed main effects for `A` and `B`, plus the `A:B` interaction
-> - `(1 + justified_subject_terms | subject)`: subject random intercept plus every subject-level random slope justified by the design
-> - `(1 + justified_item_terms | item)`: item random intercept plus every item-level random slope justified by the design
->
-> The design question behind it is:
-> - which effects are of substantive interest? -> fixed effects
-> - which units repeat? -> grouping factors
-> - which fixed effects vary within each grouping factor? -> candidate random slopes
-> - which covariance terms are estimable? -> keep them if the design supports them
->
+
+Read the generic confirmatory template like this:
+- `Y`: dependent variable
+- `1`: fixed intercept
+- `A * B`: fixed main effects for `A` and `B`, plus the `A:B` interaction
+- `(1 + justified_subject_terms | subject)`: subject random intercept plus every subject-level random slope justified by the design
+- `(1 + justified_item_terms | item)`: item random intercept plus every item-level random slope justified by the design
+
+The design question behind it is:
+- which effects are of substantive interest? -> fixed effects
+- which units repeat? -> grouping factors
+- which fixed effects vary within each grouping factor? -> candidate random slopes
+- which covariance terms are estimable? -> keep them if the design supports them
+
 #### How To Read It In Output
 
-> [!example]
->
-> When checking a supposed maximal model, ask:
-> - which grouping factors are present?
-> - which justified slopes are present?
-> - are the covariance terms present?
-> - is the fitted structure actually the one the design implies?
->
-> The output is not only for interpretation after the fact.
-> It is also how you verify that the intended maximal structure was really fit.
->
+
+When checking a supposed maximal model, ask:
+- which grouping factors are present?
+- which justified slopes are present?
+- are the covariance terms present?
+- is the fitted structure actually the one the design implies?
+
+The output is not only for interpretation after the fact.
+It is also how you verify that the intended maximal structure was really fit.
+
 #### Common Trap
 
-> [!warning]
->
-> - Calling a model "maximal" just because it looks complicated.
-> - Simplifying before checking whether the design actually justified the omitted slope.
->
+
+- Calling a model "maximal" just because it looks complicated.
+- Simplifying before checking whether the design actually justified the omitted slope.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Maximal = all random effects justified by the design, if estimable.
-> - Within-unit fixed effects are the main candidates for random slopes.
-> - Maximality is a confirmatory principle, not a convenience principle.
->
+
+- Maximal = all random effects justified by the design, if estimable.
+- Within-unit fixed effects are the main candidates for random slopes.
+- Maximality is a confirmatory principle, not a convenience principle.
+
 ### 4.11 Syntax Decoding
 
 #### Why This Matters
 
-> [!info]
->
-> The example exam explicitly tests whether you can translate syntax into plain English.
-> So syntax decoding is not just a coding skill.
-> It is a reading skill.
-> This skill is used whenever you write a model, read output, or answer syntax-to-meaning questions.
->
+
+The example exam explicitly tests whether you can translate syntax into plain English.
+So syntax decoding is not just a coding skill.
+It is a reading skill.
+This skill is used whenever you write a model, read output, or answer syntax-to-meaning questions.
+
 #### Statistical Formula
 
 Use this working example:
@@ -1985,48 +1921,46 @@ Syntax decoding is therefore just model translation.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The easiest way to decode syntax is to read in layers:
-> 1. identify the dependent variable
-> 2. read the fixed part as ordinary regression
-> 3. read each random term as "what varies" on the left of `|`
-> 4. read the grouping factor as "who varies" on the right of `|`
->
-> If you do that consistently, the formula stops looking like shorthand and starts looking like a sentence.
->
+
+The easiest way to decode syntax is to read in layers:
+1. identify the dependent variable
+2. read the fixed part as ordinary regression
+3. read each random term as "what varies" on the left of `|`
+4. read the grouping factor as "who varies" on the right of `|`
+
+If you do that consistently, the formula stops looking like shorthand and starts looking like a sentence.
+
 #### Full Formula Decryption
 
-> [!example]
->
-> For:
->
-> ```r
-> lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
-> ```
->
-> identify each role explicitly:
-> - `Reaction` = dependent variable
-> - `~` = is predicted by
-> - `1` after `~` = fixed intercept
-> - `Days` before the random term = fixed slope
-> - `1` inside `(1 + Days | f_Subject)` = random intercept
-> - `Days` inside `(1 + Days | f_Subject)` = random slope
-> - `f_Subject` = grouping factor
-> - shared placement inside one `( ... | f_Subject )` term = estimate the intercept-slope correlation automatically
-> - action status for that correlation term = no extra action is needed unless you intentionally remove it with `||` or by separating the random terms
-> - no written residual term in the R syntax = residual still exists in the fitted LMM
-> - `data = sleepstudy2` = dataset declaration, not part of the model structure
->
-> Minimal sentence translation:
-> - predict `Reaction`
-> - estimate one average intercept
-> - estimate one average `Days` slope
-> - allow subjects to differ in their intercept
-> - allow subjects to differ in their `Days` slope
-> - estimate the correlation between those subject-specific deviations
-> - retain residual error
->
+
+For:
+
+```r
+lmer(Reaction ~ 1 + Days + (1 + Days | f_Subject), data = sleepstudy2)
+```
+
+identify each role explicitly:
+- `Reaction` = dependent variable
+- `~` = is predicted by
+- `1` after `~` = fixed intercept
+- `Days` before the random term = fixed slope
+- `1` inside `(1 + Days | f_Subject)` = random intercept
+- `Days` inside `(1 + Days | f_Subject)` = random slope
+- `f_Subject` = grouping factor
+- shared placement inside one `( ... | f_Subject )` term = estimate the intercept-slope correlation automatically
+- action status for that correlation term = no extra action is needed unless you intentionally remove it with `||` or by separating the random terms
+- no written residual term in the R syntax = residual still exists in the fitted LMM
+- `data = sleepstudy2` = dataset declaration, not part of the model structure
+
+Minimal sentence translation:
+- predict `Reaction`
+- estimate one average intercept
+- estimate one average `Days` slope
+- allow subjects to differ in their intercept
+- allow subjects to differ in their `Days` slope
+- estimate the correlation between those subject-specific deviations
+- retain residual error
+
 #### Equivalent R Syntax
 
 Intercept-only random-intercept model:
@@ -2058,37 +1992,33 @@ lmer(Y ~ 1 + X + (1 | subject) + (1 | item), data = d)
 
 #### How To Read It In Output
 
-> [!example]
->
-> The formula line in the output is your first check.
-> You should be able to translate it before reading the numerical estimates.
->
+
+The formula line in the output is your first check.
+You should be able to translate it before reading the numerical estimates.
+
 #### Common Trap
 
-> [!warning]
->
-> - Reading the grouping factor as if it were another fixed predictor.
-> - Forgetting that `1` means intercept, not "nothing."
->
+
+- Reading the grouping factor as if it were another fixed predictor.
+- Forgetting that `1` means intercept, not "nothing."
+
 #### What To Memorize
 
-> [!tip]
->
-> - left of `|` = what varies
-> - right of `|` = who varies
-> - `1` = intercept
-> - syntax questions are translation questions
->
+
+- left of `|` = what varies
+- right of `|` = who varies
+- `1` = intercept
+- syntax questions are translation questions
+
 ### 4.12 Contrast Coding
 
 #### Why This Matters
 
-> [!info]
->
-> Contrast coding becomes important the moment you move from fitting the model to testing and interpreting categorical effects.
-> In this course it matters especially for Type 3 tests.
-> In the workflow, this matters right before formal testing, because coding changes what the coefficients and Type 3 tests mean.
->
+
+Contrast coding becomes important the moment you move from fitting the model to testing and interpreting categorical effects.
+In this course it matters especially for Type 3 tests.
+In the workflow, this matters right before formal testing, because coding changes what the coefficients and Type 3 tests mean.
+
 #### Statistical Formula
 
 For a factor with multiple levels, the model is still:
@@ -2135,12 +2065,11 @@ The number of factor levels also matters for interpretation. If a factor has onl
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The course's practical lesson is that coding is not an afterthought. Coding determines what the coefficient table means, and it therefore determines what a Type 3 test is actually testing. That is why Type 3 testing needs stricter control than Type 2 testing. If you use treatment coding in a Type 3 setup, the main-effect tests no longer line up with the interpretation the course is aiming for.
->
-> The most course-typical setup is therefore very explicit. For unordered factors, use `contr.sum`. For ordered factors, use `contr.poly`. If you use `afex::mixed(...)`, the slides also note that the function automatically applies sum-to-zero contrasts for your factors unless you disable that behavior.
->
+
+The course's practical lesson is that coding is not an afterthought. Coding determines what the coefficient table means, and it therefore determines what a Type 3 test is actually testing. That is why Type 3 testing needs stricter control than Type 2 testing. If you use treatment coding in a Type 3 setup, the main-effect tests no longer line up with the interpretation the course is aiming for.
+
+The most course-typical setup is therefore very explicit. For unordered factors, use `contr.sum`. For ordered factors, use `contr.poly`. If you use `afex::mixed(...)`, the slides also note that the function automatically applies sum-to-zero contrasts for your factors unless you disable that behavior.
+
 #### Equivalent R Syntax
 
 ```r
@@ -2153,43 +2082,39 @@ afex::mixed(Y ~ A * B + (1 + B | subject), data = d, type = 3, method = "KR")
 
 #### How To Read It In Output
 
-> [!example]
->
-> If a factor is coded with sum-to-zero contrasts:
-> - the intercept usually reflects a grand-mean style reference
-> - coefficients are deviations relative to that coding system
->
-> So when interpreting coefficients, always ask:
-> - what contrast system was used?
->
+
+If a factor is coded with sum-to-zero contrasts:
+- the intercept usually reflects a grand-mean style reference
+- coefficients are deviations relative to that coding system
+
+So when interpreting coefficients, always ask:
+- what contrast system was used?
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating contrast coding as a software default issue instead of an interpretation issue.
-> - Running Type 3 tests with treatment coding.
->
+
+- Treating contrast coding as a software default issue instead of an interpretation issue.
+- Running Type 3 tests with treatment coding.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Contrast coding changes parameter meaning.
-> - Type 3 needs appropriate coding.
-> - The course's main practical default is sum-to-zero coding for unordered factors.
->
+
+- Contrast coding changes parameter meaning.
+- Type 3 needs appropriate coding.
+- The course's main practical default is sum-to-zero coding for unordered factors.
+
 ### 4.13 Post-Hocs And Follow-Up Models
 
 #### Why This Matters
 
-> [!info]
->
-> Once a main effect or interaction is established, the next question is often:
-> - where exactly is the difference?
->
-> The course separates two answers to that question:
-> - post-hocs
-> - follow-up models
->
+
+Once a main effect or interaction is established, the next question is often:
+- where exactly is the difference?
+
+The course separates two answers to that question:
+- post-hocs
+- follow-up models
+
 #### Decision Rule
 
 Use post-hocs when:
@@ -2226,26 +2151,23 @@ Follow-up logic:
 
 #### Common Trap
 
-> [!warning]
->
-> - Treating post-hocs as automatic and treating them as interchangeable with follow-up models.
->
+
+- Treating post-hocs as automatic and treating them as interchangeable with follow-up models.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Post-hoc = comparisons inside the fitted model.
-> - Follow-up = separate targeted model comparisons.
->
+
+- Post-hoc = comparisons inside the fitted model.
+- Follow-up = separate targeted model comparisons.
+
 ### 4.14 Convergence Versus Singularity
 
 #### Why This Matters
 
-> [!info]
->
-> The course treats warnings as part of model interpretation, not as a technical nuisance.
-> But it also insists that not all warnings mean the same thing.
->
+
+The course treats warnings as part of model interpretation, not as a technical nuisance.
+But it also insists that not all warnings mean the same thing.
+
 #### Decision Rule
 
 First ask:
@@ -2273,26 +2195,23 @@ lme4::allFit(model)
 
 #### Common Trap
 
-> [!warning]
->
-> - Treating convergence and singularity as the same warning and simplifying before diagnosing which one it is.
->
+
+- Treating convergence and singularity as the same warning and simplifying before diagnosing which one it is.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Convergence = optimizer may not have found the best solution.
-> - Singularity = one or more variance/covariance dimensions are estimated as zero.
->
+
+- Convergence = optimizer may not have found the best solution.
+- Singularity = one or more variance/covariance dimensions are estimated as zero.
+
 ### 4.15 Diagnostics
 
 #### Why This Matters
 
-> [!info]
->
-> The course repeatedly places diagnostics inside the normal workflow.
-> That means diagnostics are not optional and not reserved for disaster cases.
->
+
+The course repeatedly places diagnostics inside the normal workflow.
+That means diagnostics are not optional and not reserved for disaster cases.
+
 #### Decision Rule
 
 After fitting the model:
@@ -2337,27 +2256,24 @@ The clean-analysis rule is that diagnostics gate inference. You should understan
 
 #### Common Trap
 
-> [!warning]
->
-> - Treating diagnostics as optional or as something you only do after a warning appears.
->
+
+- Treating diagnostics as optional or as something you only do after a warning appears.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Diagnostics gate inference.
-> - Visual checks come first, formal influence tools can follow.
->
+
+- Diagnostics gate inference.
+- Visual checks come first, formal influence tools can follow.
+
 ### 4.16 Longitudinal Models
 
 #### Why This Matters
 
-> [!info]
->
-> Longitudinal models are one of the course's major later applications of mixed-model logic.
-> They show that repeated-measures thinking can become explicitly time-based.
-> In the workflow, this matters when time itself is a fixed effect of interest and you must choose both the time function and the corresponding random slopes.
->
+
+Longitudinal models are one of the course's major later applications of mixed-model logic.
+They show that repeated-measures thinking can become explicitly time-based.
+In the workflow, this matters when time itself is a fixed effect of interest and you must choose both the time function and the corresponding random slopes.
+
 #### Statistical Formula
 
 Linear growth model:
@@ -2407,17 +2323,16 @@ That means the main questions become:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The important shift is that longitudinal modeling is not just "more repeated measures."
-> It is repeated measures where the shape of change is substantive.
-> So time may need:
-> - a linear term
-> - a quadratic term
-> - sometimes more complex representations
->
-> And the random-effects structure must still respect what the design can estimate.
->
+
+The important shift is that longitudinal modeling is not just "more repeated measures."
+It is repeated measures where the shape of change is substantive.
+So time may need:
+- a linear term
+- a quadratic term
+- sometimes more complex representations
+
+And the random-effects structure must still respect what the design can estimate.
+
 #### Equivalent R Syntax
 
 ```r
@@ -2427,41 +2342,37 @@ lmer(LifeSatisfaction ~ 1 + Time_lin + Time_quad +
 
 #### How To Read It In Output
 
-> [!example]
->
-> Look for:
-> - fixed time coefficients
-> - random time-slope variance
-> - whether the fitted time structure matches the number of available observations per person
->
-> Interpretation rule:
-> - fixed time terms describe the average trajectory
-> - random time terms describe person-to-person differences in that trajectory
->
+
+Look for:
+- fixed time coefficients
+- random time-slope variance
+- whether the fitted time structure matches the number of available observations per person
+
+Interpretation rule:
+- fixed time terms describe the average trajectory
+- random time terms describe person-to-person differences in that trajectory
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating every longitudinal example as if the most complex time structure must be estimable.
-> - Forgetting that too few repeated points limit the random-effects structure.
->
+
+- Treating every longitudinal example as if the most complex time structure must be estimable.
+- Forgetting that too few repeated points limit the random-effects structure.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Longitudinal model = mixed model where time is a key predictor.
-> - The shape of time matters.
-> - The random-effects structure must still respect the design.
->
+
+- Longitudinal model = mixed model where time is a key predictor.
+- The shape of time matters.
+- The random-effects structure must still respect the design.
+
 ### 4.17 Design-Driven Versus Data-Driven Analysis
 
 #### Why This Matters
 
-> [!info]
->
-> This is one of the course's highest-level judgment questions.
-> It determines whether your inferential claims are confirmatory or exploratory.
->
+
+This is one of the course's highest-level judgment questions.
+It determines whether your inferential claims are confirmatory or exploratory.
+
 #### Decision Rule
 
 If the model is chosen from the design and hypotheses:
@@ -2483,30 +2394,27 @@ The clean-analysis rule is to keep confirmatory and exploratory logic separate. 
 
 #### Common Trap
 
-> [!warning]
->
-> - Doing model search and then presenting the final p values as if the model had been specified in advance.
->
+
+- Doing model search and then presenting the final p values as if the model had been specified in advance.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Design-driven = confirmatory; data-driven = exploratory.
-> - If model selection occurred, disclose it and do not present the final inference as cleanly confirmatory.
->
+
+- Design-driven = confirmatory; data-driven = exploratory.
+- If model selection occurred, disclose it and do not present the final inference as cleanly confirmatory.
+
 ## 5. GLMMs And Non-Gaussian Outcomes
 
 ### 5.1 Why GLMMs Are Needed
 
 #### Why This Matters
 
-> [!info]
->
-> Earlier in the course, the dependent variable was treated as approximately Gaussian and continuous.
-> Week 8 changes that rule.
-> Once the dependent variable is binary, aggregated binary, ordinal, or another non-Gaussian type, the model family and link have to respect that scale.
-> This is the main Step 2 branch: once the DV is non-Gaussian, you leave the LMM path and choose a GLMM family and link.
->
+
+Earlier in the course, the dependent variable was treated as approximately Gaussian and continuous.
+Week 8 changes that rule.
+Once the dependent variable is binary, aggregated binary, ordinal, or another non-Gaussian type, the model family and link have to respect that scale.
+This is the main Step 2 branch: once the DV is non-Gaussian, you leave the LMM path and choose a GLMM family and link.
+
 #### Statistical Formula
 
 Generic GLMM logic:
@@ -2547,16 +2455,15 @@ Instead of assuming a Gaussian residual structure with an ordinary $e_{ij}$ term
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The teaching logic is the same as in Week 1:
-> - respect the data-generating structure
->
-> For ordinary mixed models, that means respecting clustering.
-> For GLMMs, it means respecting clustering and the scale of the dependent variable.
-> So the Week 8 move is not a break from the earlier course.
-> It is the same principle applied more carefully.
->
+
+The teaching logic is the same as in Week 1:
+- respect the data-generating structure
+
+For ordinary mixed models, that means respecting clustering.
+For GLMMs, it means respecting clustering and the scale of the dependent variable.
+So the Week 8 move is not a break from the earlier course.
+It is the same principle applied more carefully.
+
 #### Equivalent R Syntax
 
 Binary-response example:
@@ -2581,34 +2488,30 @@ ordinal::clmm(rating ~ 1 + X + (1 + X | judge), link = "logit", data = d)
 
 #### How To Read It In Output
 
-> [!example]
->
-> The main change is that fixed coefficients now live on the link scale, not necessarily on the original response scale.
-> So interpretation often needs back-transformation.
->
+
+The main change is that fixed coefficients now live on the link scale, not necessarily on the original response scale.
+So interpretation often needs back-transformation.
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating GLMMs as just `lmer` with one extra argument or forcing non-Gaussian outcomes into Gaussian models because the output feels more familiar.
->
+
+- Treating GLMMs as just `lmer` with one extra argument or forcing non-Gaussian outcomes into Gaussian models because the output feels more familiar.
+
 #### What To Memorize
 
-> [!tip]
->
-> - GLMMs keep the mixed-model logic but change the outcome family and link.
-> - The DV type determines the family, and coefficients are often on the link scale rather than the response scale.
->
+
+- GLMMs keep the mixed-model logic but change the outcome family and link.
+- The DV type determines the family, and coefficients are often on the link scale rather than the response scale.
+
 ### 5.2 Binary Responses
 
 #### Why This Matters
 
-> [!info]
->
-> This is the clearest Week 8 example and the strongest locally supported GLMM case.
-> It is the model you need when the outcome is a trial-level yes/no, success/failure, or 0/1 response.
-> Use this branch when the dependent variable is trial-level binary.
->
+
+This is the clearest Week 8 example and the strongest locally supported GLMM case.
+It is the model you need when the outcome is a trial-level yes/no, success/failure, or 0/1 response.
+Use this branch when the dependent variable is trial-level binary.
+
 #### Statistical Formula
 
 $$
@@ -2647,18 +2550,17 @@ That means:
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> This is still the same design logic as before:
-> - identify the fixed effects
-> - identify the grouping factor
-> - justify the random slopes from the design
->
-> The difference is only the outcome scale.
-> So the binary GLMM is best understood as:
-> - mixed-effects structure from Weeks 1 to 7
-> - logistic link from Week 8
->
+
+This is still the same design logic as before:
+- identify the fixed effects
+- identify the grouping factor
+- justify the random slopes from the design
+
+The difference is only the outcome scale.
+So the binary GLMM is best understood as:
+- mixed-effects structure from Weeks 1 to 7
+- logistic link from Week 8
+
 #### Equivalent R Syntax
 
 ```r
@@ -2677,42 +2579,38 @@ glmer(choice_SS0_LL1 ~ 1 + f_Now_Notnow + c_TimeDiff + c_rel_diff_Amounts +
 
 #### How To Read It In Output
 
-> [!example]
->
-> Read it in the same order as an LMM:
-> 1. formula
-> 2. random-effects block
-> 3. fixed-effects block
-> 4. observations and groups
->
-> But interpret fixed coefficients on the logit scale first.
-> Then, if needed:
-> - `exp(coef)` for odds ratios
-> - `plogis(value)` for probabilities
->
+
+Read it in the same order as an LMM:
+1. formula
+2. random-effects block
+3. fixed-effects block
+4. observations and groups
+
+But interpret fixed coefficients on the logit scale first.
+Then, if needed:
+- `exp(coef)` for odds ratios
+- `plogis(value)` for probabilities
+
 #### Common Trap
 
-> [!warning]
->
-> - Reading a logit coefficient as if it were already a probability difference and forgetting that the fixed-effect logic still follows the mixed-model structure from earlier weeks.
->
+
+- Reading a logit coefficient as if it were already a probability difference and forgetting that the fixed-effect logic still follows the mixed-model structure from earlier weeks.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Binary GLMM = `family = binomial(link = "logit")`
-> - Coefficients are on the logit scale; use odds or probabilities for interpretation when needed.
->
+
+- Binary GLMM = `family = binomial(link = "logit")`
+- Coefficients are on the logit scale; use odds or probabilities for interpretation when needed.
+
 ### 5.3 Aggregated Binary Responses And Proportions
 
 #### Why This Matters
 
-> [!info]
->
-> This is one of the easiest places to make a modeling mistake.
-> A proportion looks continuous, but in this course it is treated as aggregated binary data, not as ordinary Gaussian data.
-> Use this branch when the outcome is an aggregated binary proportion with known trial counts.
->
+
+This is one of the easiest places to make a modeling mistake.
+A proportion looks continuous, but in this course it is treated as aggregated binary data, not as ordinary Gaussian data.
+Use this branch when the outcome is an aggregated binary proportion with known trial counts.
+
 #### Statistical Formula
 
 Weighted-proportion formulation:
@@ -2759,16 +2657,15 @@ That is why the number of underlying trials must stay in the model.
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> This chapter exists to stop a very common shortcut:
-> - compute percentages
-> - forget how many trials generated them
-> - run a Gaussian model
->
-> The course explicitly rejects that move.
-> Instead, it keeps the binomial structure so the model knows how much evidence underlies each proportion.
->
+
+This chapter exists to stop a very common shortcut:
+- compute percentages
+- forget how many trials generated them
+- run a Gaussian model
+
+The course explicitly rejects that move.
+Instead, it keeps the binomial structure so the model knows how much evidence underlies each proportion.
+
 #### Equivalent R Syntax
 
 Weighted-proportion version:
@@ -2788,34 +2685,30 @@ glmer(cbind(c_LL_cond, n_trials - c_LL_cond) ~ 1 + f_Now_Notnow +
 
 #### How To Read It In Output
 
-> [!example]
->
-> The fixed effects are still on the logit scale.
-> The key conceptual check is whether the model preserved the trial-count information.
->
+
+The fixed effects are still on the logit scale.
+The key conceptual check is whether the model preserved the trial-count information.
+
 #### Common Trap
 
-> [!warning]
->
-> - Treating aggregated percentages as ordinary continuous data and forgetting that the trial count still matters.
->
+
+- Treating aggregated percentages as ordinary continuous data and forgetting that the trial count still matters.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Aggregated binary data are still binomial data, so the trial count must stay in the model.
-> - Use weighted-binomial or `cbind(successes, failures)` formulations.
->
+
+- Aggregated binary data are still binomial data, so the trial count must stay in the model.
+- Use weighted-binomial or `cbind(successes, failures)` formulations.
+
 ### 5.4 Ordinal Outcomes
 
 #### Why This Matters
 
-> [!info]
->
-> Ordinal outcomes are heavily overtreated as metric data in practice.
-> The course explicitly flags that as a problem.
-> Use this branch when the dependent variable is ordered categorical rather than continuous or binary.
->
+
+Ordinal outcomes are heavily overtreated as metric data in practice.
+The course explicitly flags that as a problem.
+Use this branch when the dependent variable is ordered categorical rather than continuous or binary.
+
 #### Statistical Formula
 
 Cumulative-link idea:
@@ -2850,13 +2743,12 @@ So the model respects the order of the categories without pretending the distanc
 
 #### Book / Literature Explanation
 
-> [!note]
->
-> The teaching point is the same as for binary data:
-> - respect the scale of the DV
->
-> For ordinal outcomes, the model is not trying to recover equal intervals between categories.
-> It is trying to model ordered category probabilities correctly.
+
+The teaching point is the same as for binary data:
+- respect the scale of the DV
+
+For ordinal outcomes, the model is not trying to recover equal intervals between categories.
+It is trying to model ordered category probabilities correctly.
 #### Equivalent R Syntax
 
 ```r
@@ -2867,41 +2759,37 @@ ordinal::clmm(rating ~ 1 + temp * contact +
 
 #### How To Read It In Output
 
-> [!example]
->
-> Look for:
-> - threshold parameters
-> - fixed slopes
-> - random-effects structure
->
-> Interpretation rule:
-> - slopes describe the shift on the latent cumulative scale
-> - thresholds separate the categories
->
+
+Look for:
+- threshold parameters
+- fixed slopes
+- random-effects structure
+
+Interpretation rule:
+- slopes describe the shift on the latent cumulative scale
+- thresholds separate the categories
+
 #### Common Trap
 
-> [!warning]
->
-> - Averaging ordinal responses and automatically treating them as metric.
-> - Forgetting that ordinal models estimate thresholds, not just one ordinary intercept.
->
+
+- Averaging ordinal responses and automatically treating them as metric.
+- Forgetting that ordinal models estimate thresholds, not just one ordinary intercept.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Ordinal outcomes need ordinal mixed models when the metric approximation is not defensible.
-> - Cumulative models use thresholds plus shared slopes.
-> - `clmm(...)` is the main local example.
->
+
+- Ordinal outcomes need ordinal mixed models when the metric approximation is not defensible.
+- Cumulative models use thresholds plus shared slopes.
+- `clmm(...)` is the main local example.
+
 ### 5.5 What Changes For Diagnostics And P Values In GLMMs
 
 #### Why This Matters
 
-> [!info]
->
-> Week 8 does not simply copy Week 4 into a new family.
-> Some assumptions and testing methods change when you move to GLMMs.
->
+
+Week 8 does not simply copy Week 4 into a new family.
+Some assumptions and testing methods change when you move to GLMMs.
+
 <details>
 <summary>Source</summary>
 <ul>
@@ -2945,25 +2833,22 @@ The Week 8 slides also become more restrictive about Type 2 and Type 3 logic in 
 
 #### Common Trap
 
-> [!warning]
->
-> - Carrying over the full Week 4 Gaussian p-value workflow into GLMMs.
->
+
+- Carrying over the full Week 4 Gaussian p-value workflow into GLMMs.
+
 #### What To Memorize
 
-> [!tip]
->
-> - Not all LMM inference tools survive the move to GLMMs.
-> - KR-style F-tests are not the local Week 8 route.
-> - Diagnostics shift toward fit and simulation-based checks such as `DHARMa`.
->
+
+- Not all LMM inference tools survive the move to GLMMs.
+- KR-style F-tests are not the local Week 8 route.
+- Diagnostics shift toward fit and simulation-based checks such as `DHARMa`.
+
 ## 6. Exam Traps And Fast Distinctions
 
 ### Why This Section Exists
 
-> [!info]
-> The example exam does not only reward long explanations.
-> It rewards fast, correct distinctions.
+The example exam does not only reward long explanations.
+It rewards fast, correct distinctions.
 
 <details>
 <summary>Source</summary>
